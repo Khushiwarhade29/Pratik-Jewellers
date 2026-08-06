@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Pratik Jewellers</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+</head>
+
+
+<body>
+
+{% include "home/navbar.html" %}
+
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <h1>Timeless Elegance Since 2017</h1>
+
+        <p>
+            Pratik Jewellers has been serving customers with trust, purity,
+            and beautiful craftsmanship since 2017.
+            We are committed to offering high-quality Gold, Silver,
+            Diamond and Custom Jewellery for every special occasion.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="our-story">
+
+    <div class="story-container">
+
+        <div class="story-image">
+            <img src="{% static 'home/images/about.jpg' %}" alt="Pratik Jewellers">
+        </div>
+
+        <div class="story-content">
+
+            <h2>Our Story</h2>
+
+            <p>
+                Pratik Jewellers was established in <strong>2017</strong> with a vision
+                to provide beautiful jewellery that reflects trust, purity,
+                and timeless craftsmanship.
+            </p>
+
+            <p>
+                From elegant daily wear to bridal collections, every jewellery
+                piece is selected with great care to ensure quality and customer
+                satisfaction.
+            </p>
+
+            <p>
+                Our commitment is to make every customer's special moments
+                memorable with jewellery that can be treasured for generations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-choose">
+
+<h2>Our Values</h2>
+
+<div class="why-grid">
+
+    <div class="why-card">
+        <i class="fas fa-crown"></i>
+        <h3>Timeless Designs</h3>
+        <p>
+        We create jewellery that blends tradition with modern elegance, making every piece timeless.
+        </p>
+    </div>
+
+    <div class="why-card">
+        <i class="fas fa-certificate"></i>
+        <h3>Certified Purity</h3>
+        <p>
+        Every jewellery piece is crafted with certified purity and exceptional quality.
+        </p>
+    </div>
+
+    <div class="why-card">
+        <i class="fas fa-gem"></i>
+        <h3>Exclusive Collections</h3>
+        <p>
+        Explore unique designs crafted for weddings, celebrations, and everyday elegance.
+        </p>
+    </div>
+
+    <div class="why-card">
+        <i class="fas fa-handshake"></i>
+        <h3>Trusted Legacy</h3>
+        <p>
+        We believe in honesty, transparency, and building lifelong relationships with our customers.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <p class="services-subtitle">
+        We offer a complete range of jewellery and personalized services
+        to make every occasion special.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <i class="fas fa-ring"></i>
+            <h3>Gold Jewellery</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-gem"></i>
+            <h3>Silver Jewellery</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-diamond"></i>
+            <h3>Diamond Jewellery</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-heart"></i>
+            <h3>Bridal Collection</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-coins"></i>
+            <h3>Gold Coins</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>Custom Jewellery</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <h2>Our Store Gallery</h2>
+
+    <p class="gallery-subtitle">
+        Take a glimpse of our showroom and jewellery collections.
+    </p>
+
+    <div class="gallery-grid">
+
+        <img src="{% static 'home/images/shop1.jpg' %}" alt="Shop">
+
+        <img src="{% static 'home/images/shop2.jpg' %}" alt="Jewellery">
+
+        <img src="{% static 'home/images/shop3.jpg' %}" alt="Gold Collection">
+
+        <img src="{% static 'home/images/shop4.jpg' %}" alt="Diamond Collection">
+
+        <img src="{% static 'home/images/shop5.jpg' %}" alt="Showroom">
+
+        <img src="{% static 'home/images/shop6.jpg' %}" alt="Pratik Jewellers">
+
+    </div>
+
+</section>
+
+
+
+<!-- WhatsApp Button -->
+
+<a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
+class="whatsapp-float"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+</body>
+</html>

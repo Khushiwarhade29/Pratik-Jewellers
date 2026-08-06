@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Contact | Pratik Jewellers</title>
+
+<!-- Bootstrap FIRST -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- Your CSS LAST -->
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+</head>
+
+<body>
+
+{% include "home/navbar.html" %}
+
+<section class="contact-section">
+
+    <div class="contact-heading">
+        <h1>Help & Contact</h1>
+        <p>
+Have questions about our jewellery, designs or services?
+Our team is here to help you.
+</p>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <div class="contact-card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Visit Us</h3>
+
+                <p>
+                    <strong>Pratik Jewellers</strong><br>
+                    Bus Stop, Gopal Nagar 2nd,<br>
+                    Nagpur, Maharashtra 440022
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+
+                <h3>Phone</h3>
+
+                <a href="tel:+919766688337">
+                    +91 97666 88337
+                </a>
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fab fa-whatsapp"></i>
+
+                <h3>WhatsApp</h3>
+
+                <a href="https://wa.me/919766688337" target="_blank">
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fas fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <a href="mailto:pratikwarhade24@gmail.com">
+                    pratikwarhade24@gmail.com
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fas fa-clock"></i>
+
+                <h3>Business Hours</h3>
+
+                <p>
+                    Monday – Saturday<br>
+                    10:00 AM – 9:00 PM
+                </p>
+
+            </div>
+               <!-- YAHAN PASTE KARO -->
+    <div class="contact-card text-center mt-4">
+
+        <i class="fas fa-map-location-dot"></i>
+
+        <h3>Visit Our Showroom</h3>
+
+        <p>
+            Click below to open Google Maps and get directions to our showroom.
+        </p>
+
+        <a href="https://maps.app.goo.gl/wQNLypWFsDCpoR8z9?g_st=aw"
+           target="_blank"
+           class="direction-btn">
+
+            <i class="fas fa-location-arrow"></i>
+            Open in Google Maps
+
+        </a>
+
+    </div>
+
+</div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Send Message</h2>
+            {% if success %}
+
+<div class="alert alert-success">
+
+    ✅ Thank you! Your message has been sent successfully.
+
+</div>
+
+{% endif %}
+
+            <form method="POST">
+
+    {% csrf_token %}
+
+                <input type="text"
+       name="name"
+       placeholder="Full Name"
+       required>
+
+                <input type="email"
+       name="email"
+       placeholder="Email Address"
+       required>
+
+               <input type="text"
+       name="phone"
+       placeholder="Phone Number"
+       required>
+
+                <textarea rows="6"
+          name="message"
+          placeholder="Your Message"
+          required></textarea>
+
+                <button type="submit">
+
+    <i class="fas fa-paper-plane"></i>
+
+    Send Message
+
+</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="help-section">
+
+    <h2>How Can We Help You?</h2>
+
+    <div class="help-cards">
+
+        <div class="help-card">
+            <i class="fas fa-ring"></i>
+            <h3>Jewellery Enquiry</h3>
+            <p>
+                Looking for Gold, Silver or Diamond jewellery?
+                Contact us for designs and pricing details.
+            </p>
+        </div>
+
+
+        <div class="help-card">
+            <i class="fas fa-gem"></i>
+            <h3>Custom Jewellery</h3>
+            <p>
+                We create customized jewellery designs
+                according to your special requirements.
+            </p>
+        </div>
+
+
+        <div class="help-card">
+            <i class="fas fa-screwdriver-wrench"></i>
+            <h3>Repair & Support</h3>
+            <p>
+                Need jewellery repair or maintenance help?
+                Our team is always ready to assist you.
+            </p>
+        </div>
+
+
+        <div class="help-card">
+            <i class="fas fa-heart"></i>
+            <h3>Bridal Consultation</h3>
+            <p>
+                Get guidance for choosing the perfect
+                bridal jewellery for your special day.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
+   class="whatsapp-float"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+</body>
+</html>

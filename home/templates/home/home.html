@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Jewellers</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+    {% include 'home/navbar.html' %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <h3>Crafting Timeless Elegance</h3>
+        <div class="hero-line"></div>
+
+        <p>
+            Discover exquisite Gold, Silver, Diamond and Bridal Jewellery
+            crafted with trust, purity and elegance.
+        </p>
+
+       <a href="{% url 'gold' %}" class="btn btn-gold">
+    Explore Collection
+</a>
+
+        <a href="{% url 'contact' %}" class="btn btn-outline">
+    Contact Us
+</a>
+
+    </div>
+
+</section>
+
+<section class="collections">
+
+    <h2>Our Collections</h2>
+
+    <div class="collection-grid">
+
+<a href="{% url 'gold' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/gold.jpg' %}" alt="Gold Jewellery">
+        <h3>Gold Collection</h3>
+    </div>
+</a>
+
+<a href="{% url 'silver' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/silver.jpg' %}" alt="Silver Jewellery">
+        <h3>Silver Collection</h3>
+    </div>
+</a>
+
+<a href="{% url 'diamond' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/diamond.jpg' %}" alt="Diamond Jewellery">
+        <h3>Diamond Collection</h3>
+    </div>
+</a>
+
+<a href="{% url 'coins' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/coins.jpg' %}" alt="Gold Coins">
+        <h3>Gold Coins</h3>
+    </div>
+</a>
+
+<a href="{% url 'bridal' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/bridal.jpg' %}" alt="Bridal Jewellery">
+        <h3>Bridal Collection</h3>
+    </div>
+</a>
+
+<a href="{% url 'custom' %}" class="collection-link">
+    <div class="card">
+        <img src="{% static 'home/images/men.jpg' %}" alt="Men's Jewellery">
+        <h3>Men's Collection</h3>
+    </div>
+</a>
+
+    </div>
+
+</section>
+
+<section class="featured">
+
+    <h2>Featured Jewellery</h2>
+
+    <div class="featured-grid">
+
+        {% for product in featured_products %}
+
+        <a href="{% url 'product_detail' product.id %}" class="product-link">
+
+            <div class="product-card">
+
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+
+                <h3>{{ product.name }}</h3>
+
+            </div>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<section class="customized">
+
+    <h2>Customized Jewellery</h2>
+
+    <p class="section-subtitle">
+        Design your dream jewellery with our expert craftsmanship.
+    </p>
+
+    <div class="customized-grid">
+
+        <a href="{% url 'custom' %}" class="custom-link">
+            <div class="custom-card">
+                <img src="{% static 'home/images/custom1.jpg' %}" alt="Custom Ring">
+                <h3>Custom Rings</h3>
+                <p>Crafted exactly to your style.</p>
+            </div>
+        </a>
+
+        <a href="{% url 'custom' %}" class="custom-link">
+            <div class="custom-card">
+                <img src="{% static 'home/images/custom2.jpg' %}" alt="Name Pendant">
+                <h3>Name Pendants</h3>
+                <p>Personalized gold pendants with your name.</p>
+            </div>
+        </a>
+
+        <a href="{% url 'custom' %}" class="custom-link">
+            <div class="custom-card">
+                <img src="{% static 'home/images/custom3.jpg' %}" alt="Bridal Jewellery">
+                <h3>Bridal Jewellery</h3>
+                <p>Exclusive bridal sets for your special day.</p>
+            </div>
+        </a>
+
+        <a href="{% url 'custom' %}" class="custom-link">
+            <div class="custom-card">
+                <img src="{% static 'home/images/custom4.jpg' %}" alt="Old Gold Redesign">
+                <h3>Old Gold Redesign</h3>
+                <p>Transform your old jewellery into a modern masterpiece.</p>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<section class="why-us">
+
+    <h2>Why Choose Pratik Jewellers</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>✨ Pure Quality</h3>
+            <p>
+                We provide certified jewellery crafted with purity and trust.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>💎 Premium Designs</h3>
+            <p>
+                Unique and elegant designs for every special occasion.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>🤝 Trusted Service</h3>
+            <p>
+                Building relationships with customers through honesty and care.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>🛠 Custom Jewellery</h3>
+            <p>
+                Personalized jewellery designs made according to your choice.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <h2>About Pratik Jewellers</h2>
+
+            <p>
+                At Pratik Jewellers, we believe jewellery is not just an ornament,
+                but a symbol of trust, tradition and beautiful memories.
+            </p>
+
+            <p>
+                We offer a wide range of Gold, Silver and Diamond jewellery
+                crafted with exceptional quality and timeless designs.
+            </p>
+
+            <a href="{% url 'about' %}" class="btn btn-gold">
+    Know More
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
+   class="whatsapp-float"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="{% static 'home/js/script.js' %}"></script>
+
+</body>
+</html>
