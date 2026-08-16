@@ -33,16 +33,333 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <p class="mt-4 fs-5">
         Explore our exclusive handcrafted 22K & 24K Hallmarked Gold Jewellery.
     </p>
+    <div class="gold-filter text-center my-4">
+
+    <a href="{% url 'gold' %}?type=all"
+       class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
+        All
+    </a>
+
+    <a href="{% url 'gold' %}?type=Women"
+       class="filter-btn {% if filter_type == 'Women' %}active{% endif %}">
+        Women
+    </a>
+
+    <a href="{% url 'gold' %}?type=Men"
+       class="filter-btn {% if filter_type == 'Men' %}active{% endif %}">
+        Men
+    </a>
+
+    <a href="{% url 'gold' %}?type=Kids"
+       class="filter-btn {% if filter_type == 'Kids' %}active{% endif %}">
+        Kids
+    </a>
 
 </div>
 
-    <div class="row">
+</div>
 
-        {% for product in products %}
+<!-- MOBILE FILTER BUTTON -->
+<div class="mobile-filter-btn">
+   <button type="button" class="mobile-filter-btn" onclick="openMobileFilter()">
+    <i class="fas fa-sliders"></i>
+    Filter Jewellery
+</button>
+</div>
 
-<div class="col-lg-4 col-md-6 mb-5">
+<!-- MOBILE FILTER PANEL -->
+<div class="mobile-filter-panel" id="mobileFilterPanel">
 
-    <div class="gold-card">
+    <div class="mobile-filter-header">
+
+        <h3>Filter Jewellery</h3>
+
+        <button type="button" onclick="closeMobileFilter()">
+            <i class="fas fa-times"></i>
+        </button>
+
+    </div>
+
+
+    <!-- SUB CATEGORIES -->
+
+    <div class="mobile-filter-section">
+
+        <div class="mobile-filter-title" onclick="toggleMobileFilterSection(this)">
+            <span>Sub Categories</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="mobile-filter-options">
+
+            {% for category in sidebar_categories %}
+
+<label>
+
+    <input type="checkbox"
+           onchange="filterProductType('{{ category }}')"
+           {% if product_type == category %}checked{% endif %}>
+
+        {% if category == "Necklace" %}
+        Necklaces
+       {% elif category == "Bangles" %}
+        Bangles
+       {% elif category == "Bracelet" %}
+        Bracelets
+       {% elif category == "Earrings" %}
+        Earrings
+       {% elif category == "Chain" %}
+        Chains
+       {% else %}
+        {{ category }}
+    {% endif %}
+
+</label>
+
+{% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- WEIGHT -->
+
+    <div class="mobile-filter-section">
+
+        <div class="mobile-filter-title" onclick="toggleMobileFilterSection(this)">
+            <span>Weight</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="mobile-filter-options">
+
+           
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterWeight('under5')"
+                       {% if weight_filter == 'under5' %}checked{% endif %}>
+                Under 5 gm
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterWeight('5to10')"
+                       {% if weight_filter == '5to10' %}checked{% endif %}>
+                5 - 10 gm
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterWeight('10to20')"
+                       {% if weight_filter == '10to20' %}checked{% endif %}>
+                10 - 20 gm
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterWeight('above20')"
+                       {% if weight_filter == 'above20' %}checked{% endif %}>
+                Above 20 gm
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <!-- PURITY -->
+
+    <div class="mobile-filter-section">
+
+        <div class="mobile-filter-title" onclick="toggleMobileFilterSection(this)">
+            <span>Purity</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="mobile-filter-options">
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterPurity('24K')"
+                       {% if purity_filter == '24K' %}checked{% endif %}>
+                24K
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterPurity('22K')"
+                       {% if purity_filter == '22K' %}checked{% endif %}>
+                22K
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterPurity('18K')"
+                       {% if purity_filter == '18K' %}checked{% endif %}>
+                18K
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       onchange="filterPurity('14K')"
+                       {% if purity_filter == '14K' %}checked{% endif %}>
+                14K
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <!-- CLEAR FILTERS -->
+
+    <div class="mobile-filter-clear">
+
+        <button type="button" onclick="clearGoldFilters()">
+            <i class="fas fa-rotate-left"></i>
+            Clear All Filters
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<div class="gold-shop-layout">
+
+    <!-- LEFT FILTER SIDEBAR -->
+    <aside class="gold-sidebar">
+
+        <h3>Filter Jewellery</h3>
+
+        <div class="sidebar-line"></div>
+
+        <div class="filter-section">
+
+            <h4>Sub Categories</h4>
+
+            
+            {% for category in sidebar_categories %}
+
+<label>
+
+           <input type="checkbox"
+           onchange="filterProductType('{{ category }}')"
+           {% if product_type == category %}checked{% endif %}>
+
+           {% if category == "Necklace" %}
+            Necklaces
+           {% elif category == "Bangles" %}
+            Bangles
+           {% elif category == "Bracelet" %}
+            Bracelets
+           {% elif category == "Earrings" %}
+            Earrings
+           {% elif category == "Chain" %}
+            Chains
+           {% else %}
+          {{ category }}
+    {% endif %}
+
+</label>
+
+{% endfor %}
+
+        </div>
+
+        <div class="filter-section">
+
+    <h4>Weight</h4>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterWeight('under5')"
+               {% if weight_filter == 'under5' %}checked{% endif %}>
+        Under 5 gm
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterWeight('5to10')"
+               {% if weight_filter == '5to10' %}checked{% endif %}>
+        5 - 10 gm
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterWeight('10to20')"
+               {% if weight_filter == '10to20' %}checked{% endif %}>
+        10 - 20 gm
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterWeight('above20')"
+               {% if weight_filter == 'above20' %}checked{% endif %}>
+        Above 20 gm
+    </label>
+
+</div>
+
+        <div class="filter-section">
+
+    <h4>Purity</h4>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterPurity('24K')"
+               {% if purity_filter == '24K' %}checked{% endif %}>
+        24K
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterPurity('22K')"
+               {% if purity_filter == '22K' %}checked{% endif %}>
+        22K
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterPurity('18K')"
+               {% if purity_filter == '18K' %}checked{% endif %}>
+        18K
+    </label>
+
+    <label>
+        <input type="checkbox"
+               onchange="filterPurity('14K')"
+               {% if purity_filter == '14K' %}checked{% endif %}>
+        14K
+    </label>
+
+</div>
+
+<div class="clear-filters-box">
+
+    <button type="button" onclick="clearGoldFilters()">
+        <i class="fas fa-rotate-left"></i>
+        Clear All Filters
+    </button>
+
+</div>
+
+    </aside>
+
+
+    <!-- RIGHT SIDE PRODUCTS -->
+    <div class="gold-products-area">
+
+        <div class="row">
+
+            {% for product in products %}
+
+            <div class="col-lg-4 col-md-6 mb-5">
+
+                <div class="gold-card">
 
 <div class="gold-image">
 
@@ -60,21 +377,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <div class="gold-info">
 
-            <h3>{{ product.name }}</h3>
+    <h3>{{ product.name }}</h3>
 
-            <hr>
+    <p>{{ product.purity }} • {{ product.weight }} gm</p>
 
-         <p><strong>Code:</strong> {{ product.product_code }}</p>
+    <a href="{% url 'product_detail' product.id %}" class="gold-btn">
+        View Details
+    </a>
 
-<p>{{ product.purity }} | {{ product.weight }} gm</p>
-
-            <h4>₹ {{ product.price }}</h4>
-
-            <a href="{% url 'product_detail' product.id %}" class="gold-btn">
-    View Details
-</a>
-
-        </div>
+</div>
 
     </div>
 
@@ -86,15 +397,138 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             <h3>No Gold Products Available.</h3>
         </div>
 
-        {% endfor %}
+{% endfor %}
 
-    </div>
+        </div> <!-- row -->
+
+    </div> <!-- gold-products-area -->
+
+</div> <!-- gold-shop-layout -->
 
 </section>
 
 <div id="toast-message" class="wishlist-toast">
     Added to Wishlist ❤️
 </div>
+
+
+<script>
+function filterProductType(type) {
+
+    const url = new URL(window.location.href);
+
+    if (url.searchParams.get("product_type") === type) {
+        url.searchParams.delete("product_type");
+    } else {
+        url.searchParams.set("product_type", type);
+    }
+
+    window.location.href = url.toString();
+}
+</script>
+
+<script>
+function filterWeight(weight) {
+
+    const url = new URL(window.location.href);
+
+    if (url.searchParams.get("weight") === weight) {
+        url.searchParams.delete("weight");
+    } else {
+        url.searchParams.set("weight", weight);
+    }
+
+    window.location.href = url.toString();
+}
+</script>
+
+<script>
+function filterPurity(purity) {
+
+    const url = new URL(window.location.href);
+
+    if (url.searchParams.get("purity") === purity) {
+        url.searchParams.delete("purity");
+    } else {
+        url.searchParams.set("purity", purity);
+    }
+
+    window.location.href = url.toString();
+}
+</script>
+
+<script>
+function clearGoldFilters() {
+
+    const url = new URL(window.location.href);
+
+    url.searchParams.delete("product_type");
+    url.searchParams.delete("weight");
+    url.searchParams.delete("purity");
+
+    window.location.href = url.toString();
+}
+</script>
+
+<script>
+function openMobileFilter() {
+
+    const panel = document.getElementById("mobileFilterPanel");
+
+    panel.style.display = "block";
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeMobileFilter() {
+
+    const panel = document.getElementById("mobileFilterPanel");
+
+    panel.style.display = "none";
+
+    document.body.style.overflow = "";
+}
+</script>
+
+<script>
+function toggleMobileFilterSection(element) {
+
+    const options = element.nextElementSibling;
+    const icon = element.querySelector("i");
+
+    if (options.style.display === "none") {
+
+        options.style.display = "flex";
+        icon.style.transform = "rotate(180deg)";
+
+    } else {
+
+        options.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+
+    }
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButton = document.querySelector(".mobile-filter-toggle");
+    const sidebar = document.querySelector(".gold-sidebar");
+
+    if (filterButton && sidebar) {
+
+        filterButton.addEventListener("click", function () {
+
+            sidebar.classList.toggle("mobile-filter-open");
+
+        });
+
+    }
+
+});
+</script>
 
 <script>
 

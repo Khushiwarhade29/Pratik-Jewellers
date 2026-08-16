@@ -20,21 +20,368 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="container py-5 mt-5">
 
-<div class="text-center mb-5">
+<div class="text-center mb-5 custom-hero">
 
     <h1 class="display-3 fw-bold">
-        Custom Collection
+        Create Your Dream Jewellery
     </h1>
 
     <div class="hero-line"></div>
 
     <p class="mt-4 fs-5">
-        Design jewellery that is uniquely yours with personalized craftsmanship.
+        From engagement rings to bridal sets, we craft jewellery exactly the way you imagine it.
     </p>
+
+    <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20want%20to%20design%20my%20custom%20jewellery."
+       class="btn btn-dark mt-4 px-4 py-3">
+
+        <i class="fab fa-whatsapp"></i>
+
+        Start Custom Order
+
+    </a>
 
 </div>
 
     <div class="row">
+
+
+        <section class="custom-design-section py-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            Choose Your Design
+        </h2>
+
+        <p class="text-muted">
+            Select a jewellery style to start your custom creation.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'custom_category' 'ring' %}" class="design-card">
+
+    💍
+    <h4>Custom Rings</h4>
+
+</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'custom_category' 'necklace' %}" class="design-card">
+
+    📿
+    <h4>Necklaces</h4>
+
+</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'custom_category' 'bridal' %}" class="design-card">
+
+    👰
+    <h4>Bridal Sets</h4>
+
+</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+           <a href="{% url 'custom_category' 'pendant' %}" class="design-card">
+
+    💎
+    <h4>Pendants</h4>
+
+</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'custom_category' 'earrings' %}" class="design-card">
+
+    👂
+    <h4>Earrings</h4>
+
+</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+           <a href="{% url 'custom_category' 'couple-ring' %}" class="design-card">
+
+    💞
+    <h4>Couple Rings</h4>
+
+</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="custom-process py-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            How It Works
+        </h2>
+
+        <p class="text-muted">
+            Creating your dream jewellery is simple.
+        </p>
+
+    </div>
+
+    <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    1
+                </div>
+
+                <h4>Share Your Idea</h4>
+
+                <p>
+                    Send us your design inspiration, image or sketch.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    2
+                </div>
+
+                <h4>Free Design</h4>
+
+                <p>
+                    Our experts prepare a custom jewellery design for approval.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    3
+                </div>
+
+                <h4>Crafting</h4>
+
+                <p>
+                    Skilled artisans handcraft your jewellery with precision.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    4
+                </div>
+
+                <h4>Delivery</h4>
+
+                <p>
+                    Receive your exclusive jewellery ready to wear.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="why-custom py-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            Why Choose Our Custom Jewellery?
+        </h2>
+
+        <p class="text-muted">
+            Every masterpiece is crafted with care, precision and trust.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="why-card">
+
+                <i class="fas fa-gem"></i>
+
+                <h4>Premium Craftsmanship</h4>
+
+                <p>
+                    Every jewellery piece is handcrafted by skilled artisans.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="why-card">
+
+                <i class="fas fa-certificate"></i>
+
+                <h4>BIS Hallmarked</h4>
+
+                <p>
+                    Certified purity with complete quality assurance.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="why-card">
+
+                <i class="fas fa-pencil-ruler"></i>
+
+                <h4>Personalized Design</h4>
+
+                <p>
+                    Your imagination becomes a unique jewellery design.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="why-card">
+
+                <i class="fas fa-handshake"></i>
+
+                <h4>Lifetime Support</h4>
+
+                <p>
+                    Cleaning, polishing and service whenever required.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="custom-consultation py-5">
+
+    <div class="container">
+
+        <div class="consultation-box">
+
+            <h2>Book a Free Design Consultation</h2>
+
+            <p>
+                Share your idea with us and our jewellery experts will contact you.
+            </p>
+
+            <form id="customForm">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <input type="text"
+                               id="customerName"
+                               class="form-control"
+                               placeholder="Your Name">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <input type="tel"
+                               id="customerPhone"
+                               class="form-control"
+                               placeholder="Mobile Number">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <select id="jewelleryType" class="form-select">
+
+                            <option value="">Select Jewellery</option>
+
+                            <option>Ring</option>
+
+                            <option>Necklace</option>
+
+                            <option>Bridal Set</option>
+
+                            <option>Pendant</option>
+
+                            <option>Earrings</option>
+
+                            <option>Bracelet</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <input type="text"
+                               id="budget"
+                               class="form-control"
+                               placeholder="Budget">
+
+                    </div>
+
+                </div>
+
+                <button type="button"
+                        class="btn btn-dark px-5 py-3"
+                        onclick="sendCustomEnquiry()">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    Send Request
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
 
         {% for product in products %}
 
@@ -153,6 +500,41 @@ document.querySelectorAll(".wishlist-btn").forEach(button => {
     <i class="fab fa-whatsapp"></i>
 
 </a>
+
+
+<script>
+
+function sendCustomEnquiry(){
+
+    let name = document.getElementById("customerName").value;
+
+    let phone = document.getElementById("customerPhone").value;
+
+    let type = document.getElementById("jewelleryType").value;
+
+    let budget = document.getElementById("budget").value;
+
+    let message =
+`Hello Pratik Jewellers,
+
+Name: ${name}
+
+Mobile: ${phone}
+
+Jewellery: ${type}
+
+Budget: ${budget}
+
+I would like to get a custom jewellery design.`;
+
+    window.open(
+        `https://wa.me/919766688337?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+
+}
+
+</script>
 
 </body>
 

@@ -1,122 +1,1066 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg custom-navbar">
 
-    <div class="container">
+<nav class="main-navbar">
 
-        <!-- Logo -->
+    <div class="container navbar-container">
 
-        <a class="navbar-brand d-flex align-items-center" href="{% url 'about' %}">
+        <!-- =====================================================
+             MOBILE HEADER
+        ====================================================== -->
 
-            <img src="{% static 'home/images/logo.png' %}" alt="Logo" class="nav-logo">
+        <div class="mobile-header">
 
-            <span class="brand-text">Pratik Jewellers</span>
+            <!-- LEFT : HAMBURGER -->
+            <button
+                type="button"
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open Menu">
 
-        </a>
+                <i class="fas fa-bars"></i>
 
-        <!-- Mobile Button -->
+            </button>
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
 
-            <span class="navbar-toggler-icon"></span>
+            <!-- CENTER : LOGO -->
+            <a
+                href="{% url 'home' %}"
+                class="mobile-logo">
 
-        </button>
+                <img
+                    src="{% static 'home/images/logo.png' %}"
+                    alt="Pratik Jewellers">
 
-        <!-- Menu -->
+            </a>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-            <ul class="navbar-nav align-items-center">
+            <!-- RIGHT : SEARCH + WISHLIST -->
+            <div class="mobile-right-icons">
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'home' %}">Home</a>
-                </li>
+                <!-- SEARCH ICON -->
+                <button
+                    type="button"
+                    class="mobile-search-btn"
+                    id="mobileSearchBtn"
+                    aria-label="Search">
 
-                <li class="nav-item dropdown">
+                    <i class="fas fa-search"></i>
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="navbarDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       aria-expanded="false">
+                </button>
 
-        Collections
 
-    </a>
+                <!-- WISHLIST -->
+                <a
+                    href="{% url 'wishlist' %}"
+                    class="mobile-wishlist-btn"
+                    aria-label="Wishlist">
 
-    <ul class="dropdown-menu">
+                    <i class="fas fa-heart"></i>
 
-        <li><a class="dropdown-item" href="{% url 'gold' %}">Gold Jewellery</a></li>
+                </a>
 
-       <li><a class="dropdown-item" href="{% url 'silver' %}">
-    Silver Jewellery
-</a></li>
+            </div>
 
-        <li><a class="dropdown-item" href="{% url 'diamond' %}">Diamond Jewellery</a></li>
+        </div>
 
-        <li><a class="dropdown-item" href="{% url 'bridal' %}">Bridal Collection</a></li>
 
-        <li><a class="dropdown-item" href="{% url 'custom' %}">Custom Jewellery</a></li>
+        <!-- =====================================================
+     DESKTOP LOGO + BRAND NAME
+====================================================== -->
 
-        <li><a class="dropdown-item" href="{% url 'coins' %}">Gold Coins</a></li>
+<a href="{% url 'home' %}" class="desktop-brand">
 
-    </ul>
+    <img
+        src="{% static 'home/images/logo.png' %}"
+        alt="Pratik Jewellers Logo">
 
-</li>
+    <span>Pratik Jewellers</span>
 
-                <li class="nav-item">
-    <a class="nav-link" href="{% url 'about' %}">
-        About Us
-    </a>
-</li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                </li>
-
-                <li class="nav-item ms-3">
-
-<form class="search-form" method="GET" action="{% url 'search' %}">
-
-<div class="search-box">
-
-    <input
-        type="search"
-        id="searchInput"
-        name="q"
-        placeholder="Search Jewellery..."
-        aria-label="Search">
-
-    <button type="button" id="voiceSearchBtn" class="voice-btn">
-        <i class="fas fa-microphone"></i>
-    </button>
-
-    <button type="submit" class="search-btn">
-        <i class="fas fa-search"></i>
-    </button>
-
-</div>
-
-</form>
-
-</li>
-
-                <!-- Icons -->
-
-                <li class="nav-item icon-item">
-                    <a class="nav-link" href="{% url 'wishlist' %}">
-    <i class="fas fa-heart"></i>
 </a>
+
+
+        <!-- =====================================================
+             DESKTOP NAVBAR
+        ====================================================== -->
+
+        <div
+            class="desktop-navbar"
+            id="navbarNav">
+
+            <ul class="navbar-nav">
+
+
+                <!-- HOME -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
                 </li>
 
-                
+
+
+                <!-- COLLECTIONS -->
+                <li class="nav-item dropdown-custom">
+
+                    <a
+                        class="nav-link collection-toggle"
+                        href="#">
+
+                        Collections
+
+                        <span class="arrow"></span>
+
+                    </a>
+
+
+                    <ul class="desktop-submenu">
+
+                        <li>
+                            <a href="{% url 'gold' %}">
+                                Gold
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'silver' %}">
+                                Silver
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'diamond' %}">
+                                Diamond
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'bridal' %}">
+                                Bridal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'custom' %}">
+                                Custom Designs
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="{% url 'coins' %}">
+                                Coins
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+                <!-- ABOUT -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="{% url 'about' %}">
+
+                        About Us
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="{% url 'contact' %}">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- =================================================
+                     DESKTOP SEARCH
+                ================================================== -->
+
+                <li class="nav-item search-nav-item">
+
+                    <form
+                        class="search-form"
+                        method="GET"
+                        action="{% url 'search' %}"
+                        id="desktopSearchForm">
+
+                        <div class="search-box">
+
+                            <input
+                                type="search"
+                                id="desktopSearchInput"
+                                name="q"
+                                placeholder="Search Jewellery..."
+                                aria-label="Search Jewellery"
+                                autocomplete="off">
+
+
+                            <!-- MICROPHONE -->
+                            <button
+                                type="button"
+                                id="voiceSearchBtn"
+                                class="voice-btn"
+                                aria-label="Voice Search">
+
+                                <i class="fas fa-microphone"></i>
+
+                            </button>
+
+
+                            <!-- SEARCH -->
+                            <button
+                                type="submit"
+                                class="search-btn"
+                                aria-label="Search">
+
+                                <i class="fas fa-search"></i>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </li>
+
+
+
+                <!-- DESKTOP WISHLIST -->
+                <li class="nav-item wishlist-item">
+
+                    <a
+                        class="nav-link"
+                        href="{% url 'wishlist' %}">
+
+                        <i class="fas fa-heart"></i>
+
+                    </a>
+
+                </li>
+
 
             </ul>
 
         </div>
 
+
+
+        <!-- =====================================================
+             MOBILE MENU
+        ====================================================== -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu">
+
+
+            <!-- HOME -->
+            <a
+                href="{% url 'home' %}"
+                class="mobile-menu-link">
+
+                Home
+
+            </a>
+
+
+
+            <!-- COLLECTIONS -->
+            <button
+                type="button"
+                class="mobile-collection-btn"
+                id="mobileCollectionBtn">
+
+                <span>
+                    Collections
+                </span>
+
+                <span
+                    class="mobile-arrow"
+                    id="mobileArrow">
+
+                    ›
+
+                </span>
+
+            </button>
+
+
+
+            <!-- COLLECTION SUBMENU -->
+            <div
+                class="mobile-collection-menu"
+                id="mobileCollectionMenu">
+
+                <a href="{% url 'gold' %}">
+                    Gold
+                </a>
+
+                <a href="{% url 'silver' %}">
+                    Silver
+                </a>
+
+                <a href="{% url 'diamond' %}">
+                    Diamond
+                </a>
+
+                <a href="{% url 'bridal' %}">
+                    Bridal
+                </a>
+
+                <a href="{% url 'coins' %}">
+                    Coins
+                </a>
+
+            </div>
+
+
+
+            <!-- ABOUT -->
+            <a
+                href="{% url 'about' %}"
+                class="mobile-menu-link">
+
+                About Us
+
+            </a>
+
+
+
+            <!-- CONTACT -->
+            <a
+                href="{% url 'contact' %}"
+                class="mobile-menu-link">
+
+                Contact
+
+            </a>
+
+
+
+            <!-- WISHLIST -->
+            <a
+                href="{% url 'wishlist' %}"
+                class="mobile-menu-link">
+
+                Wishlist
+
+            </a>
+
+
+        </div>
+
+
+
     </div>
 
+
+
+    <!-- =========================================================
+         FULL SCREEN SEARCH OVERLAY
+         IMPORTANT:
+         ONLY ONE SEARCH SYSTEM
+    ========================================================== -->
+
+    <div
+        id="searchOverlay"
+        class="search-overlay">
+
+
+        <!-- SEARCH HEADER -->
+        <div class="search-header">
+
+
+            <!-- BACK ARROW -->
+            <button
+                type="button"
+                id="closeSearchBtn"
+                class="search-back-btn"
+                aria-label="Close Search">
+
+                <i class="fas fa-arrow-left"></i>
+
+            </button>
+
+
+
+            <!-- SEARCH FORM -->
+            <form
+                class="mobile-search-form"
+                method="GET"
+                action="{% url 'search' %}"
+                id="mobileSearchForm">
+
+
+                <input
+                    type="search"
+                    id="mobileSearchInput"
+                    name="q"
+                    placeholder="Search Jewellery..."
+                    autocomplete="off"
+                    aria-label="Search Jewellery">
+
+
+
+                <!-- MICROPHONE -->
+                <button
+                    type="button"
+                    id="mobileVoiceSearchBtn"
+                    class="mobile-voice-btn"
+                    aria-label="Voice Search">
+
+                    <i class="fas fa-microphone"></i>
+
+                </button>
+
+
+
+                <!-- SEARCH -->
+                <button
+                    type="submit"
+                    class="mobile-search-submit"
+                    aria-label="Search">
+
+                    <i class="fas fa-search"></i>
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SEARCH EMPTY STATE
+        ====================================================== -->
+
+        <div class="search-empty-state">
+
+            <div class="search-big-icon">
+
+                <i class="fas fa-search"></i>
+
+            </div>
+
+
+            <p>
+                Search for jewellery by name,
+                category, price, etc.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
 </nav>
+
+<!-- =====================================================
+     GOLD / SILVER RATE BAR
+====================================================== -->
+
+<!-- =====================================================
+     GOLD / SILVER RATE TICKER
+====================================================== -->
+
+<div class="rate-bar">
+    <div class="rate-ticker">
+        <div class="rate-track">
+
+            <!-- SET 1 -->
+            <div class="ticker-group">
+
+                <span class="rate-item">
+                    Updated:
+                    {{ gold_rate.updated_at|date:"d M Y" }}
+                    {{ gold_rate.updated_at|date:"h:i A" }}
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    24K : ₹{{ rate24|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    22K : ₹{{ rate22|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    20K : ₹{{ rate20|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    18K : ₹{{ rate18|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    14K : ₹{{ rate14|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item gold-rate">
+                    9K : ₹{{ rate9|floatformat:2 }}/10g
+                </span>
+
+                <span class="rate-separator">•</span>
+
+                <span class="rate-item silver-rate">
+                    Silver : ₹{{ silver_rate.rate|floatformat:2 }}/1kg
+                </span>
+
+            </div>
+
+            <!-- SET 2 -->
+            <div class="ticker-group">
+                <!-- Same content copy-paste karo -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       MOBILE HAMBURGER
+    ====================================================== */
+
+    const mobileMenuBtn =
+        document.getElementById("mobileMenuBtn");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (mobileMenuBtn && mobileMenu) {
+
+        mobileMenuBtn.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("show");
+
+
+            mobileMenuBtn.innerHTML =
+                mobileMenu.classList.contains("show")
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       MOBILE COLLECTIONS
+    ====================================================== */
+
+    const collectionBtn =
+        document.getElementById("mobileCollectionBtn");
+
+    const collectionMenu =
+        document.getElementById("mobileCollectionMenu");
+
+
+    if (collectionBtn && collectionMenu) {
+
+        collectionBtn.addEventListener("click", function () {
+
+            collectionMenu.classList.toggle("show");
+
+            collectionBtn.classList.toggle("active");
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       DESKTOP COLLECTION
+    ====================================================== */
+
+    const desktopCollection =
+        document.querySelector(".collection-toggle");
+
+
+    if (desktopCollection) {
+
+        desktopCollection.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       SEARCH ELEMENTS
+    ====================================================== */
+
+    const searchBtn =
+        document.getElementById("mobileSearchBtn");
+
+    const searchOverlay =
+        document.getElementById("searchOverlay");
+
+    const closeSearchBtn =
+        document.getElementById("closeSearchBtn");
+
+    const mobileSearchInput =
+        document.getElementById("mobileSearchInput");
+
+    const mobileSearchForm =
+        document.getElementById("mobileSearchForm");
+
+    const desktopSearchForm =
+        document.getElementById("desktopSearchForm");
+
+    const desktopSearchInput =
+        document.getElementById("desktopSearchInput");
+    
+    /* =====================================================
+   DESKTOP SEARCH OPEN / CLOSE
+===================================================== */
+
+const desktopSearchBox =
+    document.querySelector(".desktop-navbar .search-box");
+
+const desktopSearchButton =
+    document.querySelector(".desktop-navbar .search-btn");
+
+
+if (desktopSearchBox && desktopSearchButton) {
+
+    desktopSearchButton.addEventListener("click", function(event) {
+
+        /* SEARCH BAR CLOSED */
+
+        if (!desktopSearchBox.classList.contains("active")) {
+
+            event.preventDefault();
+
+            desktopSearchBox.classList.add("active");
+
+            setTimeout(function() {
+
+                if (desktopSearchInput) {
+                    desktopSearchInput.focus();
+                }
+
+            }, 150);
+
+        }
+
+        /* SEARCH BAR ALREADY OPEN */
+
+        else {
+
+            const query =
+                desktopSearchInput
+                ? desktopSearchInput.value.trim()
+                : "";
+
+            /* Empty -> don't submit */
+
+            if (query === "") {
+
+                event.preventDefault();
+
+                if (desktopSearchInput) {
+                    desktopSearchInput.focus();
+                }
+
+            }
+
+            /* Text present -> form submits normally */
+
+        }
+
+    });
+
+
+    /* CLICK OUTSIDE = CLOSE */
+
+    document.addEventListener("click", function(event) {
+
+        if (
+            !desktopSearchBox.contains(event.target) &&
+            !desktopSearchButton.contains(event.target)
+        ) {
+
+            desktopSearchBox.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+
+    /* =====================================================
+       OPEN MOBILE SEARCH
+    ====================================================== */
+
+    if (searchBtn && searchOverlay) {
+
+        searchBtn.addEventListener("click", function () {
+
+            searchOverlay.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+
+            setTimeout(function () {
+
+                if (mobileSearchInput) {
+
+                    mobileSearchInput.focus();
+
+                }
+
+            }, 150);
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       CLOSE MOBILE SEARCH
+    ====================================================== */
+
+    if (closeSearchBtn && searchOverlay) {
+
+        closeSearchBtn.addEventListener("click", function () {
+
+            searchOverlay.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+
+            if (mobileSearchInput) {
+
+                mobileSearchInput.value = "";
+
+            }
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       MOBILE SEARCH VALIDATION
+       
+       EMPTY SEARCH = DO NOTHING
+       TEXT SEARCH = OPEN RESULTS
+    ====================================================== */
+
+    if (mobileSearchForm) {
+
+        mobileSearchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                const query =
+                    mobileSearchInput
+                    ? mobileSearchInput.value.trim()
+                    : "";
+
+
+                if (query === "") {
+
+                    event.preventDefault();
+
+                    if (mobileSearchInput) {
+
+                        mobileSearchInput.focus();
+
+                    }
+
+                    return false;
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       DESKTOP SEARCH VALIDATION
+       
+       EMPTY SEARCH = DO NOTHING
+       TEXT SEARCH = OPEN RESULTS
+    ====================================================== */
+
+    if (desktopSearchForm) {
+
+        desktopSearchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                const query =
+                    desktopSearchInput
+                    ? desktopSearchInput.value.trim()
+                    : "";
+
+
+                if (query === "") {
+
+                    event.preventDefault();
+
+                    if (desktopSearchInput) {
+
+                        desktopSearchInput.focus();
+
+                    }
+
+                    return false;
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       MOBILE VOICE SEARCH
+    ====================================================== */
+
+    const mobileVoiceBtn =
+        document.getElementById("mobileVoiceSearchBtn");
+
+
+    if (mobileVoiceBtn) {
+
+        mobileVoiceBtn.addEventListener(
+            "click",
+            function () {
+
+
+                const SpeechRecognition =
+                    window.SpeechRecognition ||
+                    window.webkitSpeechRecognition;
+
+
+                if (!SpeechRecognition) {
+
+                    alert(
+                        "Voice search is not supported in this browser."
+                    );
+
+                    return;
+
+                }
+
+
+                const recognition =
+                    new SpeechRecognition();
+
+
+                recognition.lang = "en-IN";
+
+                recognition.continuous = false;
+
+                recognition.interimResults = false;
+
+
+                recognition.start();
+
+
+                recognition.onresult =
+                    function (event) {
+
+                        const text =
+                            event.results[0][0].transcript;
+
+
+                        if (mobileSearchInput) {
+
+                            mobileSearchInput.value = text;
+
+                        }
+
+                    };
+
+
+                recognition.onerror =
+                    function () {
+
+                        console.log(
+                            "Voice search error"
+                        );
+
+                    };
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       DESKTOP VOICE SEARCH
+    ====================================================== */
+
+    const desktopVoiceBtn =
+        document.getElementById("voiceSearchBtn");
+
+
+    if (desktopVoiceBtn) {
+
+        desktopVoiceBtn.addEventListener(
+            "click",
+            function () {
+
+
+                const SpeechRecognition =
+                    window.SpeechRecognition ||
+                    window.webkitSpeechRecognition;
+
+
+                if (!SpeechRecognition) {
+
+                    alert(
+                        "Voice search is not supported in this browser."
+                    );
+
+                    return;
+
+                }
+
+
+                const recognition =
+                    new SpeechRecognition();
+
+
+                recognition.lang = "en-IN";
+
+                recognition.continuous = false;
+
+                recognition.interimResults = false;
+
+
+                recognition.start();
+
+
+                recognition.onresult =
+                    function (event) {
+
+                        const text =
+                            event.results[0][0].transcript;
+
+
+                        if (desktopSearchInput) {
+
+                            desktopSearchInput.value = text;
+
+                        }
+
+                    };
+
+
+                recognition.onerror =
+                    function () {
+
+                        console.log(
+                            "Voice search error"
+                        );
+
+                    };
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       ESC KEY = CLOSE SEARCH
+    ====================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                searchOverlay &&
+                searchOverlay.classList.contains("active")
+            ) {
+
+                searchOverlay.classList.remove("active");
+
+                document.body.style.overflow = "";
+
+            }
+
+        }
+    );
+
+
+});
+
+</script>
+

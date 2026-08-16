@@ -1,0 +1,282 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'about' %}">
+
+            <img src="{% static 'home/images/logo.png' %}" 
+                 alt="Logo" 
+                 class="nav-logo">
+
+            <span class="brand-text">
+                Pratik Jewellers
+            </span>
+
+        </a>
+
+        <div class="mobile-icons">
+
+    <a href="{% url 'wishlist' %}">
+        <i class="fas fa-heart"></i>
+    </a>
+
+
+    <button id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+</div>
+
+
+        <!-- Mobile Button -->
+
+        <button class="navbar-toggler" 
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+
+        <!-- Menu -->
+
+        <div class="collapse navbar-collapse justify-content-end" 
+             id="navbarNav">
+
+
+            <ul class="navbar-nav align-items-center">
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link active" 
+                       href="{% url 'home' %}">
+                        Home
+                    </a>
+
+                </li>
+
+<li class="nav-item mobile-collection">
+
+    <a class="nav-link collection-toggle"
+       href="#">
+        Collections
+        <span class="arrow">></span>
+    </a>
+
+
+    <ul class="mobile-submenu">
+
+
+        <li>
+            <a href="{% url 'gold' %}">
+                Gold
+            </a>
+        </li>
+
+
+        <li>
+            <a href="{% url 'silver' %}">
+                Silver
+            </a>
+        </li>
+
+
+        <li>
+            <a href="{% url 'diamond' %}">
+                Diamond
+            </a>
+        </li>
+
+
+        <li>
+            <a href="{% url 'bridal' %}">
+                Bridal
+            </a>
+        </li>
+
+
+        <li>
+            <a href="{% url 'coins' %}">
+                Coins
+            </a>
+        </li>
+
+
+    </ul>
+
+</li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" 
+                       href="{% url 'about' %}">
+                        About Us
+                    </a>
+
+                </li>
+
+
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" 
+                       href="{% url 'contact' %}">
+                        Contact
+                    </a>
+
+                </li>
+
+
+
+
+                <!-- Search -->
+
+                <li class="nav-item ms-3">
+
+
+                    <form class="search-form" 
+                          method="GET" 
+                          action="{% url 'search' %}">
+
+
+                        <div class="search-box">
+
+    <input
+        type="search"
+        id="searchInput"
+        name="q"
+        placeholder="Search Jewellery..."
+        aria-label="Search">
+
+    <button type="button"
+            id="voiceSearchBtn"
+            class="voice-btn">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <button type="submit"
+            class="search-btn">
+        <i class="fas fa-search"></i>
+    </button>
+
+</div>
+
+                    </form>
+
+
+                </li>
+
+
+
+
+                <!-- Wishlist -->
+
+                <li class="nav-item icon-item">
+
+                    <a class="nav-link" 
+                       href="{% url 'wishlist' %}">
+
+                        <i class="fas fa-heart"></i>
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+</nav>
+
+
+
+
+<!-- Mega Menu -->
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    const toggle = document.querySelector(".mega-toggle");
+    const menu = document.getElementById("megaMenu");
+
+    console.log(toggle);
+    console.log(menu);
+
+    if(toggle && menu){
+
+        toggle.onclick = function(){
+
+            menu.classList.toggle("show-menu");
+
+        };
+
+    }
+
+});
+</script>
+
+
+<div id="mobileCollectionMenu">
+
+    <a href="{% url 'gold' %}">
+        Gold
+    </a>
+
+    <a href="{% url 'silver' %}">
+        Silver
+    </a>
+
+    <a href="{% url 'diamond' %}">
+        Diamond
+    </a>
+
+    <a href="{% url 'coins' %}">
+        Coins
+    </a>
+
+    <a href="{% url 'bridal' %}">
+        Bridal
+    </a>
+
+
+</div>
+
+<script>
+
+document
+.getElementById("mobileMenuBtn")
+.onclick=function(){
+
+let menu=document.getElementById("mobileCollectionMenu");
+
+
+if(menu.style.display=="block")
+{
+menu.style.display="none";
+}
+else
+{
+menu.style.display="block";
+}
+
+}
+
+
+</script>

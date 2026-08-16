@@ -25,7 +25,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="container">
 
-        <div class="row align-items-center">
+        <div class="row align-items-start">
 
             <!-- Left Side Image -->
 
@@ -140,35 +140,48 @@ data-bs-slide-to="3"></button>
 
             <!-- Right Side Details -->
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 product-detail-column">
 
-                <span class="badge bg-warning text-dark mb-3">
-                    22K Hallmarked Jewellery
-                </span>
+               <span class="badge bg-warning text-dark mb-3">
+    {{ product.purity }} Jewellery
+</span>
 
-                <h1 class="product-title">
-                    {{ product.name }}
-                </h1>
+<h1 class="product-title">
+    {{ product.name }}
+</h1>
 
-                <h2 class="product-price">
-                    ₹ {{ product.price }}
-                </h2>
 
-                <hr>
+{% if calculated_price %}
 
-                <div class="product-info">
+    <h2 class="product-price">
+        ₹ {{ calculated_price|floatformat:2 }}
+    </h2>
 
-                    <p><strong>Product Code</strong> : {{ product.product_code }}</p>
+<div class="product-info">
 
-                    <p><strong>Purity</strong> : {{ product.purity }}</p>
 
-                    <p><strong>Weight</strong> : {{ product.weight }} gm</p>
 
-                    <p><strong>Availability</strong> :
-                        <span class="text-success">✔ In Stock</span>
-                    </p>
+    <p>
+        <strong>Product Code</strong>
+        <span>{{ product.product_code }}</span>
+    </p>
 
-                </div>
+    <p>
+        <strong>Purity</strong>
+        <span>{{ product.purity }}</span>
+    </p>
+
+    <p>
+        <strong>Weight</strong>
+        <span>{{ product.weight }} gm</span>
+    </p>
+
+    <p>
+        <strong>Availability</strong>
+        <span class="text-success">✔ In Stock</span>
+    </p>
+
+</div>
 
                 <div class="product-description">
 
@@ -179,6 +192,147 @@ data-bs-slide-to="3"></button>
                     </p>
 
                 </div>
+
+    <div class="price-breakup-card">
+
+    <h3 class="breakup-title">
+        Price Breakup
+    </h3>
+
+    <!-- GOLD -->
+    <div class="breakup-section">
+
+        <h5>{{ product.purity }} {{ product.category }}</h5>
+
+        <div class="break-row">
+            <span>Gross Weight</span>
+            <span>{{ product.weight }} gm</span>
+        </div>
+
+        <div class="break-row">
+            <span>Net Weight</span>
+            <span>{{ product.weight }} gm</span>
+        </div>
+
+        <div class="break-row">
+            <span>Purity</span>
+            <span>{{ product.purity }}</span>
+        </div>
+
+        <div class="break-row">
+            <span>Rate</span>
+            <span>₹ {{ purity_rate|floatformat:2 }}/gm</span>
+        </div>
+
+        <div class="break-row">
+            <span>Metal Value</span>
+            <span>₹ {{ metal_value|floatformat:2 }}</span>
+        </div>
+
+    </div>
+
+
+    <!-- MAKING -->
+    <div class="breakup-section">
+
+        <h5>Making Charges</h5>
+
+        <div class="break-row">
+            <span>({{ product.making_charge }}% of Metal Value)</span>
+            <span>
+                ₹ {{ making_amount|floatformat:2 }}
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- OTHER -->
+    <div class="breakup-section">
+
+        <h5>Other Charges</h5>
+
+        <div class="break-row">
+            <span>Stone Charges</span>
+            <span>
+                ₹ {{ product.stone_charge|floatformat:2 }}
+            </span>
+        </div>
+
+        <div class="break-row">
+            <span>Hallmark Charges</span>
+            <span>
+                ₹ {{ hallmark_charge|floatformat:2 }}
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- SUBTOTAL -->
+    <div class="break-row total-row">
+
+        <span>Sub Total</span>
+
+        <span>
+            ₹ {{ subtotal|floatformat:2 }}
+        </span>
+
+    </div>
+
+
+    <!-- GST -->
+
+    <div class="breakup-section">
+
+        <h5>Tax</h5>
+
+        <div class="break-row">
+
+            <span>GST ({{ product.gst_percentage }}%)</span>
+
+            <span>
+                ₹ {{ gst_amount|floatformat:2 }}
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- GRAND TOTAL -->
+
+    <div class="grand-total">
+
+        <div>
+
+            <h4>Grand Total</h4>
+
+            <small>Inclusive of all taxes</small>
+
+        </div>
+
+        <h2>
+
+            ₹ {{ calculated_price|floatformat:2 }}
+
+        </h2>
+
+    </div>
+
+</div>
+
+{% else %}
+
+    <h2 class="product-price">
+        ₹ {{ product.price|floatformat:2 }}
+    </h2>
+
+{% endif %}
+
+<hr>
+
+                
 
                 <div class="product-buttons mt-4">
                 <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20am%20interested%20in%20{{ product.name }}"
@@ -232,8 +386,8 @@ data-bs-slide-to="3"></button>
                     <h5>{{ item.name }}</h5>
 
                     <p class="text-warning fw-bold">
-                        ₹ {{ item.price }}
-                    </p>
+    ₹ {{ item.calculated_price|floatformat:2 }}
+</p>
 
                     <a href="{% url 'product_detail' item.id %}"
    class="btn btn-warning related-btn">

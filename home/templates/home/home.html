@@ -18,14 +18,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </head>
 <body>
 
-    {% include 'home/navbar.html' %}
+{% include 'home/navbar.html' %}
 
 <section class="hero">
 
     <div class="hero-content">
 
-
         <h3>Crafting Timeless Elegance</h3>
+
         <div class="hero-line"></div>
 
         <p>
@@ -33,13 +33,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             crafted with trust, purity and elegance.
         </p>
 
-       <a href="{% url 'gold' %}" class="btn btn-gold">
-    Explore Collection
-</a>
+        <a href="{% url 'gold' %}" class="btn btn-gold">
+            Explore Collection
+        </a>
 
         <a href="{% url 'contact' %}" class="btn btn-outline">
-    Contact Us
-</a>
+            Contact Us
+        </a>
 
     </div>
 
@@ -112,6 +112,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <img src="{{ product.image.url }}" alt="{{ product.name }}">
 
                 <h3>{{ product.name }}</h3>
+                <p class="featured-price">
+    ₹ {{ product.calculated_price|floatformat:2 }}
+</p>
 
             </div>
 
@@ -178,30 +181,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <div class="why-grid">
 
         <div class="why-card">
-            <h3>✨ Pure Quality</h3>
+            <h3>🛡 BIS Hallmarked Jewellery</h3>
             <p>
-                We provide certified jewellery crafted with purity and trust.
+                Every gold ornament is BIS Hallmarked, ensuring certified purity and complete trust.
             </p>
         </div>
 
         <div class="why-card">
-            <h3>💎 Premium Designs</h3>
+            <h3>💎 Exclusive Designs</h3>
             <p>
-                Unique and elegant designs for every special occasion.
+                Explore elegant Gold, Silver and Diamond collections for every occasion.
             </p>
         </div>
 
         <div class="why-card">
-            <h3>🤝 Trusted Service</h3>
+            <h3>🤝 Transparent Pricing</h3>
             <p>
-                Building relationships with customers through honesty and care.
+                Live metal rates with a detailed price breakup for complete price transparency.
             </p>
         </div>
 
         <div class="why-card">
-            <h3>🛠 Custom Jewellery</h3>
+            <h3>✨ Custom Jewellery</h3>
             <p>
-                Personalized jewellery designs made according to your choice.
+                Get personalised jewellery crafted according to your unique style and requirements.
             </p>
         </div>
 
@@ -236,6 +239,161 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </div>
 
 </section>
+
+<section class="help-strip">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <!-- Call -->
+            <div class="col-lg-3 col-6 mb-4">
+
+                <a href="tel:+919766688337" class="help-box">
+
+                    <i class="fas fa-phone-alt"></i>
+
+                    <h5>Call Us</h5>
+
+                    <p>+91 9766688337</p>
+
+                </a>
+
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="col-lg-3 col-6 mb-4">
+
+                <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
+                   target="_blank"
+                   class="help-box">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    <h5>WhatsApp</h5>
+
+                    <p>Quick Enquiry</p>
+
+                </a>
+
+            </div>
+
+            <!-- Visit Store -->
+            <div class="col-lg-3 col-6 mb-4">
+
+                <a href="https://maps.google.com/?q=Pratik+Jewellers+Nagpur"
+                   target="_blank"
+                   class="help-box">
+
+                    <i class="fas fa-map-marker-alt"></i>
+
+                    <h5>Visit Store</h5>
+
+                    <p>Nagpur</p>
+
+                </a>
+
+            </div>
+
+            <!-- Email -->
+            <div class="col-lg-3 col-6 mb-4">
+
+                <a href="mailto:pratikwarhade24@gmail.com"
+                   class="help-box">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <h5>Email</h5>
+
+                    <p>pratikwarhade24@gmail.com</p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- YAHI ADD KARNA HAI -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">
+            What Our Customers Say
+        </h2>
+
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Beautiful jewellery collection and excellent service.
+                        The staff was very helpful and the quality is outstanding.
+                    </p>
+
+                    <h5>Priya Sharma</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Transparent pricing and elegant designs.
+                        Highly recommended for bridal jewellery.
+                    </p>
+
+                    <h5>Rahul Verma</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Trusted jeweller with premium quality.
+                        Loved the overall shopping experience.
+                    </p>
+
+                    <h5>Sneha Patil</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% include "home/footer.html" %}
 
 <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
    class="whatsapp-float"

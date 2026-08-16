@@ -1,15 +1,184 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.db.models import Q
-from .models import Product, Wishlist, Contact
+from decimal import Decimal
+from .models import Product, Wishlist, Contact, MetalRate
+from .models import CustomEnquiry
+from .models import CustomGallery
 
+
+
+
+
+def calculate_product_price(product):
+
+    calculated_price = None
+
+    # ==========================================
+    # GOLD
+    # ==========================================
+
+    if (
+        product.category == "Gold"
+        and product.purity in ["18K", "22K", "24K"]
+    ):
+
+        gold_rate = MetalRate.objects.filter(
+        metal="Gold",
+        purity=product.purity
+        ).first()
+
+        if gold_rate:
+
+        # MetalRate is per 10 grams
+            rate_per_gram = gold_rate.rate / Decimal("10")
+
+          # Gold value according to product weight
+            metal_value = rate_per_gram * product.weight
+
+            # Making Charge (Percentage)
+            making_amount = (
+            metal_value * product.making_charge / Decimal("100")
+)
+
+            # Hallmark Charge
+            hallmark_charge = Decimal("45")
+
+           # Subtotal
+            subtotal = (
+                    metal_value
+                  + making_amount
+                  + product.stone_charge
+                  + hallmark_charge
+)
+
+                # GST
+            gst_amount = subtotal * product.gst_percentage / Decimal("100")
+
+             # Final price
+            calculated_price = subtotal + gst_amount
+
+    # ==========================================
+    # SILVER
+    # ==========================================
+
+    elif (
+        product.category == "Silver"
+        and product.purity == "925"
+    ):
+
+        silver_rate = MetalRate.objects.filter(
+            metal="Silver",
+            purity="925"
+        ).first()
+
+        if silver_rate:
+
+            # Silver rate is per 1 kilogram
+            rate_per_gram = silver_rate.rate / Decimal("1000")
+
+            # 925 purity
+            purity_rate = (
+                rate_per_gram * Decimal("925") / Decimal("1000")
+            )
+
+            # Silver value according to product weight
+            metal_value = purity_rate * product.weight
+
+# Making Charge (Percentage)
+            making_amount = (
+              metal_value * product.making_charge / Decimal("100")
+)
+
+# Hallmark Charge
+            hallmark_charge = Decimal("45")
+
+# Subtotal
+        subtotal = (
+              metal_value
+             + making_amount
+             + product.stone_charge
+             + hallmark_charge
+)
+
+# GST
+        gst_amount = subtotal * product.gst_percentage / Decimal("100")
+
+# Final price
+        calculated_price = subtotal + gst_amount
+
+
+    # ==========================================
+    # FALLBACK
+    # ==========================================
+
+    if calculated_price is None:
+        calculated_price = product.price
+
+    return calculated_price
 
 def home(request):
 
     featured_products = Product.objects.all()[:4]
 
+    gold_rate = MetalRate.objects.filter(
+        metal="Gold",
+        purity="24K"
+    ).first()
+
+    rate24 = rate22 = rate20 = rate18 = rate14 = rate9 = None
+
+    if gold_rate:
+
+         rate24 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="24K"
+    ).first()
+
+    rate22 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="22K"
+    ).first()
+
+    rate20 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="20K"
+    ).first()
+
+    rate18 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="18K"
+    ).first()
+
+    rate14 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="14K"
+    ).first()
+
+    rate9 = MetalRate.objects.filter(
+        metal="Gold",
+        purity="9K"
+    ).first()
+
+    rate24 = rate24.rate if rate24 else None
+    rate22 = rate22.rate if rate22 else None
+    rate20 = rate20.rate if rate20 else None
+    rate18 = rate18.rate if rate18 else None
+    rate14 = rate14.rate if rate14 else None
+    rate9 = rate9.rate if rate9 else None
+
+    # Calculate current price for every featured product
+    for product in featured_products:
+        product.calculated_price = calculate_product_price(product)
+
     context = {
-        "featured_products": featured_products
+        "featured_products": featured_products,
+        "rate24": rate24,
+        "rate22": rate22,
+        "rate20": rate20,
+        "rate18": rate18,
+        "rate14": rate14,
+        "rate9": rate9,
     }
 
     return render(request, "home/home.html", context)
@@ -36,15 +205,105 @@ def contact(request):
 
     return render(request, "home/contact.html")
 
+from .models import Product
+
 def gold(request):
 
-    gold_products = Product.objects.filter(category='Gold')
+    filter_type = request.GET.get("type", "all")
+    product_type = request.GET.get("product_type", "all")
+    weight_filter = request.GET.get("weight", "all")
+    purity_filter = request.GET.get("purity", "all")
+
+    products = Product.objects.filter(category="Gold")
+
+    if filter_type != "all":
+        products = products.filter(gender=filter_type)
+
+    if product_type != "all":
+        products = products.filter(product_type=product_type)
+    
+    if weight_filter == "under5":
+       products = products.filter(weight__lt=5)
+
+    elif weight_filter == "5to10":
+       products = products.filter(weight__gte=5, weight__lte=10)
+
+    elif weight_filter == "10to20":
+       products = products.filter(weight__gt=10, weight__lte=20)
+
+    elif weight_filter == "above20":
+       products = products.filter(weight__gt=20)
+       
+    if purity_filter != "all":
+       products = products.filter(purity=purity_filter)
+       
+    # Sidebar categories according to gender
+
+    if filter_type == "Women":
+
+      sidebar_categories = [
+        "Ring",
+        "Earrings",
+        "Necklace",
+        "Bangles",
+        "Bracelet",
+        "Chain",
+        "Pendant",
+        "Mangalsutra",
+    ]
+
+    elif filter_type == "Men":
+
+      sidebar_categories = [
+        "Ring",
+        "Chain",
+        "Bracelet",
+        "Kada",
+        "Pendant",
+    ]
+
+    elif filter_type == "Kids":
+
+       sidebar_categories = [
+        "Ring",
+        "Bracelet",
+        "Chain",
+        "Earrings",
+        "Nazariya",
+    ]
+
+    else:
+
+       sidebar_categories = [
+        "Ring",
+        "Earrings",
+        "Necklace",
+        "Bangles",
+        "Bracelet",
+        "Chain",
+        "Pendant",
+        "Mangalsutra",
+        "Kada",
+        "Nazariya",
+    ]
+
+    # Calculate current price for every product
+    product_prices = {}
+
+    for product in products:
+        product_prices[product.id] = calculate_product_price(product)
 
     context = {
-        'products': gold_products
-    }
+    "products": products,
+    "filter_type": filter_type,
+    "product_type": product_type,
+    "weight_filter": weight_filter,
+    "purity_filter": purity_filter,
+    "product_prices": product_prices,
+    "sidebar_categories": sidebar_categories,
+}
 
-    return render(request, 'home/gold.html', context)
+    return render(request, "home/gold.html", context)
 
 def product_detail(request, id):
 
@@ -54,55 +313,180 @@ def product_detail(request, id):
         category=product.category
     ).exclude(id=product.id)[:4]
 
-    wishlist_ids = Wishlist.objects.values_list('product_id', flat=True)
+    for item in related_products:
+        item.calculated_price = calculate_product_price(item)
+
+    wishlist_ids = Wishlist.objects.values_list(
+        "product_id",
+        flat=True
+    )
+
+    gold_rate_obj = MetalRate.objects.filter(
+        metal="Gold",
+        purity="24K"
+    ).first()
+
+    silver_rate_obj = MetalRate.objects.filter(
+        metal="Silver",
+        purity="925"
+    ).first()
+
+    calculated_price = None
+    purity_rate = None
+    metal_value = None
+    subtotal = None
+    gst_amount = None
+
+    making_amount = Decimal("0")
+    hallmark_charge = Decimal("45")
+
+    # ---------------- GOLD ----------------
+
+    if (
+        product.category == "Gold"
+        and gold_rate_obj
+        and product.purity in ["18K", "22K", "24K"]
+    ):
+
+        metal_rate_obj = MetalRate.objects.filter(
+        metal="Gold",
+        purity=product.purity
+        ).first()
+
+        if metal_rate_obj:
+         purity_rate = metal_rate_obj.rate / Decimal("10")
+
+        metal_value = purity_rate * product.weight
+
+        making_amount = (
+            metal_value * product.making_charge / Decimal("100")
+        )
+
+        subtotal = (
+            metal_value
+            + making_amount
+            + product.stone_charge
+            + hallmark_charge
+        )
+
+        gst_amount = (
+            subtotal * product.gst_percentage / Decimal("100")
+        )
+
+        calculated_price = subtotal + gst_amount
+
+    # ---------------- SILVER ----------------
+
+    elif (
+        product.category == "Silver"
+        and silver_rate_obj
+        and product.purity == "925"
+    ):
+
+        rate_per_gram = silver_rate_obj.rate / Decimal("1000")
+
+        purity_rate = (
+            rate_per_gram * Decimal("925") / Decimal("1000")
+        )
+
+        metal_value = purity_rate * product.weight
+
+        making_amount = (
+            metal_value * product.making_charge / Decimal("100")
+        )
+
+        subtotal = (
+            metal_value
+            + making_amount
+            + product.stone_charge
+            + hallmark_charge
+        )
+
+        gst_amount = (
+            subtotal * product.gst_percentage / Decimal("100")
+        )
+
+        calculated_price = subtotal + gst_amount
+
+    else:
+        calculated_price = product.price
 
     context = {
-        'product': product,
-        'related_products': related_products,
-        'wishlist_ids': wishlist_ids,
+        "product": product,
+        "related_products": related_products,
+        "wishlist_ids": wishlist_ids,
+        "gold_rate_obj": gold_rate_obj,
+        "silver_rate_obj": silver_rate_obj,
+        "purity_rate": purity_rate,
+        "metal_value": metal_value,
+        "subtotal": subtotal,
+        "gst_amount": gst_amount,
+        "calculated_price": calculated_price,
+        "making_amount": making_amount,
+        "hallmark_charge": hallmark_charge,
     }
 
-    return render(request, 'home/product_detail.html', context)
-
-
+    return render(
+        request,
+        "home/product_detail.html",
+        context,
+    )
 def search(request):
 
-    query = request.GET.get('q', '')
+    query = request.GET.get('q', '').strip()
     category = request.GET.get('category', '')
     purity = request.GET.get('purity', '')
     sort = request.GET.get('sort', '')
 
-    products = Product.objects.all()
+    # Default: koi product nahi
+    products = Product.objects.none()
+
+    # ==========================================
+    # SEARCH ONLY WHEN USER ENTERS SOMETHING
+    # ==========================================
+
     if query:
 
-    # Voice search / normal search query ko clean karo
-     query = query.lower()
+        # Voice search / normal search query clean karo
+        query = query.lower()
 
-    query = (
-        query.replace("jewellery", "")
-             .replace("jewelry", "")
-             .replace("collection", "")
-             .strip()
-    )
+        query = (
+            query.replace("jewellery", "")
+                 .replace("jewelry", "")
+                 .replace("collection", "")
+                 .strip()
+        )
 
-    products = products.filter(
-        Q(name__icontains=query) |
-        Q(product_code__icontains=query) |
-        Q(category__icontains=query) |
-        Q(purity__icontains=query)
-    )
+        # Agar cleaning ke baad query empty ho gayi
+        # toh bhi products show nahi honge
+        if query:
 
-    if category:
-        products = products.filter(category=category)
+            products = Product.objects.filter(
+                Q(name__icontains=query) |
+                Q(product_code__icontains=query) |
+                Q(category__icontains=query) |
+                Q(purity__icontains=query)
+            )
 
-    if purity:
-        products = products.filter(purity=purity)
+            # Category filter
+            if category:
+                products = products.filter(category=category)
 
-    if sort == "low":
-        products = products.order_by("price")
+            # Purity filter
+            if purity:
+                products = products.filter(purity=purity)
 
-    elif sort == "high":
-        products = products.order_by("-price")
+            # Sorting
+            if sort == "low":
+                products = products.order_by("price")
+
+            elif sort == "high":
+                products = products.order_by("-price")
+
+
+    # ==========================================
+    # CONTEXT
+    # ==========================================
 
     context = {
         "products": products,
@@ -114,35 +498,227 @@ def search(request):
 
     return render(request, "home/search.html", context)
 
-def silver(request):
 
-    silver_products = Product.objects.filter(category='Silver')
+def silver(request):
+    
+    filter_type = request.GET.get("type", "all")
+    product_type = request.GET.get("product_type", "all")
+    weight_filter = request.GET.get("weight", "all")
+    purity_filter = request.GET.get("purity", "all")
+
+    products = Product.objects.filter(category="Silver")
+
+    if filter_type != 'all':
+        products = products.filter(gender=filter_type)
+        
+    if product_type != "all":
+        products = products.filter(product_type=product_type)
+
+    if weight_filter == "under5":
+        products = products.filter(weight__lt=5)
+
+    elif weight_filter == "5to10":
+        products = products.filter(weight__gte=5, weight__lte=10)
+
+    elif weight_filter == "10to20":
+        products = products.filter(weight__gt=10, weight__lte=20)
+
+    elif weight_filter == "above20":
+        products = products.filter(weight__gt=20)
+
+    if purity_filter != "all":
+        products = products.filter(purity=purity_filter)
+     
+    # Sidebar categories according to gender
+
+    if filter_type == "Women":
+
+      sidebar_categories = [
+        "Ring",
+        "Chain",
+        "Bracelet",
+        "Pendant",
+        "Earrings",
+        "Anklet",
+        "Bangle",
+    ]
+
+    elif filter_type == "Men":
+
+      sidebar_categories = [
+        "Ring",
+        "Chain",
+        "Bracelet",
+    ]
+
+    elif filter_type == "Kids":
+
+      sidebar_categories = [
+        "Ring",
+        "Chain",
+        "Bracelet",
+        "Pendant",
+    ]
+
+    else:
+
+        sidebar_categories = [
+        "Ring",
+        "Chain",
+        "Bracelet",
+        "Pendant",
+        "Earrings",
+        "Anklet",
+        "Bangle",
+    ]
+ 
+    # Calculate current price for every product
+    product_prices = {}
+
+    for product in products:
+        product_prices[product.id] = calculate_product_price(product)
 
     context = {
-        'products': silver_products
-    }
+        "products": products,
+        "filter_type": filter_type,
+        "product_type": product_type,
+        "weight_filter": weight_filter,
+        "purity_filter": purity_filter,
+        "product_prices": product_prices,
+        "sidebar_categories": sidebar_categories,
+}
 
     return render(request, 'home/silver.html', context)
 
-def diamond(request):
 
-    diamond_products = Product.objects.filter(category='Diamond')
+def diamond(request):
+    
+    filter_type = request.GET.get("type", "all")
+    product_type = request.GET.get("product_type", "all")
+    weight_filter = request.GET.get("weight", "all")
+    purity_filter = request.GET.get("purity", "all")
+
+    products = Product.objects.filter(category="Diamond")
+
+    
+    # Top Navigation Filter
+
+    if filter_type == "Bridal Sets":
+        products = products.filter(product_type="Jewellery Set")
+
+    elif filter_type == "Necklaces":
+        products = products.filter(product_type="Necklace")
+
+    elif filter_type == "Earrings":
+        products = products.filter(product_type="Earrings")
+
+    elif filter_type == "Bracelets":
+        products = products.filter(product_type="Bracelet")
+        
+    if product_type != "all":
+        products = products.filter(product_type=product_type)
+
+    if weight_filter == "under5":
+        products = products.filter(weight__lt=5)
+
+    elif weight_filter == "5to10":
+        products = products.filter(weight__gte=5, weight__lte=10)
+
+    elif weight_filter == "10to20":
+        products = products.filter(weight__gt=10, weight__lte=20)
+
+    elif weight_filter == "above20":
+        products = products.filter(weight__gt=20)
+
+    if purity_filter != "all":
+        products = products.filter(purity=purity_filter)
+        
+    sidebar_categories = [
+       "Ring",
+       "Jewellery Set",
+       "Necklace",
+       "Earrings",
+       "Bracelet",
+       "Pendant",
+]
 
     context = {
-        'products': diamond_products
-    }
+    "products": products,
+    "filter_type": filter_type,
+    "product_type": product_type,
+    "weight_filter": weight_filter,
+    "purity_filter": purity_filter,
+    "sidebar_categories": sidebar_categories,
+}
 
     return render(request, 'home/diamond.html', context)
 
 def bridal(request):
 
-    bridal_products = Product.objects.filter(category='Bridal')
+    filter_type = request.GET.get("type", "all")
+    product_type = request.GET.get("product_type", "all")
+    weight_filter = request.GET.get("weight", "all")
+    purity_filter = request.GET.get("purity", "all")
+
+    products = Product.objects.filter(category="Bridal")
+
+    # Top Filter
+
+    if filter_type == "Bridal Sets":
+        products = products.filter(product_type="Jewellery Set")
+
+    elif filter_type == "Necklaces":
+        products = products.filter(product_type="Necklace")
+
+    elif filter_type == "Bangles":
+        products = products.filter(product_type="Bangles")
+
+    elif filter_type == "Earrings":
+        products = products.filter(product_type="Earrings")
+
+    # Sidebar Filter
+
+    if product_type != "all":
+        products = products.filter(product_type=product_type)
+
+    # Weight
+
+    if weight_filter == "under5":
+        products = products.filter(weight__lt=5)
+
+    elif weight_filter == "5to10":
+        products = products.filter(weight__gte=5, weight__lte=10)
+
+    elif weight_filter == "10to20":
+        products = products.filter(weight__gt=10, weight__lte=20)
+
+    elif weight_filter == "above20":
+        products = products.filter(weight__gt=20)
+
+    # Purity
+
+    if purity_filter != "all":
+        products = products.filter(purity=purity_filter)
+
+    # Sidebar Categories
+
+    sidebar_categories = [
+        "Jewellery Set",
+        "Necklace",
+        "Bangles",
+        "Earrings",
+    ]
 
     context = {
-        'products': bridal_products
+        "products": products,
+        "filter_type": filter_type,
+        "product_type": product_type,
+        "weight_filter": weight_filter,
+        "purity_filter": purity_filter,
+        "sidebar_categories": sidebar_categories,
     }
 
-    return render(request, 'home/bridal.html', context)
+    return render(request, "home/bridal.html", context)
 
 def custom(request):
 
@@ -156,13 +732,64 @@ def custom(request):
 
 def coins(request):
 
-    coin_products = Product.objects.filter(category='Coins')
+    filter_type = request.GET.get("type", "all")
+    product_type = request.GET.get("product_type", "all")
+    weight_filter = request.GET.get("weight", "all")
+    purity_filter = request.GET.get("purity", "all")
+
+    products = Product.objects.filter(category="Coins")
+
+    # TOP FILTERS
+
+    # Top Navigation Filter
+
+    if filter_type == "Gold Coin":
+        products = products.filter(purity="24K")
+
+    elif filter_type == "Silver Coin":
+        products = products.filter(purity="925")
+
+    elif filter_type == "Lakshmi Ganesh":
+        products = products.filter(name__icontains="Lakshmi") | products.filter(name__icontains="Ganesha")
+
+    elif filter_type == "Gift Coin":
+        products = products.filter(name__icontains="Gift")
+
+    # SIDEBAR FILTERS
+
+    if product_type != "all":
+        products = products.filter(product_type=product_type)
+
+    if weight_filter == "under5":
+        products = products.filter(weight__lt=5)
+
+    elif weight_filter == "5to10":
+        products = products.filter(weight__gte=5, weight__lte=10)
+
+    elif weight_filter == "10to20":
+        products = products.filter(weight__gt=10, weight__lte=20)
+
+    elif weight_filter == "above20":
+        products = products.filter(weight__gt=20)
+
+    if purity_filter != "all":
+        products = products.filter(purity=purity_filter)
+
+    sidebar_categories = [
+        "Coins",
+    ]
 
     context = {
-        'products': coin_products
+        "products": products,
+        "filter_type": filter_type,
+        "product_type": product_type,
+        "weight_filter": weight_filter,
+        "purity_filter": purity_filter,
+        "sidebar_categories": sidebar_categories,
     }
 
-    return render(request, 'home/coins.html', context)
+    return render(request, "home/coins.html", context)
+
 
 def about(request):
     return render(request, "home/about.html")
@@ -203,3 +830,123 @@ def remove_from_wishlist(request, id):
 
 def about(request):
     return render(request, 'home/about.html')
+
+def get_metal_rate(request):
+    purity = request.GET.get("purity")
+
+    if not purity:
+        return JsonResponse({"rate": 0})
+
+    metal = "Gold"
+
+    if purity == "925":
+        metal = "Silver"
+
+    rate = MetalRate.objects.filter(
+        metal=metal,
+        purity=purity
+    ).first()
+
+    if rate:
+        return JsonResponse({"rate": float(rate.rate)})
+
+    return JsonResponse({"rate": 0})
+
+
+
+
+def save(self, *args, **kwargs):
+      super().save(*args, **kwargs)
+
+      if self.metal == "Gold" and self.purity == "24K":
+
+        from .models import GoldPurity
+
+        base_percentage = GoldPurity.objects.get(purity="24K").percentage
+
+        purities = GoldPurity.objects.exclude(purity="24K")
+
+        for p in purities:
+
+            new_rate = (self.rate * p.percentage) / base_percentage
+
+            MetalRate.objects.update_or_create(
+                metal="Gold",
+                purity=p.purity,
+                defaults={
+                    "rate": new_rate,
+                    "unit": self.unit,
+                }
+            )
+            
+def custom_category(request, jewellery_type):
+
+    if request.method == "POST":
+
+        enquiry = CustomEnquiry.objects.create(
+
+        name=request.POST.get("name"),
+
+        phone=request.POST.get("phone"),
+
+        jewellery_type=jewellery_type,
+
+        gold_purity=request.POST.get("gold_purity"),
+
+        budget=request.POST.get("budget"),
+
+        design_idea=request.POST.get("design_idea"),
+
+)
+
+
+    if request.FILES.get("reference_image"):
+
+        enquiry.reference_image = request.FILES.get("reference_image")
+
+        enquiry.save()
+
+
+    data = {
+
+        "ring": {
+            "title": "Custom Ring Designs",
+            "icon": "💍"
+        },
+
+        "necklace": {
+            "title": "Custom Necklace Designs",
+            "icon": "📿"
+        },
+
+        "bridal": {
+            "title": "Custom Bridal Sets",
+            "icon": "👰"
+        },
+
+        "pendant": {
+            "title": "Custom Pendant Designs",
+            "icon": "💎"
+        },
+
+        "earrings": {
+            "title": "Custom Earrings Designs",
+            "icon": "👂"
+        },
+
+        "couple-ring": {
+            "title": "Custom Couple Ring Designs",
+            "icon": "💞"
+        }
+
+    }
+    gallery = CustomGallery.objects.filter(category=jewellery_type)
+
+    return render(
+        request,
+        "home/custom_category.html",
+        {
+            "category": data.get(jewellery_type),
+            "gallery": gallery,
+        }
+    )

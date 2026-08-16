@@ -20,9 +20,15 @@ urlpatterns = [
     views.remove_from_wishlist,
     name="remove_from_wishlist"
 ),
+    path(
+    "get-metal-rate/",
+    views.get_metal_rate,
+    name="get_metal_rate",
+),
     path('about/', views.about, name='about'),
     path('product/<int:id>/', views.product_detail, name='product_detail'),
     
+    path('custom/<str:jewellery_type>/', views.custom_category, name='custom_category'),
     # Product Detail Page
     path('product/<int:id>/', views.product_detail, name='product_detail'),
 ]
