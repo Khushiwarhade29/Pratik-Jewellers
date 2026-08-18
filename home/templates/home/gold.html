@@ -34,6 +34,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         Explore our exclusive handcrafted 22K & 24K Hallmarked Gold Jewellery.
     </p>
     <div class="gold-filter text-center my-4">
+        
 
     <a href="{% url 'gold' %}?type=all"
        class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
@@ -380,6 +381,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <h3>{{ product.name }}</h3>
 
     <p>{{ product.purity }} • {{ product.weight }} gm</p>
+
+    
 
     <a href="{% url 'product_detail' product.id %}" class="gold-btn">
         View Details

@@ -43,7 +43,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 
-    <div class="row">
+    
 
 
         <section class="custom-design-section py-5">
@@ -62,7 +62,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="row g-4">
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
             <a href="{% url 'custom_category' 'ring' %}" class="design-card">
 
     💍
@@ -71,7 +71,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
             <a href="{% url 'custom_category' 'necklace' %}" class="design-card">
 
     📿
@@ -80,7 +80,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
             <a href="{% url 'custom_category' 'bridal' %}" class="design-card">
 
     👰
@@ -89,7 +89,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
            <a href="{% url 'custom_category' 'pendant' %}" class="design-card">
 
     💎
@@ -98,7 +98,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
             <a href="{% url 'custom_category' 'earrings' %}" class="design-card">
 
     👂
@@ -107,7 +107,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="custom-design-item">
            <a href="{% url 'custom_category' 'couple-ring' %}" class="design-card">
 
     💞
@@ -116,7 +116,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
         </div>
 
-    </div>
+    
 
 </section>
 
@@ -136,7 +136,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="row text-center">
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="custom-process-item">
 
             <div class="process-card">
 
@@ -154,7 +154,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="custom-process-item">
 
             <div class="process-card">
 
@@ -172,7 +172,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="custom-process-item">
 
             <div class="process-card">
 
@@ -190,7 +190,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="custom-process-item">
 
             <div class="process-card">
 
@@ -229,7 +229,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="row g-4">
 
-        <div class="col-lg-3 col-md-6">
+        <div class="why-custom-item">
 
             <div class="why-card">
 
@@ -245,7 +245,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="why-custom-item">
 
             <div class="why-card">
 
@@ -261,7 +261,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="why-custom-item">
 
             <div class="why-card">
 
@@ -277,7 +277,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="why-custom-item">
 
             <div class="why-card">
 
@@ -383,6 +383,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
+<div class="row g-4">
+
         {% for product in products %}
 
 <div class="col-lg-4 col-md-6 mb-5">
@@ -434,6 +436,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         {% endfor %}
 
     </div>
+    </div>
+
 
 </section>
 

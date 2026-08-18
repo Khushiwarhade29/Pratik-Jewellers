@@ -1,0 +1,6259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   BASIC NAVIGATION
+===================================================== */
+
+nav {
+    background: #111;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: #d4af37;
+    font-size: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav-links li a:hover {
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h3 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    margin: 10px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+}
+
+.hero-line {
+    width: 120px;
+    height: 4px;
+    background: #D4AF37;
+    margin: 0 auto 35px;
+    border-radius: 50px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 60px;
+    margin: 15px 10px;
+    background: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #b8941f;
+}
+
+.btn-gold,
+.btn-outline {
+    width: 280px;
+    height: 60px;
+}
+
+
+/* =====================================================
+   DESKTOP LOGO
+===================================================== */
+
+/*@media (min-width: 769px) {
+
+    .desktop-logo img,
+    .logo img {
+        width: 120px;
+        height: 60px;
+        object-fit: contain;
+        display: block;
+        margin: 0;
+    }
+
+}
+
+
+/* =====================================================
+   COLLECTION SECTION
+===================================================== */
+
+.collections {
+    background: #f8f8f8;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.collections h2 {
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.collections h2::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: #D4AF37;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+    background: #fff;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+    color: #222;
+    font-size: 24px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card-body h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    margin-bottom: 8px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.card-body h5 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   WHY US
+===================================================== */
+
+.why-us {
+    padding: 60px 8%;
+    text-align: center;
+    background: #faf7f2;
+}
+
+.why-us h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px 60px;
+}
+
+.why-card {
+    background: #fff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+}
+
+.why-card i {
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.why-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    padding: 70px 8%;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image img {
+    width: 450px;
+    border-radius: 15px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-section {
+    background: #111;
+    color: #fff;
+    padding: 120px 8% 90px;
+    min-height: 100vh;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-heading h1 {
+    color: #D4AF37;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.contact-heading p {
+    color: #cfcfcf;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #D4AF37;
+}
+
+.contact-card i {
+    color: #D4AF37;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+}
+
+.contact-card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-form {
+    background: #1b1b1b;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    color: #D4AF37;
+    margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #2c2c2c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background: white;
+}
+
+.direction-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #D4AF37;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.direction-btn:hover {
+    background: white;
+}
+
+
+/* =====================================================
+   FEATURED JEWELLERY
+===================================================== */
+
+.featured {
+    padding: 80px 8%;
+    background: #fff;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #b8860b;
+    margin-bottom: 50px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+    transition: .35s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.product-content {
+    padding: 18px;
+}
+
+.product-title {
+    margin-bottom: 8px;
+}
+
+.product-meta {
+    margin-bottom: 5px;
+}
+
+.product-price {
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   CUSTOMIZED JEWELLERY
+===================================================== */
+
+.customized {
+    padding: 80px 2%;
+    background: #faf8f3;
+    text-align: center;
+}
+
+.customized h2 {
+    font-size: 42px;
+    color: #b8860b;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.customized-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    max-width:1400px;
+    margin:40px auto 0;
+    align-items:stretch;
+}
+
+.custom-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.custom-card img {
+    width: 100%;
+    height: 260px;
+    object-fit:cover;
+    object-position: center;
+    display: block;
+}
+
+.custom-card h3{
+    padding:20px 20px 10px;
+    margin:0;
+}
+
+.custom-card p{
+    padding:0 20px 25px;
+    margin-top:auto;
+    color:#666;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   CUSTOM / COLLECTION LINKS
+===================================================== */
+
+.collection-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.collection-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.collection-link .card {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.collection-link .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.custom-link{
+    text-decoration:none;
+    color:inherit;
+    display:flex;
+    height:100%;
+}
+
+.custom-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-link .custom-card {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.custom-link .custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+
+.about-hero {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+
+/* =====================================================
+   OUR STORY
+===================================================== */
+
+.our-story {
+    padding: 80px 8%;
+    background: #fff;
+}
+
+.story-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-size: 40px;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   WHY CHOOSE US
+===================================================== */
+
+.why-choose {
+    padding: 80px 8%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 40px;
+    color: #D4AF37;
+    margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+    padding: 80px 8%;
+    background: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 40px;
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+.services-subtitle {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #111;
+    color: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: #D4AF37;
+    color: #111;
+}
+
+.service-card i {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   PREMIUM NAVBAR
+===================================================== */
+
+.custom-navbar .container {
+    max-width: 1320px;
+}
+
+.icon-item {
+    margin-left: 18px;
+}
+
+.icon-item .nav-link {
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.dropdown-item {
+    color: #fff;
+    padding: 12px 20px;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background: #D4AF37;
+    color: #111;
+    padding-left: 28px;
+}
+
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, .08);
+}
+
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    background: #111;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-top: 15px;
+    min-width: 240px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: .3s;
+}
+
+@media (min-width: 992px) {
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   GOLD COLLECTION
+===================================================== */
+
+.gold-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+    transition: .4s;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gold-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+}
+
+.gold-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.gold-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.gold-card:hover img {
+    transform: scale(1.08);
+}
+
+.gold-info {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gold-info h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 30px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.gold-info hr {
+    border: 2px solid #d4af37;
+    width: 70px;
+    opacity: 1;
+}
+
+.gold-info p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 17px;
+}
+
+.gold-info h4 {
+    color: #d4af37;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.gold-btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    transition: .3s;
+    width: 70%;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.gold-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =====================================================
+   PRODUCT DETAIL
+===================================================== */
+
+.product-details {
+    padding: 130px 0 80px;
+    background: #f8f8f8;
+}
+
+.product-image-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+
+.product-image-box img {
+    width: 100%;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+.product-image-box:hover img {
+    transform: scale(1.05);
+}
+
+.product-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #222;
+}
+
+.product-price {
+    color: #d4af37;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+
+.product-description {
+    margin-top: 30px;
+}
+
+.product-description h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   PRODUCT GALLERY
+===================================================== */
+
+.thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.thumb:hover {
+    border-color: #d4af37;
+    transform: scale(1.05);
+}
+
+.active-thumb {
+    border-color: #d4af37;
+}
+
+
+/* =====================================================
+   PRODUCT DETAIL BUTTONS
+===================================================== */
+
+.detail-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    margin-top: 25px;
+}
+
+.detail-buttons .btn {
+    width: auto;
+    min-width: 180px;
+    padding: 12px 22px;
+}
+
+.mt-4.d-flex .btn {
+    white-space: nowrap;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.product-buttons .btn {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   PRODUCT CAROUSEL
+===================================================== */
+
+#productCarousel {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .08);
+}
+
+.carousel-item img {
+    height: 540px;
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   RELATED PRODUCTS
+===================================================== */
+
+.related-btn {
+    width: 75%;
+    margin: 15px auto 0;
+    display: block;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.related-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =====================================================
+   PRODUCT / WISHLIST
+===================================================== */
+
+.product-carousel {
+    position: relative;
+}
+
+.detail-wishlist {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+}
+
+.related-image {
+    position: relative;
+}
+
+.related-image .wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .9);
+
+    color: #d4af37;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+    transition: .3s;
+    z-index: 10;
+}
+
+.wishlist-btn:hover {
+    background: #d4af37;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.wishlist-btn i {
+    color: #777;
+    transition: .3s;
+}
+
+.wishlist-btn.active {
+    background: #d4af37;
+    color: white;
+}
+
+.wishlist-btn.active i {
+    color: #e63946;
+}
+
+.wishlist-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.wishlist-buttons .btn {
+    flex: 1;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: auto;
+    min-width: 260px;
+    padding: 12px 22px;
+
+    white-space: nowrap;
+
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SEARCH / VOICE
+===================================================== */
+
+.voice-btn,
+.search-btn {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px;
+    transition: .3s;
+}
+
+.voice-btn:hover,
+.search-btn:hover {
+    color: #f5d76e;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+    z-index: 9999;
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    color: white;
+}
+
+
+/* =====================================================
+   HELP SECTION
+===================================================== */
+
+.help-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.help-section h2 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.help-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.help-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.help-card i {
+    font-size: 35px;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.help-card h3 {
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   FEATURED PRODUCT IMAGE
+===================================================== */
+
+.featured {
+    background: transparent;
+    padding: 60px 0;
+}
+
+.product-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #333;
+}
+
+.product-info {
+    padding: 20px 0;
+    text-align: left;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 25px 0;
+}
+
+.product-info h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+}
+
+.product-info p strong {
+    color: #111;
+    font-weight: 600;
+}
+
+.product-info p:last-child {
+    border-bottom: none;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   MEGA MENU
+===================================================== */
+
+.mega-category-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.mega-category-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.mega-category-bar a:hover {
+    color: #D4AF37;
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    border-top: 1px solid #c9a227;
+    display: none;
+    z-index: 9999;
+}
+
+.mega-menu.active {
+    display: block;
+}
+
+
+/* =====================================================
+   SHOP CATEGORIES
+===================================================== */
+
+.shop-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.shop-categories a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    transition: .3s;
+}
+
+.shop-categories a:hover {
+    color: #D4AF37;
+}
+
+.shop-categories a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #D4AF37;
+    transition: .3s;
+}
+
+.shop-categories a:hover::after {
+    width: 100%;
+}
+
+.sub-menu-click {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px 0 25px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-menu-click a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.sub-menu-click a:hover {
+    color: #D4AF37;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.category-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.category-links a:hover {
+    color: #D4AF37;
+}
+
+.audience-filter {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px 0 35px;
+}
+
+.audience-filter a {
+    text-decoration: none;
+    color: #222;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.audience-filter a:hover {
+    color: #D4AF37;
+}
+
+
+/* =====================================================
+   GOLD FILTER
+===================================================== */
+
+.gold-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    text-decoration: none;
+    background: #111;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+/* =====================================================
+   GOLD COLLECTION - DESKTOP SHOP LAYOUT
+===================================================== */
+
+.gold-shop-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* LEFT SIDEBAR */
+
+.gold-sidebar {
+    width: 245px;
+    min-width: 245px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 25px 22px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 95px;
+}
+
+.gold-sidebar h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+}
+
+.sidebar-line {
+    width: 45px;
+    height: 3px;
+    background: #D4AF37;
+    margin: 12px 0 25px;
+}
+
+/* FILTER SECTIONS */
+
+.filter-section {
+    padding: 0 0 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.filter-section label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-section label:hover {
+    color: #b8860b;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #D4AF37;
+}
+
+/* RIGHT PRODUCT AREA */
+
+.gold-products-area {
+    flex: 1;
+    min-width: 0;
+}
+
+.gold-products-area .row {
+    margin-top: 0;
+}
+
+.filter-btn:hover {
+    background: #d4af37;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #d4af37;
+    color: #111;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, .35);
+}
+
+.gold-type-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   FILTER BAR
+===================================================== */
+
+.filter-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 25px 0 35px;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.filter-item select {
+    min-width: 220px;
+    padding: 12px 16px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter-item select:focus {
+    border-color: #b8941f;
+}
+
+
+/* =====================================================
+   COLLECTION HIGHLIGHTS
+===================================================== */
+
+.collection-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.highlight-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #111;
+    border: 1.5px solid #d4af37;
+    border-radius: 30px;
+    color: #fff;
+    transition: .3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px);
+}
+
+.highlight-card i,
+.highlight-card span {
+    font-size: 22px;
+}
+
+.highlight-card h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   PRODUCTS GRID
+===================================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =====================================================
+   MOBILE OLD MENU
+===================================================== */
+
+.mobile-submenu {
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.mobile-submenu li a {
+    display: block;
+    padding: 8px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-submenu.show,
+.mobile-collection.active .mobile-submenu {
+    display: block;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.collection-toggle.active .arrow {
+    transform: rotate(90deg);
+}
+
+.collection-item {
+    position: relative;
+}
+
+.dropdown-custom {
+    position: relative;
+}
+
+.dropdown-custom:hover .desktop-submenu {
+    display: block;
+}
+
+
+/* =====================================================
+   PRATIK JEWELLERS NAVBAR
+===================================================== */
+
+.main-navbar {
+    width: 100%;
+    background: #111;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    position: relative;
+    z-index: 9999;
+}
+
+.desktop-navbar {
+    margin-left: auto;
+}
+
+.desktop-navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-navbar .nav-item {
+    position: relative;
+    margin: 0;
+}
+
+.desktop-navbar .nav-link {
+    position: relative;
+    display: block;
+    padding: 10px 12px;
+    color: white !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.desktop-navbar .nav-link:hover {
+    color: #D4AF37 !important;
+}
+
+.desktop-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 2px;
+    height: 2px;
+    width: 0;
+    background: #D4AF37;
+    transition: 0.3s;
+}
+
+.desktop-navbar .nav-link:hover::after {
+    width: calc(100% - 24px);
+}
+
+
+/* =====================================================
+   DESKTOP DROPDOWN
+===================================================== */
+
+.desktop-submenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 190px;
+    background: #181818;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+}
+
+.desktop-submenu li {
+    width: 100%;
+}
+
+.desktop-submenu li a {
+    display: block;
+    padding: 11px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.desktop-submenu li a:hover {
+    background: #D4AF37;
+    color: #111;
+}
+
+.dropdown-custom:hover .desktop-submenu {
+    display: block;
+}
+
+
+/* =====================================================
+   DESKTOP WISHLIST
+===================================================== */
+
+.wishlist-item .nav-link {
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.wishlist-item i {
+    color: #D4AF37;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.wishlist-item i:hover {
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   DESKTOP SEARCH
+===================================================== */
+
+.search-nav-item {
+    margin-left: 12px !important;
+}
+
+.search-form {
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    height: 42px;
+    background: white;
+    border: 2px solid #D4AF37;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+.search-box input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.voice-btn,
+.search-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.voice-btn i {
+    color: #777;
+}
+
+.search-btn i {
+    color: #D4AF37;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MOBILE MENU OLD BUTTON
+===================================================== */
+
+#mobileMenuBtn {
+    background: none;
+    border: none;
+    color: #D4AF37;
+    font-size: 25px;
+    padding: 0;
+    cursor: pointer;
+}
+
+#mobileMenu {
+    display: none !important;
+}
+
+#mobileMenu.show {
+    display: block !important;
+}
+
+#mobileMenu > a,
+#mobileCollectionToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 5px;
+    color: white !important;
+    background: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#mobileMenu > a:hover,
+#mobileCollectionToggle:hover {
+    color: #D4AF37 !important;
+}
+
+#mobileCollectionMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 250px;
+    background: #111;
+    padding: 20px;
+}
+
+#mobileCollectionMenu.show {
+    display: block !important;
+}
+
+#mobileCollectionMenu a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+#mobileCollectionMenu a:hover {
+    color: #D4AF37;
+}
+
+
+/* =====================================================
+   MOBILE BUTTONS
+===================================================== */
+
+.mobile-menu-btn,
+.mobile-search-btn,
+.mobile-menu,
+.mobile-search-panel {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .main-navbar {
+        width: 100%;
+        background: #111;
+        position: relative;
+        z-index: 9999;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 68px;
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .main-navbar .container,
+    .main-navbar .navbar-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        color: #D4AF37;
+        font-size: 23px;
+        cursor: pointer;
+        flex-shrink: 0;
+        z-index: 10001;
+    }
+
+    .mobile-menu-btn i {
+        color: #D4AF37;
+    }
+
+    .mobile-search-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        margin: 0 0 0 auto;
+        border: none;
+        background: transparent;
+        color: #D4AF37;
+        font-size: 22px;
+        cursor: pointer;
+        flex-shrink: 0;
+        z-index: 10001;
+    }
+
+    .mobile-search-btn i {
+        color: #D4AF37;
+    }
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .desktop-submenu {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        border-top: 1px solid rgba(212, 175, 55, 0.35);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        padding: 8px 0;
+        z-index: 99999;
+    }
+
+    .mobile-menu.show {
+        display: block;
+    }
+
+    .mobile-menu-link,
+    .mobile-collection-btn {
+        width: 100%;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 22px;
+        box-sizing: border-box;
+        color: white !important;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .mobile-menu-link:hover,
+    .mobile-collection-btn:hover {
+        color: #D4AF37 !important;
+        background: rgba(212, 175, 55, 0.06);
+    }
+
+    .mobile-arrow {
+        color: #D4AF37;
+        font-size: 25px;
+        line-height: 1;
+        transition: 0.3s;
+    }
+
+    .mobile-collection-btn.active .mobile-arrow {
+        transform: rotate(90deg);
+    }
+
+    .mobile-collection-menu {
+        display: none;
+        background: #181818;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-collection-menu.show {
+        display: block;
+    }
+
+    .mobile-collection-menu a {
+        display: block;
+        padding: 13px 22px 13px 42px;
+        color: #ddd !important;
+        text-decoration: none;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-collection-menu a:hover {
+        color: #D4AF37 !important;
+        background: rgba(212, 175, 55, 0.06);
+    }
+
+    .mobile-search-panel {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 12px 15px;
+        border-top: 1px solid rgba(212, 175, 55, 0.35);
+        box-sizing: border-box;
+        z-index: 99998;
+    }
+
+    .mobile-search-panel.show {
+        display: block;
+    }
+
+    .mobile-search-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 46px;
+        background: #fff;
+        border: 2px solid #d4af37;
+        border-radius: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .mobile-search-box input {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 0 14px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .mobile-search-box input::placeholder {
+        color: #777;
+    }
+
+    .mobile-search-box button {
+        width: 45px;
+        height: 100%;
+        border: none;
+        background: transparent;
+        color: #D4AF37;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .mobile-voice-btn,
+    .mobile-search-submit {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        color: #d4af37;
+        font-size: 17px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .mobile-voice-btn:hover,
+    .mobile-search-submit:hover {
+        color: #b8941f;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE HEADER
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-header {
+        display: grid;
+        grid-template-columns: 55px 1fr 90px;
+        align-items: center;
+        width: 100%;
+        height: 74px;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        position: relative;
+        z-index: 9999;
+        box-sizing: border-box;
+    }
+
+    .mobile-menu-btn {
+        width: 55px;
+        height: 74px;
+        margin: 0;
+        padding: 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: transparent;
+        border: none;
+        color: #d4af37;
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+    .mobile-logo {
+        width: 100%;
+        height: 74px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        flex: 1;
+    }
+
+    .mobile-logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+        margin: 0;
+    }
+
+    .mobile-right-icons {
+        width: 90px;
+        height: 74px;
+        margin: 0;
+        padding: 0 8px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .mobile-search-btn,
+    .mobile-wishlist-btn {
+        width: 30px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: #d4af37;
+        font-size: 23px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .mobile-search-btn i,
+    .mobile-wishlist-btn i {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE LOGO
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+
+
+/* =====================================================
+   FULL SCREEN SEARCH
+===================================================== */
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 99999;
+    display: none;
+    overflow-y: auto;
+}
+
+.search-overlay.active {
+    display: block;
+}
+
+.search-header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 30px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.search-back-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    color: #c9a227;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-search-form {
+    flex: 1;
+    max-width: 900px;
+    margin: auto;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+    background: #fff;
+    padding: 0 8px;
+}
+
+.mobile-search-form input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 15px;
+    font-size: 17px;
+    color: #333;
+}
+
+.mobile-search-form input::placeholder {
+    color: #999;
+}
+
+.mobile-voice-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #c9a227;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-search-submit {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-empty-state {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.search-big-icon {
+    font-size: 90px;
+    color: #263957;
+    margin-bottom: 30px;
+}
+
+.search-empty-state p {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+
+/* =====================================================
+   MOBILE SEARCH OVERLAY
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .search-header {
+        height: 65px;
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    .search-back-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .mobile-search-form {
+        height: 46px;
+        border-width: 1.5px;
+    }
+
+    .mobile-search-form input {
+        font-size: 16px;
+        padding: 0 8px;
+    }
+
+    .mobile-voice-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .mobile-search-submit {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .search-empty-state {
+        min-height: calc(100vh - 65px);
+        padding: 25px;
+    }
+
+    .search-big-icon {
+        font-size: 65px;
+        margin-bottom: 25px;
+    }
+
+    .search-empty-state p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =====================================================
+   HIDE MOBILE SEARCH BAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-search-bar,
+    .mobile-search-container {
+        display: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE PRODUCT GRIDS
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .customized-grid,
+    .featured-grid,
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .product-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .gold-filter {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .filter-bar {
+        justify-content: center;
+    }
+
+    .filter-item {
+        width: 100%;
+    }
+
+    .filter-item select {
+        width: 100%;
+    }
+
+    .hero h3 {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .detail-buttons {
+        flex-direction: column;
+    }
+
+    .detail-buttons .btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .collection-grid,
+    .why-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customized-grid,
+    .featured-grid,
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .hero {
+        background-position: center center;
+        background-size: cover;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .navbar-container {
+        padding: 0 10px;
+    }
+
+}
+
+
+/* =====================================================
+   DESKTOP NAVBAR - FINAL FIX
+===================================================== */
+
+@media (min-width: 769px) {
+
+    .main-navbar {
+        width: 100%;
+        height: 72px;
+        min-height: 72px;
+        padding: 0;
+        background: #111;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+        position: relative;
+        z-index: 9999;
+    }
+
+    .navbar-container {
+        width: 100%;
+        max-width: 1400px;
+        height: 72px;
+        min-height: 72px;
+
+        margin: 0 auto;
+        padding: 0 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+    /* LOGO */
+
+
+    /* DESKTOP NAV */
+
+    .desktop-navbar {
+        flex: 1;
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 0;
+    }
+
+    .desktop-navbar .navbar-nav {
+        width: 100%;
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* NAV ITEMS */
+
+    .desktop-navbar .nav-item {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        height: 72px;
+
+        margin: 0;
+    }
+
+    .desktop-navbar .nav-link {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        height: 72px;
+
+        padding: 0 13px;
+
+        color: #fff !important;
+        text-decoration: none;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        white-space: nowrap;
+
+        transition: 0.3s;
+    }
+
+    .desktop-navbar .nav-link:hover {
+        color: #D4AF37 !important;
+    }
+
+    /* NAV UNDERLINE */
+
+    .desktop-navbar .nav-link::after {
+        content: "";
+
+        position: absolute;
+
+        left: 13px;
+        right: 13px;
+        bottom: 12px;
+
+        width: 0;
+        height: 2px;
+
+        background: #D4AF37;
+
+        transition: 0.3s;
+    }
+
+    .desktop-navbar .nav-link:hover::after {
+        width: calc(100% - 26px);
+    }
+
+    /* SEARCH */
+
+    .desktop-navbar .search-nav-item {
+        margin-left: auto !important;
+
+        display: flex;
+        align-items: center;
+
+        height: 72px;
+    }
+
+    .desktop-navbar .search-form {
+        margin: 0;
+    }
+
+    .desktop-navbar .search-box {
+        width: 210px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+
+        background: #fff;
+
+        border: 1px solid #D4AF37;
+        border-radius: 25px;
+
+        overflow: hidden;
+
+        padding: 0 5px;
+    }
+
+    .desktop-navbar .search-box input {
+        flex: 1;
+
+        min-width: 0;
+
+        height: 100%;
+
+        border: none;
+        outline: none;
+
+        background: transparent;
+
+        padding: 0 8px;
+
+        font-size: 14px;
+        color: #333;
+    }
+
+    .desktop-navbar .voice-btn,
+    .desktop-navbar .search-btn {
+        width: 32px;
+        height: 32px;
+
+        border: none;
+        background: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+    }
+
+    .desktop-navbar .voice-btn {
+        color: #777;
+    }
+
+    .desktop-navbar .search-btn {
+        color: #D4AF37;
+    }
+
+    /* WISHLIST */
+
+    .desktop-navbar .wishlist-item {
+        margin-left: 8px;
+    }
+
+    .desktop-navbar .wishlist-item .nav-link {
+        padding: 0 8px;
+    }
+
+    .desktop-navbar .wishlist-item i {
+        color: #D4AF37;
+        font-size: 19px;
+    }
+
+    /* COLLECTION DROPDOWN */
+
+    .desktop-navbar .dropdown-custom {
+        position: relative;
+    }
+
+    .desktop-navbar .desktop-submenu {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        min-width: 190px;
+
+        background: #181818;
+
+        border: 1px solid #D4AF37;
+        border-radius: 8px;
+
+        padding: 8px 0;
+        margin: 0;
+
+        list-style: none;
+
+        display: none;
+
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+        z-index: 99999;
+    }
+
+    .desktop-navbar .dropdown-custom:hover .desktop-submenu {
+        display: block;
+    }
+
+    .desktop-navbar .desktop-submenu li a {
+        display: block;
+
+        padding: 11px 18px;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 15px;
+
+        transition: 0.25s;
+    }
+
+    .desktop-navbar .desktop-submenu li a:hover {
+        background: #D4AF37;
+        color: #111;
+    }
+
+}
+
+
+/* =====================================================
+   CONTACT RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-heading h1 {
+        font-size: 36px;
+    }
+
+}
+
+/* =====================================================
+   FINAL NAVBAR + HERO FIX
+===================================================== */
+
+/* ---------- DESKTOP ---------- */
+
+@media (min-width: 769px) {
+
+    .main-navbar {
+        display: block !important;
+        width: 100%;
+        height: 72px;
+        min-height: 72px;
+        background: #111;
+        position: relative;
+        z-index: 99999;
+    }
+
+    .navbar-container {
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        height: 72px;
+        min-height: 72px;
+        margin: 0 auto;
+        padding: 0 35px;
+    }
+
+    .desktop-navbar {
+        display: flex !important;
+        align-items: center;
+        flex: 1;
+        height: 72px;
+        margin-left: auto;
+    }
+
+    .desktop-navbar .navbar-nav {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 72px;
+    }
+
+    .desktop-navbar .nav-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 72px;
+        margin: 0;
+    }
+
+    .desktop-navbar .nav-link {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        padding: 0 13px;
+        color: #fff !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .desktop-navbar .nav-link:hover {
+        color: #D4AF37 !important;
+    }
+
+    /* Desktop dropdown */
+
+    .desktop-navbar .desktop-submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 190px;
+        background: #181818;
+        border: 1px solid #D4AF37;
+        border-radius: 8px;
+        padding: 8px 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0 12px 30px rgba(0,0,0,.4);
+        z-index: 999999;
+    }
+
+    .desktop-navbar .dropdown-custom:hover .desktop-submenu {
+        display: block;
+    }
+
+    .desktop-navbar .desktop-submenu li a {
+        display: block;
+        padding: 11px 18px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .desktop-navbar .desktop-submenu li a:hover {
+        background: #D4AF37;
+        color: #111;
+    }
+
+    /* Search */
+
+    .desktop-navbar .search-nav-item {
+        margin-left: auto !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .desktop-navbar .search-box {
+        width: 210px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #D4AF37;
+        border-radius: 25px;
+        overflow: hidden;
+        padding: 0 5px;
+    }
+
+    .desktop-navbar .search-box input {
+        flex: 1;
+        min-width: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 0 8px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .desktop-navbar .voice-btn,
+    .desktop-navbar .search-btn {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .desktop-navbar .voice-btn {
+        color: #777;
+    }
+
+    .desktop-navbar .search-btn {
+        color: #D4AF37;
+    }
+
+    /* Wishlist */
+
+    .desktop-navbar .wishlist-item {
+        margin-left: 8px;
+    }
+
+    .desktop-navbar .wishlist-item .nav-link {
+        padding: 0 8px;
+    }
+
+    .desktop-navbar .wishlist-item i {
+        color: #D4AF37;
+        font-size: 19px;
+    }
+}
+
+
+/* =====================================================
+   HERO FIX
+===================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 72px);
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .main-navbar {
+        display: block !important;
+        width: 100%;
+        height: 74px;
+        min-height: 74px;
+    }
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: calc(100vh - 74px);
+        height: auto;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-content {
+        margin-top: 0;
+    }
+}
+
+
+/* =====================================================
+   REMOVE EXTRA LOGO GENERATED BY CSS
+===================================================== */
+
+
+
+/* =====================================================
+   FINAL LOGO + NAVBAR FIX
+===================================================== */
+
+/* NAVBAR */
+.main-navbar {
+    width: 100%;
+    height: 72px;
+    min-height: 72px;
+    background: #111 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    display: block !important;
+}
+
+/* NAVBAR CONTAINER */
+.navbar-container {
+    width: 100%;
+    max-width: 1400px;
+    height: 72px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 35px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+/* DESKTOP LOGO */
+@media (min-width: 769px) {
+
+    
+
+        width: 95px !important;
+        height: 52px !important;
+
+        background-image: url("/static/home/images/logo.png") !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: contain !important;
+
+        flex-shrink: 0 !important;
+        margin-right: 25px;
+    }
+
+    .desktop-navbar {
+        display: flex !important;
+        align-items: center;
+        flex: 1;
+        height: 72px;
+    }
+
+    .desktop-navbar .navbar-nav {
+        display: flex !important;
+        align-items: center;
+        height: 72px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* NAV LINKS */
+.desktop-navbar .nav-link {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.desktop-navbar .nav-link:hover {
+    color: #D4AF37 !important;
+}
+
+
+/* =====================================================
+   HERO - NAVBAR KE NEECHE RAHEGA
+===================================================== */
+
+.hero {
+    position: relative !important;
+    z-index: 1 !important;
+
+    width: 100%;
+
+    height: calc(100vh - 72px);
+    min-height: calc(100vh - 72px);
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+
+/* =====================================================
+   IMPORTANT - BOOTSTRAP COLLAPSE FIX
+===================================================== */
+
+@media (min-width: 769px) {
+
+    .main-navbar .navbar-collapse {
+        display: flex !important;
+    }
+
+    .main-navbar .desktop-navbar {
+        display: flex !important;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .main-navbar {
+        height: 74px;
+        min-height: 74px;
+    }
+
+    .navbar-container {
+        height: 74px;
+        min-height: 74px;
+        padding: 0;
+    }
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .hero {
+        height: calc(100vh - 74px);
+        min-height: calc(100vh - 74px);
+    }
+
+}
+
+
+/* =========================================================
+   FINAL FIX - PRATIK JEWELLERS NAVBAR + LOGO
+   ========================================================= */
+
+/* ---------- MAIN NAVBAR ---------- */
+
+.main-navbar {
+    width: 100% !important;
+    height: 72px !important;
+    min-height: 72px !important;
+
+    background: #111 !important;
+
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+
+    z-index: 999999 !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    overflow: visible !important;
+}
+
+
+/* ---------- NAVBAR CONTAINER ---------- */
+
+.navbar-container {
+    width: 100% !important;
+    max-width: 1400px !important;
+
+    height: 72px !important;
+    min-height: 72px !important;
+
+    margin: 0 auto !important;
+    padding: 0 35px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+    z-index: 1000000 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   DESKTOP NAVBAR
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    /* Desktop navigation visible */
+
+    .desktop-navbar {
+        display: flex !important;
+
+        align-items: center !important;
+
+        flex: 1 !important;
+
+        height: 72px !important;
+
+        position: relative !important;
+
+        z-index: 1000000 !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+    }
+
+
+    .desktop-navbar .navbar-nav {
+        display: flex !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+        height: 72px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        list-style: none !important;
+    }
+
+
+    .desktop-navbar .nav-item {
+        display: flex !important;
+
+        align-items: center !important;
+
+        height: 72px !important;
+
+        position: relative !important;
+    }
+
+
+    .desktop-navbar .nav-link {
+        display: flex !important;
+
+        align-items: center !important;
+
+        height: 72px !important;
+
+        padding: 0 13px !important;
+
+        color: #fff !important;
+
+        text-decoration: none !important;
+
+        font-size: 15px !important;
+
+        white-space: nowrap !important;
+
+        position: relative !important;
+
+        z-index: 1000001 !important;
+    }
+
+
+    .desktop-navbar .nav-link:hover {
+        color: #D4AF37 !important;
+    }
+
+
+    /* ---------- NAVBAR LOGO ---------- */
+
+    .main-navbar .logo img,
+    .main-navbar .desktop-logo img,
+    .main-navbar .navbar-brand img,
+    .main-navbar .navbar-container > img,
+    .main-navbar .desktop-navbar img {
+
+        width: 95px !important;
+
+        height: 52px !important;
+
+        max-width: 95px !important;
+
+        max-height: 52px !important;
+
+        min-width: 0 !important;
+
+        min-height: 0 !important;
+
+        object-fit: contain !important;
+
+        object-position: center !important;
+
+        display: block !important;
+
+        position: relative !important;
+
+        z-index: 1000001 !important;
+    }
+
+
+    /* ---------- PSEUDO LOGO ---------- */
+
+
+
+
+    /* ---------- BOOTSTRAP COLLAPSE ---------- */
+
+    .main-navbar .navbar-collapse {
+
+        display: flex !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        height: auto !important;
+    }
+
+
+    /* ---------- SEARCH ---------- */
+
+    .desktop-navbar .search-box {
+
+        width: 210px !important;
+
+        height: 38px !important;
+
+        max-width: 210px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY IMPORTANT:
+   HERO IMAGE KO NAVBAR KE UPAR MAT AANE DO
+   ========================================================= */
+
+.hero {
+
+    position: relative !important;
+
+    z-index: 1 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+}
+
+
+/* Hero ke andar koi huge image ho to control karo */
+
+.hero > img {
+
+    position: absolute !important;
+
+    top: 0 !important;
+
+    left: 0 !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
+
+    object-fit: cover !important;
+
+    z-index: 0 !important;
+}
+
+
+/* Hero content image ko huge hone se roko */
+
+.hero-content img {
+
+    width: auto !important;
+
+    max-width: 90% !important;
+
+    height: auto !important;
+
+    max-height: 180px !important;
+
+    object-fit: contain !important;
+
+}
+
+
+/* =========================================================
+   AGAR LOGO DIRECT HERO MEIN AA RAHA HAI
+   ========================================================= */
+
+/*
+   Ye rule hero ke logo ko chhota karega.
+   Isse huge PRATIK logo screen cover nahi karega.
+*/
+
+.hero .logo img,
+.hero .desktop-logo img,
+.hero .navbar-brand img {
+
+    width: 120px !important;
+
+    height: 60px !important;
+
+    max-width: 120px !important;
+
+    max-height: 60px !important;
+
+    object-fit: contain !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-navbar {
+
+        width: 100% !important;
+
+        height: 74px !important;
+
+        min-height: 74px !important;
+
+    }
+
+
+    .navbar-container {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: 74px !important;
+
+        min-height: 74px !important;
+
+        padding: 0 10px !important;
+
+        margin: 0 !important;
+
+    }
+
+
+    .desktop-navbar {
+
+        display: none !important;
+    }
+
+
+   
+
+
+    .mobile-header {
+
+        width: 100% !important;
+
+        height: 74px !important;
+
+        display: grid !important;
+
+        grid-template-columns: 55px 1fr 90px !important;
+
+        align-items: center !important;
+
+        background: #111 !important;
+
+    }
+
+
+    .mobile-logo img {
+
+        width: 50px !important;
+
+        height: 50px !important;
+
+        max-width: 50px !important;
+
+        max-height: 50px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    .mobile-menu-btn,
+    .mobile-search-btn,
+    .mobile-wishlist-btn {
+
+        position: relative !important;
+
+        z-index: 1000001 !important;
+    }
+
+
+    .hero {
+
+        width: 100% !important;
+
+        min-height: calc(100vh - 74px) !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   REMOVE OLD RULE THAT HIDES NAVBAR
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    .navbar-collapse {
+
+        display: flex !important;
+
+    }
+
+}
+
+.navbar-brand{
+    height:78px;
+    display:flex;
+    align-items:center;
+    padding:0;
+    margin:0;
+}
+
+.nav-logo{
+    width:auto;
+    height:55px;
+    max-height:55px;
+    object-fit:contain;
+    display:block;
+}
+
+.brand-text{
+    line-height:1.1;
+}
+
+
+
+.desktop-logo img,
+.navbar-brand img{
+
+    height:55px;
+    width:auto;
+
+    object-fit:contain;
+}
+
+/* ==========================
+   DESKTOP / MOBILE NAVBAR FIX
+   ========================== */
+
+/* Desktop */
+@media (min-width: 769px) {
+
+    .mobile-header,
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .desktop-navbar {
+        display: flex !important;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .mobile-header {
+        display: flex !important;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* =========================
+   DESKTOP NAVBAR FIX
+========================= */
+
+@media (min-width: 769px) {
+
+    .desktop-navbar{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        width:100% !important;
+    }
+
+    .desktop-navbar .navbar-nav{
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:30px !important;
+
+        margin:0 !important;
+        padding:0 !important;
+        list-style:none !important;
+
+        width:100% !important;
+    }
+
+    .desktop-navbar .nav-item{
+        display:block !important;
+    }
+
+    .desktop-navbar .nav-link{
+        display:inline-block !important;
+        white-space:nowrap;
+    }
+
+    .mobile-header,
+    .mobile-menu{
+        display:none !important;
+    }
+}
+
+/* =========================================================
+   FINAL OLD DESKTOP DESIGN
+   PRATIK JEWELLERS
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    /* ---------- MAIN NAVBAR ---------- */
+
+    .main-navbar {
+        width: 100% !important;
+        height: 72px !important;
+        min-height: 72px !important;
+        background: #111 !important;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.35) !important;
+        position: relative !important;
+        z-index: 99999 !important;
+        display: block !important;
+    }
+
+
+    /* ---------- NAVBAR CONTAINER ---------- */
+
+    .navbar-container {
+        width: 100% !important;
+        max-width: 1500px !important;
+        height: 72px !important;
+        margin: 0 auto !important;
+        padding: 0 35px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+
+    /* =====================================================
+       LOGO LEFT
+       ===================================================== */
+
+    .navbar-container > .navbar-brand,
+    .navbar-container > .desktop-logo,
+    .navbar-container > .logo {
+        flex: 0 0 auto !important;
+        width: 220px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .navbar-container > .navbar-brand img,
+    .navbar-container > .desktop-logo img,
+    .navbar-container > .logo img,
+    .navbar-container > img {
+
+        width: auto !important;
+        height: 52px !important;
+        max-width: 170px !important;
+        max-height: 52px !important;
+
+        object-fit: contain !important;
+        object-position: left center !important;
+
+        display: block !important;
+        margin: 0 !important;
+    }
+
+
+    /* =====================================================
+       DESKTOP NAVIGATION
+       ===================================================== */
+
+    .desktop-navbar {
+        flex: 1 1 auto !important;
+
+        width: auto !important;
+        height: 72px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .desktop-navbar .navbar-nav {
+
+        width: auto !important;
+        height: 72px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        gap: 18px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        list-style: none !important;
+    }
+
+
+    /* ---------- NAV ITEMS ---------- */
+
+    .desktop-navbar .nav-item {
+        height: 72px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .desktop-navbar .nav-link {
+
+        height: 72px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        padding: 0 14px !important;
+
+        color: #fff !important;
+        text-decoration: none !important;
+
+        font-size: 18px !important;
+        font-weight: 500 !important;
+
+        white-space: nowrap !important;
+
+        transition: 0.3s ease !important;
+    }
+
+
+    .desktop-navbar .nav-link:hover {
+        color: #D4AF37 !important;
+    }
+
+
+    /* =====================================================
+       SEARCH - OLD DESKTOP STYLE
+       Only search icon visible
+       ===================================================== */
+
+    .desktop-navbar .search-nav-item {
+        margin-left: 5px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+
+    .desktop-navbar .search-box {
+
+        width: 45px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+
+        height: 45px !important;
+
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* Search input hide */
+
+    .desktop-navbar .search-box input {
+        display: none !important;
+    }
+
+
+    /* Microphone hide on desktop */
+
+    .desktop-navbar .search-box .voice-btn {
+        display: none !important;
+    }
+
+
+    /* Search button */
+
+    .desktop-navbar .search-box .search-btn {
+
+        width: 45px !important;
+        height: 45px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: transparent !important;
+        border: none !important;
+
+        color: #fff !important;
+
+        font-size: 22px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        cursor: pointer !important;
+    }
+
+
+    .desktop-navbar .search-box .search-btn i {
+        color: #fff !important;
+        font-size: 22px !important;
+    }
+
+
+    .desktop-navbar .search-box .search-btn:hover i {
+        color: #D4AF37 !important;
+    }
+
+
+    /* =====================================================
+       WISHLIST
+       ===================================================== */
+
+    .desktop-navbar .wishlist-item {
+
+        display: flex !important;
+        align-items: center !important;
+
+        margin-left: 3px !important;
+    }
+
+
+    .desktop-navbar .wishlist-item .nav-link {
+
+        width: 45px !important;
+        height: 45px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    .desktop-navbar .wishlist-item i {
+
+        color: #fff !important;
+        font-size: 22px !important;
+
+        transition: 0.3s ease !important;
+    }
+
+
+    .desktop-navbar .wishlist-item:hover i {
+        color: #D4AF37 !important;
+        transform: scale(1.1);
+    }
+
+
+    /* =====================================================
+       PHONE ICON
+       ===================================================== */
+
+    .desktop-navbar .phone-item {
+
+        display: flex !important;
+        align-items: center !important;
+
+        margin-left: 0 !important;
+    }
+
+
+    .desktop-navbar .phone-item .nav-link {
+
+        width: 45px !important;
+        height: 45px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    .desktop-navbar .phone-item i {
+
+        color: #fff !important;
+        font-size: 21px !important;
+
+        transition: 0.3s ease !important;
+    }
+
+
+    .desktop-navbar .phone-item:hover i {
+        color: #D4AF37 !important;
+        transform: scale(1.1);
+    }
+
+
+    /* =====================================================
+       REMOVE UNDERLINE FROM ICONS
+       ===================================================== */
+
+    .desktop-navbar .search-nav-item .nav-link::after,
+    .desktop-navbar .wishlist-item .nav-link::after,
+    .desktop-navbar .phone-item .nav-link::after {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       HERO SHOULD START BELOW NAVBAR
+       ===================================================== */
+
+    .hero {
+        width: 100% !important;
+
+        min-height: calc(100vh - 72px) !important;
+        height: calc(100vh - 72px) !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+        z-index: 1 !important;
+
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+
+    .hero-content {
+        position: relative !important;
+        z-index: 2 !important;
+
+        margin: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   KEEP MOBILE DESIGN UNCHANGED
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .main-navbar {
+        height: 74px !important;
+        min-height: 74px !important;
+    }
+
+    .hero {
+        min-height: calc(100vh - 74px) !important;
+    }
+}
+
+/* =========================================================
+   FINAL DESKTOP SEARCH
+   Click Search Icon -> Open Search Bar
+   MOBILE KO TOUCH NAHI KAREGA
+========================================================= */
+
+@media (min-width: 769px) {
+
+    /* Search item */
+    .desktop-navbar .search-nav-item {
+        display: flex !important;
+        align-items: center !important;
+        margin-left: 5px !important;
+        position: relative !important;
+    }
+
+
+    /* CLOSED SEARCH */
+    .desktop-navbar .search-box {
+
+        width: 45px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+
+        height: 45px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        background: transparent !important;
+
+        border: none !important;
+        border-radius: 25px !important;
+
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        transition:
+            width 0.3s ease,
+            background 0.3s ease,
+            border 0.3s ease !important;
+
+    }
+
+
+    /* INPUT HIDDEN WHEN CLOSED */
+
+    .desktop-navbar .search-box input {
+
+        display: none !important;
+
+        flex: 1;
+
+        min-width: 0;
+
+        border: none !important;
+        outline: none !important;
+
+        background: transparent !important;
+
+        padding: 0 10px !important;
+
+        font-size: 15px !important;
+
+        color: #333 !important;
+
+    }
+
+
+    /* MICROPHONE HIDDEN WHEN CLOSED */
+
+    .desktop-navbar .search-box .voice-btn {
+
+        display: none !important;
+
+    }
+
+
+    /* SEARCH ICON */
+
+    .desktop-navbar .search-box .search-btn {
+
+        width: 45px !important;
+        min-width: 45px !important;
+
+        height: 45px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: transparent !important;
+
+        border: none !important;
+
+        color: #fff !important;
+
+        font-size: 22px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        cursor: pointer !important;
+
+        flex-shrink: 0 !important;
+
+    }
+
+
+    .desktop-navbar .search-box .search-btn i {
+
+        color: #fff !important;
+
+        font-size: 22px !important;
+
+        transition: 0.3s ease;
+
+    }
+
+
+    .desktop-navbar .search-box .search-btn:hover i {
+
+        color: #D4AF37 !important;
+
+    }
+
+
+    /* =====================================================
+       OPEN SEARCH
+    ===================================================== */
+
+    .desktop-navbar .search-box.active {
+
+        width: 330px !important;
+        min-width: 330px !important;
+        max-width: 330px !important;
+
+        height: 45px !important;
+
+        background: #fff !important;
+
+        border: 2px solid #D4AF37 !important;
+
+        border-radius: 25px !important;
+
+        padding: 0 5px 0 12px !important;
+
+        overflow: hidden !important;
+
+    }
+
+
+    /* SHOW INPUT */
+
+    .desktop-navbar .search-box.active input {
+
+        display: block !important;
+
+    }
+
+
+    /* SHOW MICROPHONE */
+
+    .desktop-navbar .search-box.active .voice-btn {
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 38px !important;
+        min-width: 38px !important;
+
+        height: 38px !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        color: #777 !important;
+
+        cursor: pointer !important;
+
+        font-size: 17px !important;
+
+        flex-shrink: 0 !important;
+
+    }
+
+
+    .desktop-navbar .search-box.active .voice-btn:hover {
+
+        color: #D4AF37 !important;
+
+    }
+
+
+    /* SEARCH BUTTON WHEN OPEN */
+
+    .desktop-navbar .search-box.active .search-btn {
+
+        width: 38px !important;
+        min-width: 38px !important;
+
+        height: 38px !important;
+
+        color: #D4AF37 !important;
+
+    }
+
+
+    .desktop-navbar .search-box.active .search-btn i {
+
+        color: #D4AF37 !important;
+
+        font-size: 17px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP LOGO + PRATIK JEWELLERS
+   MOBILE KO TOUCH NAHI KAREGA
+========================================================= */
+
+.desktop-brand{
+    display:flex !important;
+
+    align-items:center !important;
+
+    gap:10px !important;
+
+    width:230px !important;
+
+    height:72px !important;
+
+    flex:0 0 230px !important;
+
+    text-decoration:none !important;
+
+    color:#fff !important;
+
+    z-index:1000001 !important;
+
+    position:relative !important;
+}
+
+
+/* LOGO */
+
+.desktop-brand img{
+
+    width:45px !important;
+
+    height:45px !important;
+
+    max-width:45px !important;
+
+    max-height:45px !important;
+
+    object-fit:contain !important;
+
+    display:block !important;
+
+    flex-shrink:0 !important;
+
+}
+
+
+/* PRATIK JEWELLERS TEXT */
+
+.desktop-brand span{
+
+    color:#fff !important;
+
+    font-family:Georgia, "Times New Roman", serif !important;
+
+    font-size:21px !important;
+
+    font-weight:500 !important;
+
+    letter-spacing:0.5px !important;
+
+    white-space:nowrap !important;
+
+}
+
+
+/* HOVER */
+
+.desktop-brand:hover span{
+
+    color:#fff !important;
+
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+========================================================= */
+
+@media (max-width:768px){
+
+    .desktop-brand{
+
+        display:none !important;
+
+    }
+
+}
+
+/* =========================================================
+   DESKTOP NAVBAR - REFERENCE STYLE
+========================================================= */
+
+@media (min-width: 769px){
+
+    .main-navbar,
+    nav.main-navbar{
+
+        background: rgba(0, 0, 0, 0.72) !important;
+
+        border-bottom: 1px solid rgba(212, 175, 55, 0.45) !important;
+
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+
+    }
+
+}
+
+@media (min-width: 769px){
+
+    .main-navbar{
+        position: sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 99999 !important;
+    }
+
+    .desktop-navbar{
+        position: relative !important;
+        z-index: 100000 !important;
+    }
+
+}
+
+/* =========================================================
+   GOLD / SILVER RATE BAR
+   REFERENCE WEBSITE STYLE
+========================================================= */
+
+
+
+.rate-update{
+
+    font-weight:400;
+
+}
+
+
+.rate-divider{
+
+    color:#777;
+
+    margin:0 3px;
+
+}
+
+
+.gold-rate{
+
+    color:#222;
+
+    font-weight:500;
+
+}
+
+
+.silver-rate{
+
+    color:#222;
+
+    font-weight:500;
+
+}
+
+
+/* =========================================================
+   STICKY NAVBAR + RATE BAR
+========================================================= */
+
+@media (min-width:769px){
+
+    .main-navbar{
+
+        position:sticky !important;
+
+        top:0 !important;
+
+        z-index:100000 !important;
+
+    }
+
+
+    .rate-bar{
+
+        position:sticky;
+
+        top:72px;
+
+        z-index:99999;
+
+        background:#fff;
+
+    }
+
+}
+
+.rate-bar{
+    width:100%;
+    height:45px;
+    background:#fff;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    overflow:hidden;
+    position:relative;
+    z-index:9998;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+
+.rate-ticker {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
+.rate-track span{
+    font-size:17px;
+    font-weight:600;
+}
+
+@keyframes tickerMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+.rate-bar:hover .rate-track{
+    animation-play-state:paused;
+}
+
+.rate-track{
+    display:flex;
+    align-items:center;
+    width:max-content;
+    height:100%;
+    animation:tickerMove 22s linear infinite;
+}
+
+
+
+.rate-ticker{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+
+
+.ticker-group{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-shrink:0;
+    padding-right:220px;
+}
+
+.rate-item{
+    white-space:nowrap;
+    font-size:16px;
+    color:#222;
+    font-weight:500;
+}
+
+.gold-rate{
+    color:#b8860b;
+    font-weight:700;
+}
+
+.silver-rate{
+    color:#666;
+    font-weight:700;
+}
+
+.rate-separator{
+    color:#999;
+}
+
+
+@media(max-width:768px){
+
+    .rate-bar{
+        height:44px;
+    }
+
+    .rate-item{
+        font-size:13px;
+    }
+
+    .ticker-group{
+        padding-right:120px;
+        gap:14px;
+    }
+
+}
+.price-breakdown{
+    margin-top:30px;
+}
+
+.price-breakdown table{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.price-breakdown th{
+    width:45%;
+    background:#fafafa;
+    font-weight:600;
+}
+
+.price-breakdown td{
+    font-weight:500;
+}
+
+.table-warning{
+    font-size:20px;
+}
+
+.price-breakup-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-top:30px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+    border:1px solid #ececec;
+
+}
+
+.breakup-title{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+}
+
+.breakup-section{
+
+    margin-bottom:28px;
+
+}
+
+.breakup-section h5{
+
+    font-weight:700;
+
+    color:#c89b3c;
+
+    margin-bottom:15px;
+
+    border-left:4px solid #c89b3c;
+
+    padding-left:12px;
+
+}
+
+.break-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px dashed #ddd;
+
+    font-size:16px;
+
+}
+
+.break-row span:first-child{
+
+    color:#666;
+
+}
+
+.break-row span:last-child{
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+.total-row{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+.grand-total{
+
+    margin-top:30px;
+
+    background:linear-gradient(135deg,#111,#2f2f2f);
+
+    color:#fff;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.grand-total h2{
+
+    color:#FFD700;
+
+    margin:0;
+
+    font-size:34px;
+
+}
+
+.grand-total h4{
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.grand-total small{
+
+    color:#ddd;
+
+}
+
+.product-detail-column{
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding-right:12px;
+
+    /* Hide scrollbar */
+    scrollbar-width:none;      /* Firefox */
+    -ms-overflow-style:none;   /* IE & Edge */
+
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:70px 0 25px;
+    margin-top:60px;
+}
+
+.footer-logo{
+    width:140px;
+    margin-bottom:18px;
+}
+
+.footer h4{
+    color:#d4af37;
+    font-size:26px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.footer h5{
+    color:#d4af37;
+    font-size:18px;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.footer p{
+    color:#d6d6d6;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.footer ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+    color:#d6d6d6;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+    color:#d4af37;
+    padding-left:6px;
+}
+
+.footer-social{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.footer-social a{
+    width:42px;
+    height:42px;
+    border:1px solid #444;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#d4af37;
+    color:#111;
+    border-color:#d4af37;
+}
+
+.footer hr{
+    border-color:#333;
+    margin:40px 0 20px;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#999;
+    font-size:14px;
+}
+
+@media(max-width:991px){
+
+.footer{
+    text-align:center;
+}
+
+.footer-social{
+    justify-content:center;
+}
+
+.footer-logo{
+    margin:auto;
+    display:block;
+    margin-bottom:20px;
+}
+
+}
+
+/* ===========================
+   HELP STRIP
+=========================== */
+
+.help-strip{
+    background:#1b1b1b;
+    padding:45px 0;
+}
+
+.help-box{
+    color:#fff;
+    transition:.3s;
+}
+
+.help-box i{
+    font-size:34px;
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.help-box h5{
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.help-box p{
+    color:#fff;
+    margin:0;
+}
+
+.help-box:hover{
+    transform:translateY(-5px);
+}
+
+.help-box{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.help-box:hover{
+    color:inherit;
+}
+
+
+
+/* Hide sticky navbar only on Search page */
+
+.search-page .main-navbar{
+    position: relative !important;
+    top: auto !important;
+}
+
+.search-page .rate-bar{
+    position: relative !important;
+    top: auto !important;
+}
+
+
+/* =====================================================
+   GOLD FILTER - CLEAR BUTTON
+===================================================== */
+
+.clear-filters-box {
+    margin-top: 5px;
+}
+
+.clear-filters-box button {
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #c9a227;
+    background: transparent;
+    color: #9a7610;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.clear-filters-box button i {
+    margin-right: 7px;
+}
+
+.clear-filters-box button:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.gold-info h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.gold-btn {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.gold-btn {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 12px 28px;
+    min-width: 140px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   GOLD COLLECTION - DESKTOP PREMIUM LAYOUT
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    /* MAIN LAYOUT */
+
+    .gold-shop-layout {
+        display: grid;
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 45px;
+        align-items: start;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin-left: -10px;
+    }
+
+
+    /* SIDEBAR */
+
+    .gold-sidebar {
+        width: 240px;
+        min-width: 210px;
+        margin: 0;
+    }
+
+
+    /* PRODUCTS AREA */
+
+    .gold-products-area {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    /* REMOVE BOOTSTRAP ROW BEHAVIOUR */
+
+    .gold-products-area .row {
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 22px;
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    /* REMOVE BOOTSTRAP COLUMN WIDTH/PADDING */
+
+    .gold-products-area .col-lg-4,
+    .gold-products-area .col-md-6 {
+        width: auto;
+        max-width: none;
+
+        padding: 0;
+        margin: 0 !important;
+    }
+
+
+    /* PRODUCT CARD */
+
+    .gold-card {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        overflow: hidden;
+
+        border-radius: 22px;
+    }
+
+
+    /* PRODUCT IMAGE */
+
+    .gold-image {
+        width: 100%;
+        height: 255px;
+
+        overflow: hidden;
+    }
+
+
+    .gold-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* PRODUCT INFO */
+
+    .gold-info {
+        padding: 20px 18px 22px;
+
+        text-align: left;
+    }
+
+
+    /* PRODUCT NAME */
+
+    .gold-info h3 {
+        font-size: 20px;
+        line-height: 1.25;
+
+        margin: 0 0 14px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        text-align: center;
+    }
+
+
+    /* PURITY + WEIGHT */
+
+    .gold-info p {
+        font-size: 16px;
+        line-height: 1.3;
+
+        margin: 0 0 18px;
+
+        text-align: left;
+    }
+
+
+    /* VIEW DETAILS */
+
+    .gold-info .gold-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: fit-content;
+        min-width: 175px;
+
+        margin: 0 auto;
+
+        padding: 11px 20px;
+
+        font-size: 16px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+    }
+
+}
+
+ /* =====================================================
+    MOBILE FILTER BUTTON
+    ===================================================== */
+
+.mobile-filter-btn {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+
+    .mobile-filter-btn {
+        display: block;
+        width: 100%;
+        margin: 20px 0 25px;
+    }
+
+    .mobile-filter-btn button {
+        width: 100%;
+        height: 48px;
+
+        background: #111;
+        color: #d4af37;
+
+        border: 1px solid #d4af37;
+        border-radius: 8px;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+    }
+
+    .mobile-filter-btn button i {
+        font-size: 14px;
+    }
+
+    .mobile-filter-btn button:active {
+        transform: scale(0.98);
+    }
+}
+
+/* =====================================================
+   MOBILE FILTER PANEL
+   ===================================================== */
+
+.mobile-filter-panel {
+    display: none;
+}
+
+.mobile-filter-panel.active {
+    display: block;
+}
+
+
+@media (max-width: 767px) {
+
+    .mobile-filter-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        background: #fff;
+
+        z-index: 999999;
+
+        overflow-y: auto;
+
+        padding: 20px 20px 30px;
+
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+    }
+
+
+    /* HEADER */
+
+    .mobile-filter-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 18px;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    .mobile-filter-header h3 {
+        margin: 0;
+
+        font-size: 20px;
+        font-weight: 600;
+
+        color: #111;
+    }
+
+
+    .mobile-filter-header button {
+        width: 38px;
+        height: 38px;
+
+        border: none;
+        background: transparent;
+
+        font-size: 20px;
+
+        color: #111;
+
+        cursor: pointer;
+    }
+
+
+    /* FILTER SECTIONS */
+
+    .mobile-filter-section {
+        padding: 20px 0;
+
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+
+    .mobile-filter-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        color: #111;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-filter-title i {
+        font-size: 12px;
+
+        transition: transform 0.3s ease;
+    }
+    .mobile-filter-title.active i {
+    transform: rotate(180deg);
+}
+
+
+    /* OPTIONS */
+
+    .mobile-filter-options {
+
+    display: none;
+
+    margin-top: 15px;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.mobile-filter-options.show {
+
+    display: flex;
+
+}
+
+
+    .mobile-filter-options label {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        font-size: 14px;
+
+        color: #444;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-filter-options input {
+        width: 17px;
+        height: 17px;
+
+        accent-color: #b8952e;
+    }
+
+
+    /* CLEAR BUTTON */
+
+    .mobile-filter-clear {
+        padding-top: 25px;
+    }
+
+
+    .mobile-filter-clear button {
+        width: 100%;
+
+        height: 46px;
+
+        background: #111;
+
+        color: #d4af37;
+
+        border: 1px solid #d4af37;
+
+        border-radius: 7px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+}
+
+/* =====================================================
+   MOBILE GOLD COLLECTION
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Mobile filter button */
+    .mobile-filter-btn {
+        display: flex;
+        width: 100%;
+        height: 62px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #111;
+        color: #d4af37;
+        border: 1px solid #d4af37;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    /* Sidebar hidden by default on mobile */
+    .gold-sidebar {
+        display: none;
+        width: 100%;
+        margin: 0 0 25px 0;
+    }
+
+    /* Sidebar when opened */
+    .gold-sidebar.active {
+        display: block;
+    }
+
+    /* Products should use full mobile width */
+    .gold-products-area {
+        width: 100%;
+    }
+
+    .gold-products-area .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .gold-products-area .col-lg-4,
+    .gold-products-area .col-md-6 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+
+    /* Gold card */
+    .gold-card {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Product image */
+    .gold-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .gold-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Product information */
+    .gold-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .gold-info h3 {
+        font-size: 21px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .gold-info p {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .gold-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+     .gold-sidebar.mobile-filter-open {
+        display: block;
+    }
+}
+
+
+.mobile-filter-panel.active {
+    right: 0;
+}
+
+/* ==========================================
+   CUSTOM DESIGN SECTION
+========================================== */
+
+.custom-design-section{
+    margin-bottom:60px;
+}
+
+.design-card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:16px;
+    padding:40px 20px;
+    text-align:center;
+    transition:.35s ease;
+    cursor:pointer;
+    height:220px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#111;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+
+.design-card:hover{
+    transform:translateY(-8px);
+    border-color:#c9a227;
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+    color:#111;
+}
+
+
+.design-card:first-line{
+    font-size:45px;
+}
+
+
+.design-card h4{
+    margin-top:18px;
+    color:#111;
+    font-size:22px;
+    font-weight:600;
+}
+
+
+.design-card p{
+    color:#777;
+    margin-top:10px;
+    font-size:15px;
+}
+/* ======================================
+CUSTOM PROCESS
+====================================== */
+
+.custom-process{
+
+    padding:70px 0;
+
+}
+
+.process-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:35px 25px;
+
+    height:100%;
+
+    border:1px solid #eee;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#c9a227;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.process-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#d4af37;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.process-card h4{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    color:#111;
+
+}
+
+.process-card p{
+
+    color:#777;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+WHY CUSTOM
+========================================== */
+
+.why-custom{
+
+    padding:70px 0;
+
+}
+
+.why-card{
+
+    background:#fff;
+
+    border:1px solid #eee;
+
+    border-radius:15px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.why-card i{
+
+    font-size:42px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.why-card h4{
+
+    font-size:21px;
+
+    margin-bottom:15px;
+
+    color:#111;
+
+}
+
+.why-card p{
+
+    color:#777;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+CUSTOM CONSULTATION
+========================================== */
+
+.custom-consultation{
+
+    padding:70px 0;
+
+}
+
+.consultation-box{
+
+    background:#111;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.consultation-box h2{
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.consultation-box p{
+
+    color:#ddd;
+
+    margin-bottom:35px;
+
+}
+
+.consultation-box .form-control,
+.consultation-box .form-select{
+
+    height:52px;
+
+}
+
+.consultation-box button{
+
+    background:#d4af37;
+
+    color:#111;
+
+    border:none;
+
+    font-weight:600;
+
+}
+
+.consultation-box button:hover{
+
+    background:#fff;
+
+}
+
+/* =========================================
+   PREMIUM FOOTER FEATURES
+========================================= */
+
+.footer-features{
+
+    background:#0f0f0f;
+    border-top:1px solid rgba(212,175,55,.2);
+    border-bottom:1px solid rgba(212,175,55,.2);
+    padding:70px 0;
+}
+
+.footer-features .col-lg-3{
+
+    transition:.35s;
+}
+
+.footer-features .col-lg-3:hover{
+
+    transform:translateY(-8px);
+}
+
+.footer-features i{
+
+    font-size:42px;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.footer-features h5{
+
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.footer-features p{
+
+    color:#bdbdbd;
+    font-size:15px;
+    margin:0;
+}
+
+@media(max-width:768px){
+
+.footer-features{
+
+    padding:45px 20px;
+}
+
+.footer-features i{
+
+    font-size:34px;
+}
+
+.footer-features h5{
+
+    font-size:18px;
+}
+
+.footer-features p{
+
+    font-size:14px;
+}
+
+}
+
+/* ===========================
+   PREMIUM FOOTER
+=========================== */
+
+.footer{
+
+    background:#0d0d0d;
+    color:#d9d9d9;
+    padding:80px 0 25px;
+}
+
+.footer h4,
+.footer h5{
+
+    color:#d4af37;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.footer h5::after{
+
+    content:"";
+
+    width:45px;
+    height:2px;
+
+    background:#d4af37;
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+}
+
+.footer p{
+
+    color:#bfbfbf;
+
+    line-height:1.9;
+
+    font-size:15px;
+}
+
+.footer ul{
+
+    padding:0;
+
+    list-style:none;
+}
+
+.footer ul li{
+
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+
+    color:#cfcfcf;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+
+    color:#d4af37;
+
+    padding-left:8px;
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.footer-social a{
+
+    width:46px;
+
+    height:46px;
+
+    border:1px solid rgba(212,175,55,.4);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#d4af37;
+
+    font-size:18px;
+
+    transition:.35s;
+}
+
+.footer-social a:hover{
+
+    background:#d4af37;
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+.footer hr{
+
+    border:none;
+
+    height:1px;
+
+    background:linear-gradient(to right,
+    transparent,
+    rgba(212,175,55,.5),
+    transparent);
+
+    margin:45px 0 25px;
+}
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    color:#999;
+
+    font-size:14px;
+}
+
+.footer-bottom span{
+
+    color:#d4af37;
+}
+
+.footer-bottom a{
+
+    color:#999;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.footer-bottom a:hover{
+
+    color:#d4af37;
+}
+
+.inspiration-card{
+
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+
+}
+
+
+.inspiration-card img{
+
+width:100%;
+height:280px;
+object-fit:cover;
+
+}
+
+
+
+.inspiration-card:hover{
+
+transform:translateY(-8px);
+
+}

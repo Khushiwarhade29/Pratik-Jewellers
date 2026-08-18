@@ -24,39 +24,46 @@ def calculate_product_price(product):
     ):
 
         gold_rate = MetalRate.objects.filter(
-        metal="Gold",
-        purity=product.purity
+            metal="Gold",
+            purity=product.purity
         ).first()
 
         if gold_rate:
 
-        # MetalRate is per 10 grams
+            # MetalRate = Per 10 grams
             rate_per_gram = gold_rate.rate / Decimal("10")
 
-          # Gold value according to product weight
+            # Gold value
             metal_value = rate_per_gram * product.weight
 
-            # Making Charge (Percentage)
+            # Making charge %
             making_amount = (
-            metal_value * product.making_charge / Decimal("100")
-)
+                metal_value
+                * product.making_charge
+                / Decimal("100")
+            )
 
-            # Hallmark Charge
+            # Hallmark
             hallmark_charge = Decimal("45")
 
-           # Subtotal
+            # Subtotal
             subtotal = (
-                    metal_value
-                  + making_amount
-                  + product.stone_charge
-                  + hallmark_charge
-)
+                metal_value
+                + making_amount
+                + product.stone_charge
+                + hallmark_charge
+            )
 
-                # GST
-            gst_amount = subtotal * product.gst_percentage / Decimal("100")
+            # GST
+            gst_amount = (
+                subtotal
+                * product.gst_percentage
+                / Decimal("100")
+            )
 
-             # Final price
+            # Final price
             calculated_price = subtotal + gst_amount
+
 
     # ==========================================
     # SILVER
@@ -74,38 +81,46 @@ def calculate_product_price(product):
 
         if silver_rate:
 
-            # Silver rate is per 1 kilogram
+            # Silver rate = Per 1 kilogram
             rate_per_gram = silver_rate.rate / Decimal("1000")
 
             # 925 purity
             purity_rate = (
-                rate_per_gram * Decimal("925") / Decimal("1000")
+                rate_per_gram
+                * Decimal("925")
+                / Decimal("1000")
             )
 
-            # Silver value according to product weight
+            # Silver value
             metal_value = purity_rate * product.weight
 
-# Making Charge (Percentage)
+            # Making charge %
             making_amount = (
-              metal_value * product.making_charge / Decimal("100")
-)
+                metal_value
+                * product.making_charge
+                / Decimal("100")
+            )
 
-# Hallmark Charge
+            # Hallmark
             hallmark_charge = Decimal("45")
 
-# Subtotal
-        subtotal = (
-              metal_value
-             + making_amount
-             + product.stone_charge
-             + hallmark_charge
-)
+            # Subtotal
+            subtotal = (
+                metal_value
+                + making_amount
+                + product.stone_charge
+                + hallmark_charge
+            )
 
-# GST
-        gst_amount = subtotal * product.gst_percentage / Decimal("100")
+            # GST
+            gst_amount = (
+                subtotal
+                * product.gst_percentage
+                / Decimal("100")
+            )
 
-# Final price
-        calculated_price = subtotal + gst_amount
+            # Final price
+            calculated_price = subtotal + gst_amount
 
 
     # ==========================================
@@ -117,10 +132,27 @@ def calculate_product_price(product):
 
     return calculated_price
 
+
 def home(request):
+    
+    featured_products = Product.objects.filter(
+        is_featured=True
+    )[:4]
 
-    featured_products = Product.objects.all()[:4]
+    # =====================================================
+    # 20E — THE PRATIK EDIT
+    # =====================================================
 
+    pratik_edit_products = Product.objects.filter(
+        is_new_arrival=True
+    )[:4]
+
+    # Calculate current price for The Pratik Edit
+    for product in pratik_edit_products:
+        product.calculated_price = calculate_product_price(product)
+
+    
+    
     gold_rate = MetalRate.objects.filter(
         metal="Gold",
         purity="24K"
@@ -173,6 +205,7 @@ def home(request):
 
     context = {
         "featured_products": featured_products,
+        "pratik_edit_products": pratik_edit_products,
         "rate24": rate24,
         "rate22": rate22,
         "rate20": rate20,
@@ -855,29 +888,7 @@ def get_metal_rate(request):
 
 
 
-def save(self, *args, **kwargs):
-      super().save(*args, **kwargs)
 
-      if self.metal == "Gold" and self.purity == "24K":
-
-        from .models import GoldPurity
-
-        base_percentage = GoldPurity.objects.get(purity="24K").percentage
-
-        purities = GoldPurity.objects.exclude(purity="24K")
-
-        for p in purities:
-
-            new_rate = (self.rate * p.percentage) / base_percentage
-
-            MetalRate.objects.update_or_create(
-                metal="Gold",
-                purity=p.purity,
-                defaults={
-                    "rate": new_rate,
-                    "unit": self.unit,
-                }
-            )
             
 def custom_category(request, jewellery_type):
 

@@ -41,63 +41,6 @@ class GoldRate(models.Model):
                 }
             )
 
-        # ==========================================
-        # UPDATE ALL GOLD PRODUCT PRICES
-        # ==========================================
-
-        products = Product.objects.filter(category="Gold")
-
-        for product in products:
-
-            metal_rate = MetalRate.objects.filter(
-                metal="Gold",
-                purity=product.purity
-            ).first()
-
-            if metal_rate:
-
-                # Metal rate is per 10 grams
-                rate_per_gram = (
-                    metal_rate.rate / Decimal("10")
-                )
-
-                # Metal Price
-                metal_price = (
-                    rate_per_gram * product.weight
-                )
-
-                # Making Charge
-                making_amount = product.making_charge
-
-                # Hallmark Charge
-                hallmark_charge = Decimal("45")
-
-                # Subtotal
-                subtotal = (
-                    metal_price
-                    + making_amount
-                    + product.stone_charge
-                    + hallmark_charge
-                )
-
-                # GST
-                gst_amount = (
-                    subtotal * product.gst_percentage
-                ) / Decimal("100")
-
-                # Final Price
-                final_price = subtotal + gst_amount
-
-                # Save both prices
-                product.metal_price = metal_price
-                product.price = final_price
-
-                product.save(
-                    update_fields=[
-                        "metal_price",
-                        "price"
-                    ]
-                )
 
     def __str__(self):
         return f"24K ₹{self.rate_24k}"
@@ -200,10 +143,10 @@ class Product(models.Model):
 )
     
     making_charge = models.DecimalField(
-    max_digits=10,
+    max_digits=5,
     decimal_places=2,
     default=0,
-    help_text="Making charge amount"
+    help_text="Making charge percentage"
 )
 
     stone_charge = models.DecimalField(
@@ -290,15 +233,15 @@ class MetalRate(models.Model):
     ]
 
     PURITY_CHOICES = [
-    ('24K', '24K Gold'),
-    ('22K', '22K Gold'),
-    ('20K', '20K Gold'),
-    ('18K', '18K Gold'),
-    ('14K', '14K Gold'),
-    ('9K', '9K Gold'),
-    ('925', '925 Silver'),
-    ('1CT', 'Diamond Per Carat'),
-]
+        ('24K', '24K Gold'),
+        ('22K', '22K Gold'),
+        ('20K', '20K Gold'),
+        ('18K', '18K Gold'),
+        ('14K', '14K Gold'),
+        ('9K', '9K Gold'),
+        ('925', '925 Silver'),
+        ('1CT', 'Diamond Per Carat'),
+    ]
 
     UNIT_CHOICES = [
         ('10g', 'Per 10 Gram'),
@@ -332,9 +275,9 @@ class MetalRate(models.Model):
         auto_now=True
     )
 
+
     def __str__(self):
-        return f"{self.metal} ({self.purity}) - ₹{self.rate} / {self.unit}"
-    
+        return f"{self.metal} ({self.purity}) - ₹{self.rate} / {self.unit}"    
 
 
     
