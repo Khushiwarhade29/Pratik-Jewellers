@@ -36,3 +36,37 @@ if (voiceBtn && searchInput) {
 
     }
 }
+
+/* =========================================================
+   20H-2 — HERO AUTO SLIDER
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroSlides = document.querySelectorAll(".hero-slide");
+
+    if (!heroSlides.length) return;
+
+    let currentSlide = 0;
+
+    function showHeroSlide(index) {
+
+        heroSlides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+
+    }
+
+    setInterval(function () {
+
+        currentSlide++;
+
+        if (currentSlide >= heroSlides.length) {
+            currentSlide = 0;
+        }
+
+        showHeroSlide(currentSlide);
+
+    }, 5000);
+
+});

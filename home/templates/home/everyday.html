@@ -1,0 +1,199 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Everyday Jewellery | Pratik Jewellers</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="{% static 'home/css/style.css' %}">
+
+</head>
+
+<body>
+
+    {% include 'home/navbar.html' %}
+
+<section class="everyday-page">
+
+    <!-- HERO -->
+    <div class="everyday-hero">
+
+        <img
+    src="/media/products/everyday-bg.jpg"
+    alt="Everyday Jewellery"
+    class="everyday-hero-image">
+
+        <div class="everyday-hero-content">
+
+            <span class="everyday-eyebrow">
+                EVERYDAY COLLECTION
+            </span>
+
+            <h1>
+                Jewellery for<br>
+                every beautiful day.
+            </h1>
+
+            <p>
+                Discover refined pieces designed to
+                become part of your everyday story.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- INTRO -->
+    <section class="everyday-intro">
+
+        <span class="everyday-label">
+            THE EVERYDAY EDIT
+        </span>
+
+        <h2>
+            Effortless elegance,
+            made to be worn.
+        </h2>
+
+        <p>
+            From delicate chains to timeless earrings,
+            discover jewellery that quietly completes
+            every look.
+        </p>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="everyday-products">
+
+        <div class="everyday-products-header">
+
+            <div>
+                <span class="everyday-label">
+                    CURATED FOR YOU
+                </span>
+
+                <h2>
+                    Everyday essentials.
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="everyday-product-grid">
+
+            {% for product in everyday_products %}
+
+                <div class="everyday-product-card">
+
+                    <a href="{% url 'product_detail' product.id %}">
+
+                        {% if product.image %}
+
+                            <img
+                                src="{{ product.image.url }}"
+                                alt="{{ product.name }}"
+                                class="everyday-product-image">
+
+                        {% endif %}
+
+                    </a>
+
+
+                    <div class="everyday-product-info">
+
+                        <span class="everyday-product-category">
+                            {{ product.category }}
+                        </span>
+
+                        <h3>
+                            {{ product.name }}
+                        </h3>
+
+                        <p>
+
+                            {% if product.purity %}
+                                {{ product.purity }}
+                            {% endif %}
+
+                            {% if product.weight %}
+                                • {{ product.weight }} gm
+                            {% endif %}
+
+                        </p>
+
+                        <a
+                            href="{% url 'product_detail' product.id %}"
+                            class="everyday-product-link">
+
+                            VIEW DETAILS
+                            <span>→</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="everyday-empty">
+
+                    <h3>
+                        Everyday jewellery coming soon.
+                    </h3>
+
+                    <p>
+                        Our collection is being curated for you.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM CTA -->
+    <section class="everyday-cta">
+
+        <span class="everyday-label">
+            PRATIK JEWELLERS
+        </span>
+
+        <h2>
+            Made for your<br>
+            everyday moments.
+        </h2>
+
+        <a href="{% url 'search' %}">
+            EXPLORE ALL JEWELLERY
+            <span>→</span>
+        </a>
+
+    </section>
+
+</section>
+
+</body>
+</html>

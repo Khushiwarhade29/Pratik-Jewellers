@@ -67,6 +67,7 @@ class Product(models.Model):
     ('Earrings', 'Earrings'),
     ('Mangalsutra', 'Mangalsutra'),
     ('Nose Pin', 'Nose Pin'),
+    ('Nose Pin', 'Nose Pin'),
     ('Anklet', 'Anklet'),
     ('Jewellery Set', 'Jewellery Set'),
     ("Men's Jewellery", "Men's Jewellery"),
@@ -114,6 +115,7 @@ class Product(models.Model):
     blank=True,
     default='Other'
 )
+    
     
     purity = models.CharField(
         max_length=10,
@@ -184,10 +186,14 @@ class Product(models.Model):
     image4 = models.ImageField(upload_to='products/', blank=True, null=True)
 
     description = models.TextField()
+    
+    
 
     is_featured = models.BooleanField(default=False)
 
     is_new_arrival = models.BooleanField(default=False)
+    
+    is_everyday = models.BooleanField(default=False)
 
     is_best_seller = models.BooleanField(default=False)
 

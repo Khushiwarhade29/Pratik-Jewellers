@@ -24983,3 +24983,5077 @@ transform:translateY(-8px);
     }
 
 }
+
+
+
+/* =====================================================
+   CUSTOMER CARE SECTION
+   ===================================================== */
+
+.customer-care-section {
+    width: min(1180px, 90%);
+    margin: 80px auto 0;
+    text-align: center;
+}
+
+
+.customer-care-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+.customer-care-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 20px;
+}
+
+
+.customer-care-card {
+
+    min-height: 205px;
+    padding: 30px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0,0,0,.06);
+
+    box-shadow:
+    0 7px 25px rgba(0,0,0,.06);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.customer-care-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+    0 15px 34px rgba(0,0,0,.10);
+}
+
+
+.customer-care-card i {
+
+    font-size: 25px;
+
+    color:#d4af37;
+
+    margin-bottom:14px;
+}
+
+
+.customer-care-card h3 {
+
+    font-size:16px;
+
+    margin-bottom:10px;
+}
+
+
+.customer-care-card p {
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+@media(max-width:768px){
+
+.customer-care-section{
+
+width:100%;
+padding:0 15px;
+margin:50px auto 0;
+
+}
+
+
+.customer-care-cards{
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+gap:12px;
+
+}
+
+
+.customer-care-card{
+
+min-height:165px;
+
+padding:20px 10px;
+
+}
+
+
+.customer-care-card h3{
+
+font-size:13px;
+
+}
+
+
+.customer-care-card p{
+
+font-size:10px;
+
+}
+
+}
+
+/* =====================================================
+   20E-2 — THE PRATIK EDIT | DESKTOP
+   ===================================================== */
+
+@media (min-width: 769px) {
+
+    .pratik-edit {
+        width: 100% !important;
+
+        padding: 110px 6% 100px !important;
+
+        background: #f8f5ef !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .pratik-edit-header {
+        max-width: 720px !important;
+
+        margin: 0 auto 65px !important;
+
+        text-align: center !important;
+    }
+
+
+    .pratik-edit-label {
+        display: inline-block !important;
+
+        margin-bottom: 18px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 4px !important;
+
+        color: #b18a45 !important;
+    }
+
+
+    .pratik-edit-header h2 {
+        margin: 0 !important;
+
+        font-family:
+            "Cormorant Garamond",
+            Georgia,
+            serif !important;
+
+        font-size: clamp(
+            48px,
+            5vw,
+            72px
+        ) !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -1px !important;
+
+        color: #292722 !important;
+    }
+
+
+    .pratik-edit-header p {
+        max-width: 520px !important;
+
+        margin: 22px auto 0 !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.8 !important;
+
+        color: #77716a !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT GRID
+       ===================================================== */
+
+    .pratik-edit-grid {
+        width: 100% !important;
+
+        max-width: 1250px !important;
+
+        margin: 0 auto !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, 1fr) !important;
+
+        gap: 32px !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT CARD
+       ===================================================== */
+
+    .pratik-edit-card {
+        min-width: 0 !important;
+
+        background: #fff !important;
+
+        overflow: hidden !important;
+
+        transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease !important;
+    }
+
+
+    .pratik-edit-card:hover {
+        transform: translateY(-6px) !important;
+
+        box-shadow:
+            0 18px 45px rgba(40,35,28,0.10) !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .pratik-edit-image-link {
+        display: block !important;
+
+        width: 100% !important;
+
+        aspect-ratio: 1 / 1.08 !important;
+
+        overflow: hidden !important;
+
+        background: #f2eee7 !important;
+    }
+
+
+    .pratik-edit-image {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transition:
+            transform 0.7s
+            cubic-bezier(.22,.61,.36,1) !important;
+    }
+
+
+    .pratik-edit-card:hover
+    .pratik-edit-image {
+        transform: scale(1.035) !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT INFO
+       ===================================================== */
+
+    .pratik-edit-info {
+        padding: 28px 28px 32px !important;
+
+        text-align: center !important;
+    }
+
+
+    .pratik-edit-category {
+        display: block !important;
+
+        margin-bottom: 9px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 9px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 2.5px !important;
+
+        text-transform: uppercase !important;
+
+        color: #b18a45 !important;
+    }
+
+
+    .pratik-edit-info h3 {
+        margin: 0 !important;
+
+        font-family:
+            "Cormorant Garamond",
+            Georgia,
+            serif !important;
+
+        font-size: 27px !important;
+
+        font-weight: 500 !important;
+
+        line-height: 1.15 !important;
+
+        color: #292722 !important;
+    }
+
+
+    .pratik-edit-info p {
+        margin: 10px 0 0 !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 11px !important;
+
+        letter-spacing: 1px !important;
+
+        color: #817b73 !important;
+    }
+
+
+    /* =====================================================
+       VIEW DETAILS
+       ===================================================== */
+
+    .pratik-edit-details {
+        position: relative !important;
+
+        display: inline-flex !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+
+        margin-top: 22px !important;
+
+        padding-bottom: 7px !important;
+
+        text-decoration: none !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 9px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 2px !important;
+
+        color: #292722 !important;
+    }
+
+
+    .pratik-edit-details::after {
+        content: "" !important;
+
+        position: absolute !important;
+
+        left: 0 !important;
+
+        bottom: 0 !important;
+
+        width: 100% !important;
+
+        height: 1px !important;
+
+        background: #b18a45 !important;
+    }
+
+
+    .pratik-edit-details span {
+        color: #b18a45 !important;
+
+        font-size: 14px !important;
+
+        transition:
+            transform 0.3s ease !important;
+    }
+
+
+    .pratik-edit-details:hover span {
+        transform: translateX(4px) !important;
+    }
+
+
+    /* =====================================================
+       VIEW ALL
+       ===================================================== */
+
+    .pratik-edit-footer {
+        margin-top: 60px !important;
+
+        text-align: center !important;
+    }
+
+
+    .pratik-edit-view-all {
+        display: inline-flex !important;
+
+        align-items: center !important;
+
+        gap: 14px !important;
+
+        padding-bottom: 9px !important;
+
+        text-decoration: none !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 2.5px !important;
+
+        color: #292722 !important;
+
+        border-bottom: 1px solid #b18a45 !important;
+    }
+
+
+    .pratik-edit-view-all span {
+        color: #b18a45 !important;
+
+        font-size: 15px !important;
+    }
+
+}
+
+/* =====================================================
+   20E-3 — THE PRATIK EDIT | MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .pratik-edit {
+        width: 100% !important;
+
+        padding: 65px 14px 60px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .pratik-edit-header {
+        width: 100% !important;
+
+        margin: 0 auto 35px !important;
+
+        padding: 0 10px !important;
+
+        text-align: center !important;
+    }
+
+
+    .pratik-edit-label {
+        margin-bottom: 12px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .pratik-edit-header h2 {
+        font-size: 39px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+
+    .pratik-edit-header p {
+        max-width: 310px !important;
+
+        margin: 15px auto 0 !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT GRID
+       ===================================================== */
+
+    .pratik-edit-grid {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 14px !important;
+    }
+
+
+    /* =====================================================
+       CARD
+       ===================================================== */
+
+    .pratik-edit-card {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+
+        box-shadow: none !important;
+
+        transform: none !important;
+    }
+
+
+    .pratik-edit-card:hover {
+        transform: none !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .pratik-edit-image-link {
+        width: 100% !important;
+
+        aspect-ratio: 1 / 1.08 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .pratik-edit-image {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT INFO
+       ===================================================== */
+
+    .pratik-edit-info {
+        padding: 15px 7px 20px !important;
+
+        text-align: center !important;
+    }
+
+
+    .pratik-edit-category {
+        margin-bottom: 6px !important;
+
+        font-size: 7px !important;
+
+        letter-spacing: 1.5px !important;
+    }
+
+
+    .pratik-edit-info h3 {
+        font-size: 18px !important;
+
+        line-height: 1.1 !important;
+    }
+
+
+    .pratik-edit-info p {
+        margin: 7px 0 0 !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 0.7px !important;
+    }
+
+
+    /* =====================================================
+       VIEW DETAILS
+       ===================================================== */
+
+    .pratik-edit-details {
+        gap: 6px !important;
+
+        margin-top: 14px !important;
+
+        padding-bottom: 5px !important;
+
+        font-size: 7px !important;
+
+        letter-spacing: 1.4px !important;
+    }
+
+
+    .pratik-edit-details span {
+        font-size: 11px !important;
+    }
+
+
+    /* =====================================================
+       VIEW ALL
+       ===================================================== */
+
+    .pratik-edit-footer {
+        margin-top: 38px !important;
+    }
+
+
+    .pratik-edit-view-all {
+        gap: 9px !important;
+
+        padding-bottom: 7px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1.7px !important;
+    }
+
+
+    .pratik-edit-view-all span {
+        font-size: 13px !important;
+    }
+
+}
+
+/* =====================================================
+   20F-2 — SHOP BY OCCASION | DESKTOP
+   ===================================================== */
+
+@media (min-width: 769px) {
+
+    .shop-occasion {
+        width: 100% !important;
+
+        padding: 110px 6% 100px !important;
+
+        background: #f8f5ef !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .shop-occasion-header {
+        max-width: 720px !important;
+
+        margin: 0 auto 60px !important;
+
+        text-align: center !important;
+    }
+
+
+    .shop-occasion-label {
+        display: inline-block !important;
+
+        margin-bottom: 17px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 4px !important;
+
+        color: #b18a45 !important;
+    }
+
+
+    .shop-occasion-header h2 {
+        margin: 0 !important;
+
+        font-family:
+            "Cormorant Garamond",
+            Georgia,
+            serif !important;
+
+        font-size: clamp(
+            46px,
+            5vw,
+            70px
+        ) !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -1px !important;
+
+        color: #292722 !important;
+    }
+
+
+    .shop-occasion-header p {
+        max-width: 520px !important;
+
+        margin: 20px auto 0 !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.8 !important;
+
+        color: #77716a !important;
+    }
+
+
+    /* =====================================================
+       OCCASION GRID
+       ===================================================== */
+
+    .shop-occasion-grid {
+        width: 100% !important;
+
+        max-width: 1250px !important;
+
+        margin: 0 auto !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+
+        gap: 18px !important;
+    }
+
+
+    /* =====================================================
+       OCCASION CARD
+       ===================================================== */
+
+    .occasion-card {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        aspect-ratio: 0.78 !important;
+
+        overflow: hidden !important;
+
+        text-decoration: none !important;
+
+        background: #292722 !important;
+
+        isolation: isolate !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .occasion-image {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        overflow: hidden !important;
+
+        z-index: 0 !important;
+    }
+
+
+    .occasion-image img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transition:
+            transform 0.9s
+            cubic-bezier(.22,.61,.36,1) !important;
+    }
+
+
+    /* =====================================================
+       LUXURY OVERLAY
+       ===================================================== */
+
+    .occasion-card::after {
+        content: "" !important;
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        z-index: 1 !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(20,18,15,0.02) 20%,
+                rgba(20,18,15,0.18) 48%,
+                rgba(20,18,15,0.82) 100%
+            ) !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .occasion-content {
+        position: absolute !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        z-index: 2 !important;
+
+        padding: 32px 28px !important;
+
+        color: #fff !important;
+
+        text-align: center !important;
+    }
+
+
+    .occasion-content span {
+        display: block !important;
+
+        margin-bottom: 9px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 8px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 3px !important;
+
+        color: #e1c27b !important;
+    }
+
+
+    .occasion-content h3 {
+        margin: 0 !important;
+
+        font-family:
+            "Cormorant Garamond",
+            Georgia,
+            serif !important;
+
+        font-size: 28px !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1.05 !important;
+
+        color: #fff !important;
+    }
+
+
+    .occasion-content p {
+        margin: 10px auto 0 !important;
+
+        max-width: 210px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.6 !important;
+
+        color: rgba(255,255,255,0.78) !important;
+    }
+
+
+    .occasion-content strong {
+        display: inline-block !important;
+
+        margin-top: 18px !important;
+
+        padding-bottom: 7px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 8px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 2px !important;
+
+        color: #fff !important;
+
+        border-bottom: 1px solid #d1ad62 !important;
+    }
+
+
+    /* =====================================================
+       HOVER
+       ===================================================== */
+
+    .occasion-card:hover
+    .occasion-image img {
+        transform: scale(1.045) !important;
+    }
+
+
+    .occasion-card:hover
+    .occasion-content strong {
+        color: #e1c27b !important;
+    }
+
+}
+
+/* =====================================================
+   20F-3 — SHOP BY OCCASION | MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .shop-occasion {
+        width: 100% !important;
+
+        padding: 65px 14px 60px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .shop-occasion-header {
+        width: 100% !important;
+
+        margin: 0 auto 35px !important;
+
+        padding: 0 8px !important;
+
+        text-align: center !important;
+    }
+
+
+    .shop-occasion-label {
+        margin-bottom: 12px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .shop-occasion-header h2 {
+        font-size: 38px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+
+    .shop-occasion-header p {
+        max-width: 310px !important;
+
+        margin: 15px auto 0 !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* =====================================================
+       GRID
+       ===================================================== */
+
+    .shop-occasion-grid {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+
+    /* =====================================================
+       CARD
+       ===================================================== */
+
+    .occasion-card {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        aspect-ratio: 0.78 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .occasion-image {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .occasion-image img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       OVERLAY
+       ===================================================== */
+
+    .occasion-card::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(20,18,15,0.02) 15%,
+                rgba(20,18,15,0.20) 45%,
+                rgba(20,18,15,0.86) 100%
+            ) !important;
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .occasion-content {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        padding: 20px 10px !important;
+
+        text-align: center !important;
+    }
+
+
+    .occasion-content span {
+        margin-bottom: 6px !important;
+
+        font-size: 6px !important;
+
+        letter-spacing: 1.8px !important;
+    }
+
+
+    .occasion-content h3 {
+        font-size: 19px !important;
+
+        line-height: 1.05 !important;
+    }
+
+
+    .occasion-content p {
+        max-width: 150px !important;
+
+        margin: 7px auto 0 !important;
+
+        font-size: 7px !important;
+
+        line-height: 1.5 !important;
+    }
+
+
+    .occasion-content strong {
+        margin-top: 11px !important;
+
+        padding-bottom: 5px !important;
+
+        font-size: 6px !important;
+
+        letter-spacing: 1.5px !important;
+    }
+
+}
+
+/* =====================================================
+   20G-2 — CUSTOM JEWELLERY STUDIO | DESKTOP
+   ===================================================== */
+
+@media (min-width: 769px) {
+
+    .custom-studio {
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-height: 680px !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        background: #292722 !important;
+
+        isolation: isolate !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .custom-studio-image {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        overflow: hidden !important;
+
+        z-index: 0 !important;
+    }
+
+
+    .custom-studio-image img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transform: scale(1.01) !important;
+
+        transition:
+            transform 1.2s
+            cubic-bezier(.22,.61,.36,1) !important;
+    }
+
+
+    /* =====================================================
+       DARK EDITORIAL OVERLAY
+       ===================================================== */
+
+    .custom-studio-overlay {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        z-index: 1 !important;
+
+        pointer-events: none !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(20,18,15,0.76) 0%,
+                rgba(20,18,15,0.45) 42%,
+                rgba(20,18,15,0.16) 100%
+            ) !important;
+    }
+
+
+    .custom-studio-overlay::after {
+        content: "" !important;
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.08) 0%,
+                rgba(0,0,0,0.05) 50%,
+                rgba(0,0,0,0.35) 100%
+            ) !important;
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .custom-studio-content {
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        width: 100% !important;
+
+        max-width: 1200px !important;
+
+        padding: 100px 70px !important;
+
+        text-align: left !important;
+
+        color: #fff !important;
+    }
+
+
+    /* =====================================================
+       LABEL
+       ===================================================== */
+
+    .custom-studio-label {
+        display: inline-block !important;
+
+        margin-bottom: 24px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 4px !important;
+
+        color: #e1c27b !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+       ===================================================== */
+
+    .custom-studio-content h2 {
+        margin: 0 !important;
+
+        font-family:
+            "Cormorant Garamond",
+            Georgia,
+            serif !important;
+
+        font-size: clamp(
+            60px,
+            6vw,
+            92px
+        ) !important;
+
+        font-weight: 400 !important;
+
+        line-height: 0.94 !important;
+
+        letter-spacing: -1px !important;
+
+        color: #fff !important;
+
+        text-shadow:
+            0 3px 25px rgba(0,0,0,0.25) !important;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+       ===================================================== */
+
+    .custom-studio-content p {
+        max-width: 460px !important;
+
+        margin: 28px 0 0 !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 13px !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1.85 !important;
+
+        letter-spacing: 0.2px !important;
+
+        color: rgba(255,255,255,0.86) !important;
+    }
+
+
+    /* =====================================================
+       CTA
+       ===================================================== */
+
+    .custom-studio-link {
+        position: relative !important;
+
+        display: inline-flex !important;
+
+        align-items: center !important;
+
+        gap: 13px !important;
+
+        margin-top: 34px !important;
+
+        padding-bottom: 9px !important;
+
+        text-decoration: none !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 10px !important;
+
+        font-weight: 600 !important;
+
+        letter-spacing: 2.5px !important;
+
+        color: #fff !important;
+
+        transition:
+            color 0.3s ease,
+            gap 0.35s ease !important;
+    }
+
+
+    .custom-studio-link::after {
+        content: "" !important;
+
+        position: absolute !important;
+
+        left: 0 !important;
+
+        bottom: 0 !important;
+
+        width: 100% !important;
+
+        height: 1px !important;
+
+        background: #d1ad62 !important;
+
+        transform-origin: left !important;
+
+        transition:
+            transform 0.35s ease !important;
+    }
+
+
+    .custom-studio-link span {
+        font-size: 16px !important;
+
+        line-height: 1 !important;
+
+        color: #e1c27b !important;
+
+        transition:
+            transform 0.35s ease !important;
+    }
+
+
+    .custom-studio-link:hover {
+        gap: 19px !important;
+
+        color: #e1c27b !important;
+    }
+
+
+    .custom-studio-link:hover span {
+        transform: translateX(4px) !important;
+    }
+
+
+    .custom-studio-link:hover::after {
+        transform: scaleX(0.55) !important;
+    }
+
+
+    /* =====================================================
+       OPTIONS
+       ===================================================== */
+
+    .custom-studio-options {
+        position: absolute !important;
+
+        left: 50% !important;
+
+        bottom: 30px !important;
+
+        z-index: 3 !important;
+
+        width: 90% !important;
+
+        transform: translateX(-50%) !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 12px !important;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif !important;
+
+        font-size: 8px !important;
+
+        font-weight: 500 !important;
+
+        letter-spacing: 2px !important;
+
+        color: rgba(255,255,255,0.78) !important;
+    }
+
+
+    .custom-studio-options a {
+        text-decoration: none !important;
+
+        color: inherit !important;
+
+        transition:
+            color 0.3s ease !important;
+    }
+
+
+    .custom-studio-options a:hover {
+        color: #e1c27b !important;
+    }
+
+
+    .custom-studio-options span {
+        color: #d1ad62 !important;
+    }
+
+
+    /* =====================================================
+       IMAGE HOVER
+       ===================================================== */
+
+    .custom-studio:hover
+    .custom-studio-image img {
+        transform: scale(1.025) !important;
+    }
+
+}
+
+/* =====================================================
+   20G-3 — CUSTOM JEWELLERY STUDIO | MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .custom-studio {
+        width: 100% !important;
+
+        min-height: 620px !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        isolation: isolate !important;
+    }
+
+
+    /* =====================================================
+       IMAGE
+       ===================================================== */
+
+    .custom-studio-image {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .custom-studio-image img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center center !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       OVERLAY
+       ===================================================== */
+
+    .custom-studio-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(20,18,15,0.25) 0%,
+                rgba(20,18,15,0.30) 35%,
+                rgba(20,18,15,0.82) 100%
+            ) !important;
+    }
+
+
+    .custom-studio-overlay::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.08) 0%,
+                rgba(0,0,0,0.05) 45%,
+                rgba(0,0,0,0.40) 100%
+            ) !important;
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .custom-studio-content {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        padding: 80px 24px 130px !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =====================================================
+       LABEL
+       ===================================================== */
+
+    .custom-studio-label {
+        margin-bottom: 18px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.8px !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+       ===================================================== */
+
+    .custom-studio-content h2 {
+        font-size: 48px !important;
+
+        line-height: 0.98 !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+       ===================================================== */
+
+    .custom-studio-content p {
+        max-width: 310px !important;
+
+        margin: 20px auto 0 !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.75 !important;
+
+        color: rgba(255,255,255,0.88) !important;
+    }
+
+
+    /* =====================================================
+       CTA
+       ===================================================== */
+
+    .custom-studio-link {
+        gap: 9px !important;
+
+        margin-top: 27px !important;
+
+        padding-bottom: 7px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1.8px !important;
+    }
+
+
+    .custom-studio-link span {
+        font-size: 14px !important;
+    }
+
+
+    /* =====================================================
+       OPTIONS
+       ===================================================== */
+
+    .custom-studio-options {
+        left: 50% !important;
+
+        bottom: 24px !important;
+
+        width: calc(100% - 28px) !important;
+
+        transform: translateX(-50%) !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 7px 9px !important;
+
+        font-size: 6px !important;
+
+        letter-spacing: 1.2px !important;
+
+        line-height: 1.5 !important;
+
+        text-align: center !important;
+    }
+
+
+    .custom-studio-options a {
+        white-space: nowrap !important;
+    }
+
+
+    .custom-studio-options span {
+        font-size: 7px !important;
+    }
+
+}
+/* =====================================================
+   20G-3 FIX — CUSTOM STUDIO MOBILE IMAGE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .custom-studio {
+        position: relative !important;
+        min-height: 620px !important;
+        height: 620px !important;
+        overflow: hidden !important;
+    }
+
+    .custom-studio-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: block !important;
+        z-index: 0 !important;
+    }
+
+    .custom-studio-image img {
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: block !important;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    .custom-studio-overlay {
+        z-index: 1 !important;
+    }
+
+    .custom-studio-content {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .custom-studio-options {
+        z-index: 3 !important;
+    }
+
+}
+
+/* =====================================================
+   20E-4 — THE PRATIK EDIT | 4 COLUMNS DESKTOP
+   ===================================================== */
+
+@media (min-width: 769px) {
+
+    .pratik-edit-grid {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+
+        gap: 24px !important;
+
+        align-items: start !important;
+    }
+
+
+    .pratik-edit-card {
+        width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .pratik-edit-image-link {
+        display: block !important;
+
+        width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .pratik-edit-image {
+        width: 100% !important;
+
+        height: auto !important;
+
+        display: block !important;
+    }
+
+}
+
+/* =====================================================
+   20E-5 — THE PRATIK EDIT | MOBILE IMAGE FIX
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .pratik-edit-grid {
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 18px !important;
+
+        width: 100% !important;
+    }
+
+
+    .pratik-edit-card {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .pratik-edit-image-link {
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .pratik-edit-image {
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        max-height: none !important;
+
+        aspect-ratio: auto !important;
+
+        object-fit: contain !important;
+
+        object-position: center center !important;
+
+        display: block !important;
+
+        transform: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   20H-2 — SILVER EDITORIAL
+   DESKTOP
+   ===================================================== */
+
+.silver-editorial {
+    width: 100% !important;
+
+    min-height: 620px !important;
+
+    margin: 0 !important;
+    padding: 70px 6vw !important;
+
+    display: grid !important;
+
+    grid-template-columns: 38% 62% !important;
+
+    align-items: center !important;
+
+    gap: 50px !important;
+
+    background: #f7f5f0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+   ===================================================== */
+
+.silver-editorial-content {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: flex-start !important;
+
+    padding: 30px 20px 30px 0 !important;
+}
+
+
+.silver-editorial-label {
+    position: relative !important;
+
+    display: inline-block !important;
+
+    margin-bottom: 24px !important;
+
+    padding-left: 42px !important;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 4px !important;
+
+    color: #77736c !important;
+}
+
+
+.silver-editorial-label::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 0 !important;
+
+    top: 50% !important;
+
+    width: 28px !important;
+
+    height: 1px !important;
+
+    background: #aaa59c !important;
+}
+
+
+.silver-editorial-content h2 {
+    margin: 0 !important;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif !important;
+
+    font-size: clamp(
+        48px,
+        5vw,
+        76px
+    ) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 0.98 !important;
+
+    letter-spacing: -1px !important;
+
+    color: #25231f !important;
+}
+
+
+.silver-editorial-link {
+    position: relative !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    margin-top: 34px !important;
+
+    padding-bottom: 8px !important;
+
+    text-decoration: none !important;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 2.5px !important;
+
+    color: #292722 !important;
+
+    transition:
+        color 0.3s ease,
+        gap 0.35s ease !important;
+}
+
+
+.silver-editorial-link::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 0 !important;
+
+    bottom: 0 !important;
+
+    width: 100% !important;
+
+    height: 1px !important;
+
+    background: #8d8981 !important;
+
+    transition:
+        transform 0.35s ease !important;
+
+    transform-origin: left !important;
+}
+
+
+.silver-editorial-link span {
+    font-size: 16px !important;
+
+    line-height: 1 !important;
+
+    transition:
+        transform 0.35s ease !important;
+}
+
+
+.silver-editorial-link:hover {
+    gap: 17px !important;
+
+    color: #77736c !important;
+}
+
+
+.silver-editorial-link:hover span {
+    transform: translateX(4px) !important;
+}
+
+
+.silver-editorial-link:hover::after {
+    transform: scaleX(0.55) !important;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE GALLERY
+   ===================================================== */
+
+.silver-editorial-gallery {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns: 1.5fr 0.8fr !important;
+
+    gap: 18px !important;
+
+    align-items: stretch !important;
+}
+
+
+/* LARGE IMAGE */
+
+.silver-gallery-main {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: 470px !important;
+
+    overflow: hidden !important;
+
+    background: #ece9e2 !important;
+}
+
+
+.silver-gallery-main img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    object-position: center center !important;
+
+    transition:
+        transform 0.8s
+        cubic-bezier(.22,.61,.36,1) !important;
+}
+
+
+.silver-gallery-main:hover img {
+    transform: scale(1.035) !important;
+}
+
+
+/* =====================================================
+   SMALL IMAGES
+   ===================================================== */
+
+.silver-gallery-small {
+    display: grid !important;
+
+    grid-template-columns: 1fr !important;
+
+    grid-template-rows: 1fr 1fr !important;
+
+    gap: 18px !important;
+
+    min-width: 0 !important;
+}
+
+
+.silver-gallery-card {
+    display: block !important;
+
+    width: 100% !important;
+
+    min-height: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #ece9e2 !important;
+}
+
+
+.silver-gallery-card img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    object-position: center center !important;
+
+    transition:
+        transform 0.8s
+        cubic-bezier(.22,.61,.36,1) !important;
+}
+
+
+.silver-gallery-card:hover img {
+    transform: scale(1.045) !important;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .silver-editorial {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        padding: 55px 18px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        gap: 35px !important;
+    }
+
+
+    .silver-editorial-content {
+        padding: 0 !important;
+
+        align-items: flex-start !important;
+
+        text-align: left !important;
+    }
+
+
+    .silver-editorial-label {
+        margin-bottom: 18px !important;
+
+        padding-left: 34px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 3px !important;
+    }
+
+
+    .silver-editorial-label::before {
+        width: 23px !important;
+    }
+
+
+    .silver-editorial-content h2 {
+        font-size: 43px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+
+    .silver-editorial-link {
+        margin-top: 25px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+
+    /* IMAGE AREA */
+
+    .silver-editorial-gallery {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1.35fr 0.85fr !important;
+
+        gap: 10px !important;
+    }
+
+
+    .silver-gallery-main {
+        height: 360px !important;
+    }
+
+
+    .silver-gallery-small {
+        gap: 10px !important;
+    }
+
+
+    .silver-gallery-card {
+        min-height: 0 !important;
+    }
+
+
+    .silver-gallery-main img,
+    .silver-gallery-card img {
+        object-fit: cover !important;
+
+        object-position: center center !important;
+    }
+
+}
+
+/* =====================================================
+   20H-2 — SILVER EDITORIAL | MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .silver-editorial {
+        width: 100% !important;
+        min-height: auto !important;
+
+        margin: 0 !important;
+        padding: 55px 18px 50px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+        gap: 32px !important;
+
+        background: #f7f5f0 !important;
+    }
+
+
+    /* =================================================
+       TEXT
+    ================================================= */
+
+    .silver-editorial-content {
+        width: 100% !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        text-align: left !important;
+    }
+
+
+    .silver-editorial-label {
+        margin-bottom: 17px !important;
+
+        padding-left: 32px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 3px !important;
+    }
+
+
+    .silver-editorial-label::before {
+        width: 22px !important;
+    }
+
+
+    .silver-editorial-content h2 {
+        margin: 0 !important;
+
+        font-size: 42px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+
+    .silver-editorial-link {
+        margin-top: 24px !important;
+
+        padding-bottom: 7px !important;
+
+        gap: 9px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+
+    .silver-editorial-link span {
+        font-size: 14px !important;
+    }
+
+
+    /* =================================================
+       GALLERY
+    ================================================= */
+
+    .silver-editorial-gallery {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 10px !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* =================================================
+       LARGE IMAGE
+    ================================================= */
+
+    .silver-gallery-main {
+        width: 100% !important;
+
+        height: 330px !important;
+
+        display: block !important;
+
+        overflow: hidden !important;
+
+        background: #ece9e2 !important;
+    }
+
+
+    .silver-gallery-main img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center center !important;
+
+        transform: none !important;
+    }
+
+
+    /* =================================================
+       TWO SMALL IMAGES
+    ================================================= */
+
+    .silver-gallery-small {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-rows: none !important;
+
+        gap: 10px !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .silver-gallery-card {
+        width: 100% !important;
+
+        height: 190px !important;
+
+        min-height: 0 !important;
+
+        overflow: hidden !important;
+
+        display: block !important;
+
+        background: #ece9e2 !important;
+    }
+
+
+    .silver-gallery-card img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        object-position: center center !important;
+
+        transform: none !important;
+    }
+
+
+    /* =================================================
+       DISABLE HOVER SCALE ON TOUCH DEVICES
+    ================================================= */
+
+    .silver-gallery-main:hover img,
+    .silver-gallery-card:hover img {
+        transform: none !important;
+    }
+
+}
+
+
+
+
+/* =========================================
+   CUSTOMER CARE CLICKABLE CARDS
+========================================= */
+
+.customer-care-card {
+    text-decoration: none !important;
+    color: #555 !important;
+    display: block;
+}
+
+.customer-care-card h3 {
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+.customer-care-card p {
+    color: #666 !important;
+    text-decoration: none !important;
+}
+
+.customer-care-card:hover {
+    text-decoration: none !important;
+}
+
+.customer-care-link {
+    color: #d4af37 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   CUSTOMER CARE - MATCH HELP CARDS
+========================================= */
+
+/* Customer Care main heading */
+.customer-care-section > h2 {
+    color: #d4af37 !important;
+}
+
+/* Customer Care card heading */
+.customer-care-card h3 {
+    color: #d4af37 !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+/* Customer Care card paragraph */
+.customer-care-card p {
+    color: #555 !important;
+    text-decoration: none !important;
+}
+
+/* Keep clickable card styling */
+.customer-care-card {
+    color: #555 !important;
+    text-decoration: none !important;
+}
+
+/* Arrow / action text */
+.customer-care-link {
+    color: #d4af37 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   20H-1 — HERO IMAGE SLIDER
+   ========================================================= */
+
+.hero {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+}
+
+/* Slider wrapper */
+.hero-slider {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    overflow: hidden !important;
+
+    z-index: -2 !important;
+}
+
+/* Individual slides */
+.hero-slide {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    opacity: 0 !important;
+
+    transition:
+        opacity 1.2s ease-in-out !important;
+
+    pointer-events: none !important;
+}
+
+/* Active image */
+.hero-slide.active {
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-slider {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .hero-slide {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+
+}
+
+/* =========================================================
+   20H-3 — HERO SLIDER MOBILE FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .hero-slider {
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-slide {
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+
+        /*
+         * Center keeps the jewellery visible
+         * while filling the mobile hero.
+         */
+        background-position: center center !important;
+
+        opacity: 0 !important;
+
+        transition:
+            opacity 1.2s ease-in-out !important;
+    }
+
+    .hero-slide.active {
+        opacity: 1 !important;
+    }
+
+}
+
+/* =========================================================
+   20H-4 — HERO SLIDER LUXURY POLISH
+   ========================================================= */
+
+.hero-slide {
+    transform: scale(1.02) !important;
+
+    transition:
+        opacity 1.2s ease-in-out,
+        transform 6s ease-out !important;
+}
+
+.hero-slide.active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+
+/* Keep hero content above slider */
+.hero-content {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+.hero-overlay {
+    z-index: 2 !important;
+}
+
+
+/* Mobile — slightly gentler movement */
+@media (max-width: 768px) {
+
+    .hero-slide {
+        transform: scale(1.01) !important;
+
+        transition:
+            opacity 1.2s ease-in-out,
+            transform 5s ease-out !important;
+    }
+
+    .hero-slide.active {
+        transform: scale(1) !important;
+    }
+
+}
+
+/* =========================================================
+   20I-4 — EVERYDAY JEWELLERY | DESKTOP
+   ========================================================= */
+
+.everyday-page {
+    width: 100%;
+    background: #f7f3ec;
+    color: #292722;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.everyday-hero {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.everyday-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 80px 40px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+
+.everyday-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #e1c27b;
+}
+
+
+.everyday-hero-content h1 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(52px, 6vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -1px;
+}
+
+
+.everyday-hero-content p {
+    max-width: 520px;
+
+    margin: 28px auto 0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.88);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.everyday-intro {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px 80px;
+
+    text-align: center;
+}
+
+
+.everyday-label {
+    display: inline-block;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #a88745;
+}
+
+
+.everyday-intro h2 {
+    margin: 18px 0 20px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #292722;
+}
+
+
+.everyday-intro p {
+    max-width: 580px;
+
+    margin: 0 auto;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #716b61;
+}
+
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+
+.everyday-products {
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 100px;
+}
+
+
+.everyday-products-header {
+    margin-bottom: 45px;
+}
+
+
+.everyday-products-header h2 {
+    margin: 12px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 44px;
+
+    font-weight: 400;
+
+    color: #292722;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.everyday-product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+.everyday-product-card {
+    background: #fff;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.everyday-product-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(45, 38, 28, 0.12);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.everyday-product-card > a:first-child {
+    display: block;
+
+    overflow: hidden;
+
+    background: #f0ebe2;
+}
+
+
+.everyday-product-image {
+    width: 100%;
+
+    height: 330px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.everyday-product-card:hover
+.everyday-product-image {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+   ========================================================= */
+
+.everyday-product-info {
+    padding: 24px 22px 28px;
+}
+
+
+.everyday-product-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #a88745;
+
+    text-transform: uppercase;
+}
+
+
+.everyday-product-info h3 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    color: #292722;
+}
+
+
+.everyday-product-info p {
+    margin: 8px 0 18px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    color: #81796d;
+}
+
+
+.everyday-product-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #292722;
+}
+
+
+.everyday-product-link span {
+    color: #b59451;
+
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.everyday-product-link:hover {
+    color: #a88745;
+}
+
+
+.everyday-product-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.everyday-empty {
+    grid-column: 1 / -1;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+
+.everyday-empty h3 {
+    margin: 0 0 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+}
+
+
+.everyday-empty p {
+    margin: 0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: #81796d;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.everyday-cta {
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background: #292722;
+
+    color: #fff;
+}
+
+
+.everyday-cta h2 {
+    margin: 18px 0 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.everyday-cta > a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #d1ad62;
+
+    text-decoration: none;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #fff;
+}
+
+
+.everyday-cta > a span {
+    color: #e1c27b;
+}
+
+
+
+
+.everyday-page {
+    background: #f7f3ec !important;
+}
+
+.everyday-hero {
+    min-height: 560px !important;
+    background: #292722 !important;
+}
+
+.everyday-product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+.everyday-hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   20J-2 — CUSTOM DESIGN CARDS
+   ========================================================= */
+
+.custom-design-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    background: #f7f3ec;
+}
+
+.custom-design-header {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.custom-section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #a88745;
+}
+
+.custom-design-header h2 {
+    margin: 0 0 15px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(40px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1;
+
+    color: #292722;
+}
+
+.custom-design-header p {
+    margin: 0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #716b61;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.custom-design-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.custom-design-card {
+    display: block;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.custom-design-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(45, 38, 28, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.custom-design-image {
+    width: 100%;
+    height: 330px;
+
+    overflow: hidden;
+
+    background: #eee8de;
+}
+
+.custom-design-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.custom-design-card:hover
+.custom-design-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.custom-design-info {
+    padding: 24px 24px 28px;
+}
+
+.custom-design-info span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #a88745;
+
+    text-transform: uppercase;
+}
+
+.custom-design-info h3 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 500;
+
+    color: #292722;
+}
+
+.custom-design-info p {
+    margin: 8px 0 18px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #81796d;
+}
+
+.custom-design-info strong {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #292722;
+}
+
+.custom-design-info strong b {
+    color: #b59451;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.custom-design-card:hover
+.custom-design-info strong b {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .custom-design-section {
+        padding: 70px 18px;
+    }
+
+    .custom-design-header {
+        margin-bottom: 35px;
+    }
+
+    .custom-design-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .custom-design-image {
+        height: 220px;
+    }
+
+    .custom-design-info {
+        padding: 17px 15px 20px;
+    }
+
+    .custom-design-info span {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .custom-design-info h3 {
+        font-size: 21px;
+    }
+
+    .custom-design-info p {
+        font-size: 9px;
+        margin: 6px 0 14px;
+    }
+
+    .custom-design-info strong {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+}
+
+/* =========================================================
+   20J-3 — CUSTOM HERO WARM WHITE FIX
+   ========================================================= */
+
+.custom-hero {
+    min-height: 560px !important;
+
+    background: #f7f3ec !important;
+
+    color: #292722 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+.custom-hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+
+    width: 100% !important;
+    max-width: 900px !important;
+
+    padding: 90px 40px !important;
+
+    text-align: center !important;
+
+    color: #292722 !important;
+}
+
+
+.custom-eyebrow {
+    color: #a88745 !important;
+}
+
+
+.custom-hero-content h1 {
+    color: #292722 !important;
+}
+
+
+.custom-hero-content p {
+    color: #716b61 !important;
+}
+
+
+.custom-hero-link {
+    color: #292722 !important;
+
+    border-bottom: 1px solid #b59451 !important;
+
+    text-decoration: none !important;
+}
+
+
+.custom-hero-link span {
+    color: #a88745 !important;
+}
+
+/* =========================================================
+   CUSTOM HERO — REMOVE BLACK BACKGROUND
+   ========================================================= */
+
+.custom-page {
+    background: #f7f3ec !important;
+}
+
+.custom-hero {
+    background: #f7f3ec !important;
+    background-image: none !important;
+    background-color: #f7f3ec !important;
+
+    color: #292722 !important;
+}
+
+.custom-hero::before,
+.custom-hero::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    opacity: 0 !important;
+}
+
+.custom-hero-content {
+    color: #292722 !important;
+}
+
+.custom-hero-content h1 {
+    color: #292722 !important;
+}
+
+.custom-hero-content p {
+    color: #716b61 !important;
+}
+
+.custom-eyebrow {
+    color: #a88745 !important;
+}
+
+.custom-hero-link {
+    color: #292722 !important;
+}
+
+/* =========================================================
+   CUSTOM HERO — WARM IVORY THEME
+   ========================================================= */
+
+.custom-hero {
+    background: #f7f3ec !important;
+    background-image: none !important;
+    background-color: #f7f3ec !important;
+}
+
+.custom-hero-content {
+    color: #292722 !important;
+}
+
+.custom-hero-content h1 {
+    color: #292722 !important;
+}
+
+.custom-hero-content p {
+    color: #716b61 !important;
+}
+
+.custom-eyebrow {
+    color: #a88745 !important;
+}
+
+.custom-hero-link {
+    color: #292722 !important;
+    border-bottom-color: #b59451 !important;
+}
+
+.custom-hero-link span {
+    color: #a88745 !important;
+}
+
+/* =========================================================
+   20J-3 — CUSTOM HERO WARM BACKGROUND
+   ========================================================= */
+
+.custom-hero {
+    width: 100% !important;
+    min-height: 560px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #f7f3ec !important;
+    background-image: none !important;
+
+    color: #292722 !important;
+
+    margin: 0 !important;
+}
+
+
+.custom-hero-content {
+    width: 100% !important;
+    max-width: 900px !important;
+
+    padding: 90px 40px !important;
+
+    text-align: center !important;
+
+    color: #292722 !important;
+}
+
+
+.custom-hero-content h1 {
+    color: #292722 !important;
+}
+
+
+.custom-hero-content p {
+    color: #716b61 !important;
+}
+
+
+.custom-eyebrow {
+    color: #a88745 !important;
+}
+
+
+.custom-hero-link {
+    color: #292722 !important;
+    border-bottom: 1px solid #b59451 !important;
+}
+
+
+.custom-hero-link span {
+    color: #a88745 !important;
+}
+
+/* =====================================================
+   JEWELLERY CATEGORY STRIP — DESKTOP
+===================================================== */
+
+.jewellery-category-strip {
+    width: 100%;
+    background: #f8f5ef;
+    border-top: 1px solid rgba(180, 150, 90, 0.25);
+    border-bottom: 1px solid rgba(180, 150, 90, 0.25);
+    overflow: hidden;
+}
+
+.jewellery-category-track {
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+    padding: 0 25px;
+
+    white-space: nowrap;
+}
+
+.jewellery-category-track a {
+    color: #2b2926;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+.jewellery-category-track span {
+    color: #b79a62;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.jewellery-category-track a:hover {
+    color: #b08b4f;
+}
+
+/* =====================================================
+   JEWELLERY CATEGORY STRIP — MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .jewellery-category-strip {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .jewellery-category-strip::-webkit-scrollbar {
+        display: none;
+    }
+
+    .jewellery-category-track {
+        width: max-content;
+        min-width: max-content;
+
+        justify-content: flex-start;
+
+        gap: 16px;
+
+        padding: 0 20px;
+
+        white-space: nowrap;
+    }
+
+    .jewellery-category-track a {
+        flex-shrink: 0;
+
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .jewellery-category-track span {
+        flex-shrink: 0;
+
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   PRATIK JEWELLERS — WARM / IVORY WEBSITE THEME
+   ONLY COLOUR OVERRIDE
+   LAYOUT / SPACING / IMAGES / FUNCTIONALITY UNCHANGED
+   ========================================================= */
+
+/* =========================================================
+   PRATIK JEWELLERS — FINAL WARM WHITE THEME
+   COLOUR ONLY — NO LAYOUT CHANGES
+   ========================================================= */
+
+:root {
+    --pj-warm: #f7f3ec;
+    --pj-warm-light: #fcfaf6;
+    --pj-white: #ffffff;
+    --pj-text: #292722;
+    --pj-muted: #716b61;
+    --pj-gold: #b59451;
+}
+
+
+/* =========================================================
+   COLLECTION PAGE BACKGROUND
+   ========================================================= */
+
+body:has(.gold-card),
+body:has(.silver-card),
+body:has(.diamond-card),
+body:has(.bridal-card),
+body:has(.coin-card),
+body:has(.coins-card) {
+    background: var(--pj-warm) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* MAIN COLLECTION SECTION */
+
+body:has(.gold-card) > section.container,
+body:has(.silver-card) > section.container,
+body:has(.diamond-card) > section.container,
+body:has(.bridal-card) > section.container,
+body:has(.coin-card) > section.container,
+body:has(.coins-card) > section.container {
+    background: var(--pj-warm) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   COLLECTION HEADING
+   ========================================================= */
+
+body:has(.gold-card) h1.display-3,
+body:has(.silver-card) h1.display-3,
+body:has(.diamond-card) h1.display-3,
+body:has(.bridal-card) h1.display-3,
+body:has(.coin-card) h1.display-3,
+body:has(.coins-card) h1.display-3 {
+    color: var(--pj-text) !important;
+}
+
+
+/* DESCRIPTION */
+
+body:has(.gold-card) .text-center.mb-5 > p,
+body:has(.silver-card) .text-center.mb-5 > p,
+body:has(.diamond-card) .text-center.mb-5 > p,
+body:has(.bridal-card) .text-center.mb-5 > p,
+body:has(.coin-card) .text-center.mb-5 > p,
+body:has(.coins-card) .text-center.mb-5 > p {
+    color: var(--pj-muted) !important;
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+   ========================================================= */
+
+body:has(.gold-card) .filter-btn,
+body:has(.silver-card) .filter-btn,
+body:has(.diamond-card) .filter-btn,
+body:has(.bridal-card) .filter-btn,
+body:has(.coin-card) .filter-btn,
+body:has(.coins-card) .filter-btn {
+    color: var(--pj-text) !important;
+    background: transparent !important;
+    border-color: rgba(181,148,81,.35) !important;
+}
+
+
+body:has(.gold-card) .filter-btn.active,
+body:has(.silver-card) .filter-btn.active,
+body:has(.diamond-card) .filter-btn.active,
+body:has(.bridal-card) .filter-btn.active,
+body:has(.coin-card) .filter-btn.active,
+body:has(.coins-card) .filter-btn.active {
+    background: #d8b238 !important;
+    color: var(--pj-text) !important;
+    border-color: #d8b238 !important;
+}
+
+
+/* =========================================================
+   PRODUCT CARDS
+   ========================================================= */
+
+body:has(.gold-card) .gold-card,
+body:has(.silver-card) .silver-card,
+body:has(.diamond-card) .diamond-card,
+body:has(.bridal-card) .bridal-card,
+body:has(.coin-card) .coin-card,
+body:has(.coins-card) .coins-card {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+   THIS REMOVES THE BLACK STRIP
+   ========================================================= */
+
+body:has(.gold-card) .gold-image,
+body:has(.silver-card) .silver-image,
+body:has(.diamond-card) .diamond-image,
+body:has(.bridal-card) .bridal-image,
+body:has(.coin-card) .coin-image,
+body:has(.coins-card) .coins-image {
+    background: var(--pj-warm-light) !important;
+}
+
+
+body:has(.gold-card) .gold-image img,
+body:has(.silver-card) .silver-image img,
+body:has(.diamond-card) .diamond-image img,
+body:has(.bridal-card) .bridal-image img,
+body:has(.coin-card) .coin-image img,
+body:has(.coins-card) .coins-image img {
+    background: var(--pj-warm-light) !important;
+}
+
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+
+body:has(.gold-card) .wishlist-btn,
+body:has(.silver-card) .wishlist-btn,
+body:has(.diamond-card) .wishlist-btn,
+body:has(.bridal-card) .wishlist-btn,
+body:has(.coin-card) .wishlist-btn,
+body:has(.coins-card) .wishlist-btn {
+    background: rgba(255,255,255,.95) !important;
+    color: var(--pj-text) !important;
+    border-color: rgba(181,148,81,.45) !important;
+}
+
+
+/* =========================================================
+   PRODUCT TEXT
+   ========================================================= */
+
+body:has(.gold-card) .gold-info,
+body:has(.silver-card) .silver-info,
+body:has(.diamond-card) .diamond-info,
+body:has(.bridal-card) .bridal-info,
+body:has(.coin-card) .coin-info,
+body:has(.coins-card) .coins-info {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--pj-warm-light) !important;
+    color: var(--pj-text) !important;
+    border-top: 1px solid rgba(181,148,81,.25) !important;
+}
+
+
+.footer h4,
+.footer h5 {
+    color: var(--pj-text) !important;
+}
+
+
+.footer p {
+    color: var(--pj-muted) !important;
+}
+
+
+.footer ul li a,
+.footer a {
+    color: var(--pj-muted) !important;
+}
+
+
+.footer ul li a:hover,
+.footer a:hover {
+    color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   FOOTER FEATURES
+   ========================================================= */
+
+.footer-features {
+    background: var(--pj-warm) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.footer-features h5 {
+    color: var(--pj-text) !important;
+}
+
+
+.footer-features p {
+    color: var(--pj-muted) !important;
+}
+
+
+.footer-features i {
+    color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   PRODUCT NAMES — WARM THEME
+   ========================================================= */
+
+body:has(.gold-card) .gold-info h3,
+body:has(.silver-card) .silver-info h3,
+body:has(.diamond-card) .diamond-info h3,
+body:has(.bridal-card) .bridal-info h3,
+body:has(.coin-card) .coin-info h3,
+body:has(.coins-card) .coins-info h3 {
+    color: #292722 !important;
+}
+
+
+/* Product details */
+
+body:has(.gold-card) .gold-info p,
+body:has(.silver-card) .silver-info p,
+body:has(.diamond-card) .diamond-info p,
+body:has(.bridal-card) .bridal-info p,
+body:has(.coin-card) .coin-info p,
+body:has(.coins-card) .coins-info p {
+    color: #716b61 !important;
+}
+
+
+/* Purity / weight */
+
+body:has(.gold-card) .gold-info p:nth-of-type(2),
+body:has(.silver-card) .silver-info p:nth-of-type(2),
+body:has(.diamond-card) .diamond-info p:nth-of-type(2),
+body:has(.bridal-card) .bridal-info p:nth-of-type(2),
+body:has(.coin-card) .coin-info p:nth-of-type(2),
+body:has(.coins-card) .coins-info p:nth-of-type(2) {
+    color: #a88745 !important;
+}
+
+
+/* Price */
+
+body:has(.gold-card) .gold-info h4,
+body:has(.silver-card) .silver-info h4,
+body:has(.diamond-card) .diamond-info h4,
+body:has(.bridal-card) .bridal-info h4,
+body:has(.coin-card) .coin-info h4,
+body:has(.coins-card) .coins-info h4 {
+    color: #a88745 !important;
+}
+
+
+/* =========================================================
+   WHY CHOOSE PRATIK JEWELLERS — WARM WHITE THEME
+   ========================================================= */
+
+.why-us {
+    background: #f7f3ec !important;
+    color: #292722 !important;
+}
+
+
+/* Heading */
+
+.why-us h2 {
+    color: #292722 !important;
+}
+
+
+/* Gold underline stays */
+
+.why-us h2::after {
+    background: #b59451 !important;
+}
+
+
+/* Cards */
+
+.why-us .why-card {
+    background: transparent !important;
+    border-right: 1px solid rgba(181, 148, 81, 0.25) !important;
+}
+
+
+/* Card headings */
+
+.why-us .why-card h3 {
+    color: #a88745 !important;
+}
+
+
+/* Card descriptions */
+
+.why-us .why-card p {
+    color: #716b61 !important;
+}
+
+
+/* Last card */
+
+.why-us .why-card:last-child {
+    border-right: none !important;
+}
+
+
+/* Hover */
+
+@media (min-width: 769px) {
+
+    .why-us .why-card:hover h3 {
+        color: #b59451 !important;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   PRATIK JEWELLERS — COMPLETE WARM / IVORY THEME
+   NO SOLID BLACK BACKGROUNDS
+   ========================================================= */
+
+:root {
+    --pj-bg: #f7f3ec;
+    --pj-bg-light: #fcfaf6;
+    --pj-white: #ffffff;
+
+    --pj-text: #292722;
+    --pj-text-soft: #716b61;
+
+    --pj-gold: #b59451;
+    --pj-gold-light: #d8b238;
+
+    --pj-border: rgba(181, 148, 81, 0.28);
+}
+
+
+/* =========================================================
+   GLOBAL BODY
+   ========================================================= */
+
+html,
+body {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+nav,
+.main-navbar {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* Navbar text */
+
+.main-navbar a,
+.main-navbar span,
+.main-navbar button {
+    color: var(--pj-text) !important;
+}
+
+
+/* Logo */
+
+.main-navbar .logo-text,
+.main-navbar .brand-text {
+    color: var(--pj-text) !important;
+}
+
+
+/* Navbar icons */
+
+.main-navbar i,
+.main-navbar svg {
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   DROPDOWN / COLLECTION MENUS
+   ========================================================= */
+
+.dropdown-menu,
+.desktop-submenu,
+.mega-menu,
+#mobileCollectionMenu,
+.mobile-collection-menu {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+    border-color: var(--pj-border) !important;
+}
+
+
+.dropdown-menu a,
+.desktop-submenu a,
+.mega-menu a,
+#mobileCollectionMenu a,
+.mobile-collection-menu a {
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-section {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.contact-card,
+.contact-form {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-hero {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.service-card {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   FILTERS / BUTTONS
+   ========================================================= */
+
+.filter-btn {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+    border-color: var(--pj-border) !important;
+}
+
+
+.filter-btn.active {
+    background: var(--pj-gold-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   HELP CARDS
+   ========================================================= */
+
+.help-card {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   HELP STRIP
+   ========================================================= */
+
+.help-strip {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   WHY CHOOSE PRATIK JEWELLERS
+   ========================================================= */
+
+.why-us {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.why-us h2 {
+    color: var(--pj-text) !important;
+}
+
+
+.why-card {
+    background: transparent !important;
+}
+
+
+.why-card h3 {
+    color: var(--pj-gold) !important;
+}
+
+
+.why-card p {
+    color: var(--pj-text-soft) !important;
+}
+
+
+/* =========================================================
+   FOOTER FEATURES
+   ========================================================= */
+
+.footer-features {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.footer-features h5 {
+    color: var(--pj-text) !important;
+}
+
+
+.footer-features p {
+    color: var(--pj-text-soft) !important;
+}
+
+
+.footer-features i {
+    color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.footer h4,
+.footer h5 {
+    color: var(--pj-text) !important;
+}
+
+
+.footer p {
+    color: var(--pj-text-soft) !important;
+}
+
+
+.footer a,
+.footer ul li a {
+    color: var(--pj-text-soft) !important;
+}
+
+
+.footer a:hover,
+.footer ul li a:hover {
+    color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   PRODUCT COLLECTION PAGES
+   ========================================================= */
+
+body:has(.gold-card),
+body:has(.silver-card),
+body:has(.diamond-card),
+body:has(.bridal-card),
+body:has(.coin-card),
+body:has(.coins-card) {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+body:has(.gold-card) > section.container,
+body:has(.silver-card) > section.container,
+body:has(.diamond-card) > section.container,
+body:has(.bridal-card) > section.container,
+body:has(.coin-card) > section.container,
+body:has(.coins-card) > section.container {
+    background: var(--pj-bg) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   ALL PRODUCT CARDS
+   ========================================================= */
+
+.gold-card,
+.silver-card,
+.diamond-card,
+.bridal-card,
+.coin-card,
+.coins-card {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* Product image backgrounds */
+
+.gold-image,
+.silver-image,
+.diamond-image,
+.bridal-image,
+.coin-image,
+.coins-image {
+    background: var(--pj-bg-light) !important;
+}
+
+
+/* =========================================================
+   PRODUCT TEXT
+   ========================================================= */
+
+.gold-info,
+.silver-info,
+.diamond-info,
+.bridal-info,
+.coin-info,
+.coins-info {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+.gold-info h3,
+.silver-info h3,
+.diamond-info h3,
+.bridal-info h3,
+.coin-info h3,
+.coins-info h3 {
+    color: var(--pj-text) !important;
+}
+
+
+.gold-info p,
+.silver-info p,
+.diamond-info p,
+.bridal-info p,
+.coin-info p,
+.coins-info p {
+    color: var(--pj-text-soft) !important;
+}
+
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+
+.wishlist-btn {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+    border-color: var(--pj-border) !important;
+}
+
+
+.wishlist-btn:hover {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   MOBILE FILTERS
+   ========================================================= */
+
+.mobile-filter-btn button,
+.mobile-filter-clear button {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+    border-color: var(--pj-border) !important;
+}
+
+
+/* =========================================================
+   CLEAR FILTER BUTTON
+   ========================================================= */
+
+.clear-filters-box button:hover {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+    border-color: var(--pj-gold) !important;
+}
+
+
+/* =========================================================
+   GENERIC DARK BUTTONS
+   ========================================================= */
+
+.view-btn,
+.gold-btn:hover,
+.related-btn:hover {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   DARK SERVICE / HIGHLIGHT CARDS
+   ========================================================= */
+
+.highlight-card {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   DARK FORM / CONSULTATION AREAS
+   ========================================================= */
+
+.consultation-box {
+    background: var(--pj-white) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   MOBILE MENUS / OVERLAYS
+   ========================================================= */
+
+.mobile-menu,
+.mobile-menu-overlay,
+.mobile-search-overlay,
+.mobile-search-container {
+    background: var(--pj-bg-light) !important;
+    color: var(--pj-text) !important;
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-navbar {
+        background: var(--pj-bg-light) !important;
+        color: var(--pj-text) !important;
+    }
+
+    .mobile-header {
+        background: var(--pj-bg-light) !important;
+    }
+
+    .mobile-logo,
+    .mobile-logo img {
+        background: transparent !important;
+    }
+
+    .mobile-menu-btn,
+    .mobile-search-btn,
+    .mobile-wishlist-btn {
+        color: var(--pj-text) !important;
+    }
+}
+
+
+
+/* =========================================================
+   PRATIK JEWELLERS — WARM THEME TEXT FIX
+   Background warm-white hai, isliye text dark hona chahiye
+   ========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.main-navbar .nav-links li a,
+.desktop-navbar .nav-link,
+.desktop-navbar .desktop-submenu li a,
+.desktop-brand span,
+.desktop-navbar .search-box .search-btn i,
+.desktop-navbar .wishlist-item i,
+.desktop-navbar .phone-item i {
+    color: #292722 !important;
+}
+
+.main-navbar .nav-links li a:hover,
+.desktop-navbar .nav-link:hover,
+.desktop-navbar .desktop-submenu li a:hover {
+    color: #b59451 !important;
+}
+
+
+/* Mobile navbar */
+
+.mobile-menu-btn,
+.mobile-search-btn,
+.mobile-wishlist-btn,
+.mobile-menu-btn i,
+.mobile-search-btn i,
+.mobile-wishlist-btn i {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   DROPDOWNS / COLLECTION MENU
+   ========================================================= */
+
+.dropdown-item,
+.desktop-submenu li a,
+#mobileCollectionMenu a,
+.mobile-submenu li a {
+    color: #292722 !important;
+}
+
+.dropdown-item:hover,
+.desktop-submenu li a:hover,
+#mobileCollectionMenu a:hover,
+.mobile-submenu li a:hover {
+    color: #b59451 !important;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-section {
+    color: #292722 !important;
+}
+
+.contact-section h1,
+.contact-section h2,
+.contact-section h3,
+.contact-section h4,
+.contact-section h5,
+.contact-section p,
+.contact-section label,
+.contact-section span {
+    color: #292722 !important;
+}
+
+.contact-section .contact-card a {
+    color: #292722 !important;
+}
+
+
+/* Contact form */
+
+.contact-form {
+    color: #292722 !important;
+}
+
+.contact-form label,
+.contact-form h3,
+.contact-form h4,
+.contact-form p {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-hero {
+    color: #292722 !important;
+}
+
+.about-hero h1,
+.about-hero h2,
+.about-hero h3,
+.about-hero p,
+.about-hero span {
+    color: #292722 !important;
+}
+
+
+.service-card {
+    color: #292722 !important;
+}
+
+.service-card h3,
+.service-card h4,
+.service-card p,
+.service-card span {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   WHY CHOOSE PRATIK JEWELLERS
+   ========================================================= */
+
+.why-us {
+    color: #292722 !important;
+}
+
+.why-us h2 {
+    color: #292722 !important;
+}
+
+.why-us .why-card h3 {
+    color: #a88745 !important;
+}
+
+.why-us .why-card p {
+    color: #716b61 !important;
+}
+
+
+/* =========================================================
+   HELP SECTION
+   ========================================================= */
+
+.help-strip {
+    color: #292722 !important;
+}
+
+.help-strip h2,
+.help-strip h3,
+.help-strip h4,
+.help-strip p,
+.help-strip span {
+    color: #292722 !important;
+}
+
+
+.help-card {
+    color: #292722 !important;
+}
+
+.help-card h3,
+.help-card h4,
+.help-card h5,
+.help-card p,
+.help-card span {
+    color: #292722 !important;
+}
+
+.help-card i {
+    color: #b59451 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    color: #292722 !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+    color: #292722 !important;
+}
+
+.footer p {
+    color: #716b61 !important;
+}
+
+.footer a,
+.footer ul li a {
+    color: #716b61 !important;
+}
+
+.footer a:hover,
+.footer ul li a:hover {
+    color: #b59451 !important;
+}
+
+
+/* Footer social icons */
+
+.footer-social a {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   FOOTER FEATURES
+   ========================================================= */
+
+.footer-features {
+    color: #292722 !important;
+}
+
+.footer-features h5 {
+    color: #292722 !important;
+}
+
+.footer-features p {
+    color: #716b61 !important;
+}
+
+.footer-features i {
+    color: #b59451 !important;
+}
+
+
+/* =========================================================
+   CONSULTATION BOX
+   ========================================================= */
+
+.consultation-box {
+    color: #292722 !important;
+}
+
+.consultation-box h2,
+.consultation-box h3,
+.consultation-box h4,
+.consultation-box p,
+.consultation-box span {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   HIGHLIGHT CARDS
+   ========================================================= */
+
+.highlight-card {
+    color: #292722 !important;
+}
+
+.highlight-card h3,
+.highlight-card h4,
+.highlight-card p,
+.highlight-card span {
+    color: #292722 !important;
+}
+
+
+/* =========================================================
+   PRODUCT COLLECTION PAGES
+   ========================================================= */
+
+body:has(.gold-card),
+body:has(.silver-card),
+body:has(.diamond-card),
+body:has(.bridal-card),
+body:has(.coin-card),
+body:has(.coins-card) {
+    color: #292722 !important;
+}
+
+
+body:has(.gold-card) h1,
+body:has(.gold-card) h2,
+body:has(.gold-card) h3,
+body:has(.gold-card) p,
+body:has(.gold-card) span,
+
+body:has(.silver-card) h1,
+body:has(.silver-card) h2,
+body:has(.silver-card) h3,
+body:has(.silver-card) p,
+body:has(.silver-card) span,
+
+body:has(.diamond-card) h1,
+body:has(.diamond-card) h2,
+body:has(.diamond-card) h3,
+body:has(.diamond-card) p,
+body:has(.diamond-card) span,
+
+body:has(.bridal-card) h1,
+body:has(.bridal-card) h2,
+body:has(.bridal-card) h3,
+body:has(.bridal-card) p,
+body:has(.bridal-card) span,
+
+body:has(.coin-card) h1,
+body:has(.coin-card) h2,
+body:has(.coin-card) h3,
+body:has(.coin-card) p,
+body:has(.coin-card) span,
+
+body:has(.coins-card) h1,
+body:has(.coins-card) h2,
+body:has(.coins-card) h3,
+body:has(.coins-card) p,
+body:has(.coins-card) span {
+    color: #292722 !important;
+}
+
+
+/* Product names */
+
+.gold-info h3,
+.silver-info h3,
+.diamond-info h3,
+.bridal-info h3,
+.coin-info h3,
+.coins-info h3 {
+    color: #292722 !important;
+}
+
+
+/* Product details */
+
+.gold-info p,
+.silver-info p,
+.diamond-info p,
+.bridal-info p,
+.coin-info p,
+.coins-info p {
+    color: #716b61 !important;
+}
+
+
+/* Gold/purity/price */
+
+.gold-info .gold-price,
+.silver-info .silver-price,
+.diamond-info .diamond-price,
+.bridal-info .bridal-price,
+.coin-info .coin-price,
+.coins-info .coins-price {
+    color: #a88745 !important;
+}
+
+
+/* =========================================================
+   MOBILE MENU — TEXT VISIBILITY FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Mobile menu container */
+    .mobile-menu,
+    .mobile-nav,
+    .mobile-menu-container,
+    .mobile-menu-content {
+        background: #fcfaf6 !important;
+        color: #292722 !important;
+    }
+
+    /* HOME / ABOUT / CONTACT / MAIN LINKS */
+    .mobile-menu a,
+    .mobile-nav a,
+    .mobile-menu-container a,
+    .mobile-menu-content a {
+        color: #292722 !important;
+        background: transparent !important;
+    }
+
+    /* Hover / active / focus */
+    .mobile-menu a:hover,
+    .mobile-menu a:focus,
+    .mobile-menu a:active,
+    .mobile-nav a:hover,
+    .mobile-nav a:focus,
+    .mobile-nav a:active {
+        color: #a88745 !important;
+        background: transparent !important;
+    }
+
+    /* If links are inside list items */
+    .mobile-menu li a,
+    .mobile-nav li a {
+        color: #292722 !important;
+    }
+
+    .mobile-menu li a:hover,
+    .mobile-menu li a:focus,
+    .mobile-menu li a:active {
+        color: #a88745 !important;
+    }
+
+    /* Menu headings/text */
+    .mobile-menu h1,
+    .mobile-menu h2,
+    .mobile-menu h3,
+    .mobile-menu h4,
+    .mobile-menu h5,
+    .mobile-menu span {
+        color: #292722 !important;
+    }
+
+    /* Hamburger icon */
+    .mobile-menu-btn,
+    .mobile-menu-btn i {
+        color: #292722 !important;
+    }
+}

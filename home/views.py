@@ -7,9 +7,6 @@ from .models import CustomEnquiry
 from .models import CustomGallery
 
 
-
-
-
 def calculate_product_price(product):
 
     calculated_price = None
@@ -246,8 +243,15 @@ def gold(request):
     product_type = request.GET.get("product_type", "all")
     weight_filter = request.GET.get("weight", "all")
     purity_filter = request.GET.get("purity", "all")
+    
+    category_filter = request.GET.get("category", "all")
 
     products = Product.objects.filter(category="Gold")
+    
+    
+    if category_filter != "all":
+        products = products.filter(product_type=category_filter)
+    
 
     if filter_type != "all":
         products = products.filter(gender=filter_type)
@@ -343,7 +347,9 @@ def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
 
     related_products = Product.objects.filter(
-        category=product.category
+    category=product.category,
+    product_type=product.product_type,
+    gender=product.gender
     ).exclude(id=product.id)[:4]
 
     for item in related_products:
@@ -960,4 +966,27 @@ def custom_category(request, jewellery_type):
             "category": data.get(jewellery_type),
             "gallery": gallery,
         }
+    )
+    
+# =====================================================
+# EVERYDAY JEWELLERY
+# =====================================================
+
+def everyday(request):
+
+    everyday_products = Product.objects.filter(
+    is_everyday=True
+    ).order_by("-id")
+
+    for product in everyday_products:
+        product.calculated_price = calculate_product_price(product)
+
+    context = {
+        "everyday_products": everyday_products,
+    }
+
+    return render(
+        request,
+        "home/everyday.html",
+        context
     )

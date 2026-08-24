@@ -20,105 +20,212 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="container py-5 mt-5">
 
-<div class="text-center mb-5 custom-hero">
+<div class="custom-hero">
 
-    <h1 class="display-3 fw-bold">
-        Create Your Dream Jewellery
-    </h1>
+    <div class="custom-hero-content">
 
-    <div class="hero-line"></div>
+        <span class="custom-eyebrow">
+            CUSTOM JEWELLERY
+        </span>
 
-    <p class="mt-4 fs-5">
-        From engagement rings to bridal sets, we craft jewellery exactly the way you imagine it.
-    </p>
+        <h1>
+            Made around<br>
+            your story.
+        </h1>
 
-    <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20want%20to%20design%20my%20custom%20jewellery."
-       class="btn btn-dark mt-4 px-4 py-3">
+        <p>
+            Create jewellery that reflects your
+            imagination, your style and your story.
+        </p>
 
-        <i class="fab fa-whatsapp"></i>
+        <a
+            href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20want%20to%20design%20my%20custom%20jewellery."
+            class="custom-hero-link">
 
-        Start Custom Order
+            START CREATING
+            <span>→</span>
 
-    </a>
+        </a>
+
+    </div>
 
 </div>
-
     
+<section class="custom-design-section">
 
+    <div class="custom-design-header">
 
-        <section class="custom-design-section py-5">
+        <span class="custom-section-label">
+            THE CUSTOM EDIT
+        </span>
 
-    <div class="text-center mb-5">
-
-        <h2 class="fw-bold">
-            Choose Your Design
+        <h2>
+            Choose your design.
         </h2>
 
-        <p class="text-muted">
-            Select a jewellery style to start your custom creation.
+        <p>
+            Start with an idea and make it uniquely yours.
         </p>
 
     </div>
 
-    <div class="row g-4">
 
-        <div class="custom-design-item">
-            <a href="{% url 'custom_category' 'ring' %}" class="design-card">
+    <div class="custom-design-grid" id="custom-designs">
 
-    💍
-    <h4>Custom Rings</h4>
 
-</a>
-        </div>
+        <!-- CUSTOM RINGS -->
 
-        <div class="custom-design-item">
-            <a href="{% url 'custom_category' 'necklace' %}" class="design-card">
+        <a
+            href="{% url 'custom_category' 'rings' %}"
+            class="custom-design-card">
 
-    📿
-    <h4>Necklaces</h4>
+            <div class="custom-design-image">
 
-</a>
-        </div>
+                <img
+                    src="/media/products/custom_rings.jpg"
+                    alt="Custom Rings">
 
-        <div class="custom-design-item">
-            <a href="{% url 'custom_category' 'bridal' %}" class="design-card">
+            </div>
 
-    👰
-    <h4>Bridal Sets</h4>
+            <div class="custom-design-info">
 
-</a>
-        </div>
+                <span>
+                    CUSTOM COLLECTION
+                </span>
 
-        <div class="custom-design-item">
-           <a href="{% url 'custom_category' 'pendant' %}" class="design-card">
+                <h3>
+                    Custom Rings
+                </h3>
 
-    💎
-    <h4>Pendants</h4>
+                <p>
+                    Designed around your story.
+                </p>
 
-</a>
-        </div>
+                <strong>
+                    EXPLORE <b>→</b>
+                </strong>
 
-        <div class="custom-design-item">
-            <a href="{% url 'custom_category' 'earrings' %}" class="design-card">
+            </div>
 
-    👂
-    <h4>Earrings</h4>
+        </a>
 
-</a>
-        </div>
 
-        <div class="custom-design-item">
-           <a href="{% url 'custom_category' 'couple-ring' %}" class="design-card">
+        <!-- NAME PENDANTS -->
 
-    💞
-    <h4>Couple Rings</h4>
+        <a
+            href="{% url 'custom_category' 'pendants' %}"
+            class="custom-design-card">
 
-</a>
-        </div>
+            <div class="custom-design-image">
 
-    
+                <img
+                    src="/media/products/name_pendant.jpg"
+                    alt="Name Pendants">
+
+            </div>
+
+            <div class="custom-design-info">
+
+                <span>
+                    PERSONALIZED
+                </span>
+
+                <h3>
+                    Name Pendants
+                </h3>
+
+                <p>
+                    Something made just for you.
+                </p>
+
+                <strong>
+                    EXPLORE <b>→</b>
+                </strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- BRIDAL -->
+
+        <a
+            href="{% url 'custom_category' 'bridal' %}"
+            class="custom-design-card">
+
+            <div class="custom-design-image">
+
+                <img
+                    src="/media/products/custom_bridal.jpg"
+                    alt="Custom Bridal Jewellery">
+
+            </div>
+
+            <div class="custom-design-info">
+
+                <span>
+                    BRIDAL
+                </span>
+
+                <h3>
+                    Bridal Jewellery
+                </h3>
+
+                <p>
+                    Created for your special day.
+                </p>
+
+                <strong>
+                    EXPLORE <b>→</b>
+                </strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- OLD GOLD REDESIGN -->
+
+        <a
+            href="{% url 'custom_category' 'redesign' %}"
+            class="custom-design-card">
+
+            <div class="custom-design-image">
+
+                <img
+                    src="/media/products/old_gold_redesign.jpg"
+                    alt="Old Gold Redesign">
+
+            </div>
+
+            <div class="custom-design-info">
+
+                <span>
+                    REIMAGINE
+                </span>
+
+                <h3>
+                    Old Gold Redesign
+                </h3>
+
+                <p>
+                    Give your old jewellery a new story.
+                </p>
+
+                <strong>
+                    EXPLORE <b>→</b>
+                </strong>
+
+            </div>
+
+        </a>
+
+
+    </div>
 
 </section>
+
+
 
 <section class="custom-process py-5">
 
@@ -441,9 +548,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
-<div id="toast-message" class="wishlist-toast">
-    Added to Wishlist ❤️
-</div>
+
 
 <script>
 

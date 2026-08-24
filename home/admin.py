@@ -23,12 +23,6 @@ class CustomGalleryAdmin(admin.ModelAdmin):
         "title",
     )
 
-
-from django.contrib import admin
-from .models import GoldRate
-
-from .models import GoldPurity
-
 @admin.register(CustomEnquiry)
 class CustomEnquiryAdmin(admin.ModelAdmin):
 
@@ -36,9 +30,28 @@ class CustomEnquiryAdmin(admin.ModelAdmin):
         "name",
         "phone",
         "jewellery_type",
+        "gold_purity",
         "budget",
-        "created_at"
+        "created_at",
     )
+
+    list_filter = (
+        "jewellery_type",
+        "gold_purity",
+        "created_at",
+    )
+
+    search_fields = (
+        "name",
+        "phone",
+    )
+
+from django.contrib import admin
+from .models import GoldRate
+
+from .models import GoldPurity
+
+
 
 @admin.register(GoldPurity)
 class GoldPurityAdmin(admin.ModelAdmin):

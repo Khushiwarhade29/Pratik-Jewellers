@@ -28,8 +28,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="hero">
 
-    <!-- Hero Background -->
+    <!-- HERO BACKGROUND SLIDER -->
+    <div class="hero-slider">
+
+        <div class="hero-slide active"
+             style="background-image: url('{% static "home/images/hero/hero-gold.jpg" %}');">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image: url('{% static "home/images/hero/hero-diamond.jpg" %}');">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image: url('{% static "home/images/hero/hero-silver.jpg" %}');">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image: url('{% static "home/images/hero/hero-offer.jpg.jpg" %}');">
+        </div>
+
+    </div>
+
+    <!-- Existing Overlay -->
     <div class="hero-overlay"></div>
+
 
     <!-- Hero Content -->
     <div class="hero-content">
@@ -51,11 +73,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <div class="hero-actions">
 
-            <a href="{% url 'gold' %}" class="hero-btn hero-btn-primary">
+            <a href="{% url 'gold' %}"
+               class="hero-btn hero-btn-primary">
                 Explore Collection
             </a>
 
-            <a href="{% url 'contact' %}" class="hero-btn hero-btn-secondary">
+            <a href="{% url 'contact' %}"
+               class="hero-btn hero-btn-secondary">
                 Book an Appointment
             </a>
 
@@ -63,7 +87,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     </div>
 
+
+
 </section>
+
+
 
 
 <!-- =====================================================
@@ -90,6 +118,62 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
+<!-- =====================================================
+     JEWELLERY CATEGORY STRIP
+====================================================== -->
+
+<!-- =====================================================
+     JEWELLERY CATEGORY STRIP
+====================================================== -->
+
+<section class="jewellery-category-strip">
+
+    <div class="jewellery-category-track">
+
+        <a href="{% url 'gold' %}?category=Necklace">
+            NECKLACE SETS
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Chain">
+            CHAINS
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Pendant">
+            PENDANTS
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Mangalsutra">
+            MANGALSUTRA
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Earrings">
+            EARRINGS
+        </a>
+        <span>|</span>
+
+
+        <a href="{% url 'gold' %}?category=Bangles">
+            BANGLES
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Ring">
+            RINGS
+        </a>
+        <span>|</span>
+
+        <a href="{% url 'gold' %}?category=Nose%20Pin">
+            NATH
+        </a>
+
+    </div>
+
+</section>
+
 <section class="collections editorial-collections">
 
     <div class="editorial-collections-heading">
@@ -111,7 +195,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <div class="editorial-collection-image">
 
             <img
-                src="{% static 'home/images/gold.jpg' %}"
+                src="/media/products/home_gold.jpg"
                 alt="Gold Jewellery">
 
         </div>
@@ -137,35 +221,67 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 
     <!-- SILVER -->
-    <a href="{% url 'silver' %}"
-       class="collection-link editorial-collection-item reverse">
+    <!-- SILVER -->
+<section class="silver-editorial">
 
-        <div class="editorial-collection-image">
+    <!-- LEFT : TEXT -->
+    <div class="silver-editorial-content">
+
+        <span class="silver-editorial-label">
+            SILVER
+        </span>
+
+        <h2>
+            Quiet elegance,<br>
+            beautifully crafted.
+        </h2>
+
+        <a href="{% url 'silver' %}" class="silver-editorial-link">
+            EXPLORE
+            <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- RIGHT : IMAGES -->
+    <div class="silver-editorial-gallery">
+
+        <!-- LARGE IMAGE -->
+        <a href="{% url 'silver' %}" class="silver-gallery-main">
 
             <img
-                src="{% static 'home/images/silver.jpg' %}"
+                src="{% static 'home/images/home-silvernecklace.jpg' %}"
                 alt="Silver Jewellery">
 
+        </a>
+
+
+        <!-- TWO SMALL IMAGES -->
+        <div class="silver-gallery-small">
+
+            <a href="{% url 'silver' %}" class="silver-gallery-card">
+
+                <img
+                    src="{% static 'home/images/home-silverearring.jpg' %}"
+                    alt="Silver Earrings">
+
+            </a>
+
+
+            <a href="{% url 'silver' %}" class="silver-gallery-card">
+
+                <img
+                    src="{% static 'home/images/home-silverring.jpg' %}"
+                    alt="Silver Rings">
+
+            </a>
+
         </div>
 
-        <div class="editorial-collection-content">
+    </div>
 
-            <span class="editorial-label">
-                SILVER
-            </span>
-
-            <h3>
-                Quiet elegance,<br>
-                beautifully crafted.
-            </h3>
-
-            <span class="editorial-explore">
-                EXPLORE <b>→</b>
-            </span>
-
-        </div>
-
-    </a>
+</section>
 
 
     <!-- DIAMONDS -->
@@ -175,7 +291,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <div class="editorial-collection-image">
 
             <img
-                src="{% static 'home/images/diamond.jpg' %}"
+                src="{% static 'home/images/home-diamondset.jpg' %}"
                 alt="Diamond Jewellery">
 
         </div>
@@ -306,7 +422,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <div class="necklace-editorial-image">
 
         <img
-            src="/media/products/diamond_necklace.jpg"
+            src="/media/products/home_diamond.jpg"
             alt="Diamond Necklace Collection">
 
     </div>
@@ -379,7 +495,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <!-- Earrings image will be added here -->
           <img
-        src="{% static 'home/images/custom/custom_earring3.jpg' %}"
+        src="{% static 'home/images/home-diamondearrings.jpg' %}"
         alt="Earrings Collection">
 
     </div>
@@ -390,43 +506,439 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
      20D — BRIDAL CAMPAIGN
 ====================================================== -->
 
-<section class="bridal-campaign">
 
-    <div class="bridal-campaign-overlay"></div>
+<!-- =====================================================
+     20E — THE PRATIK EDIT
+====================================================== -->
 
-    <div class="bridal-campaign-content">
+<!-- =====================================================
+     20E — THE PRATIK EDIT
+====================================================== -->
 
-        <span class="bridal-campaign-label">
-            THE BRIDAL EDIT
+<section class="pratik-edit">
+
+    <div class="pratik-edit-header">
+
+        <span class="pratik-edit-label">
+            THE PRATIK EDIT
         </span>
 
         <h2>
-            For the beginning<br>
-            of forever.
+            Curated for you.
         </h2>
 
         <p>
-            Discover jewellery crafted for
-            the moments that become memories.
+            A refined selection of timeless pieces,
+            chosen from our signature collections.
         </p>
 
-        <div class="bridal-campaign-categories">
+    </div>
 
-            <span>NECKLACES</span>
-            <span>•</span>
-            <span>EARRINGS</span>
-            <span>•</span>
-            <span>RINGS</span>
-            <span>•</span>
-            <span>BANGLES</span>
+
+    <!-- =================================================
+         THE PRATIK EDIT — 4 CURATED PIECES
+    ================================================== -->
+
+    <div class="pratik-edit-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="pratik-edit-card">
+
+            <a
+                href="{% url 'gold' %}"
+                class="pratik-edit-image-link">
+
+                <img
+                    src="/media/products/pratik_edit.jpg"
+                    alt="Timeless Gold Jewellery"
+                    class="pratik-edit-image">
+
+            </a>
+
+            <div class="pratik-edit-info">
+
+                <span class="pratik-edit-category">
+                    SIGNATURE
+                </span>
+
+                <h3>
+                    Timeless Gold
+                </h3>
+
+                <p>
+                    Crafted with elegance
+                </p>
+
+                <a
+                    href="{% url 'gold' %}"
+                    class="pratik-edit-details">
+
+                    EXPLORE
+                    <span>→</span>
+
+                </a>
+
+            </div>
 
         </div>
 
-        <a
-            href="{% url 'bridal' %}"
-            class="bridal-campaign-link">
 
-            DISCOVER BRIDAL
+        <!-- PRODUCT 2 -->
+
+        <div class="pratik-edit-card">
+
+            <a
+                href="{% url 'diamond' %}"
+                class="pratik-edit-image-link">
+
+                <img
+                    src="/media/products/pratik_edit3.jpg"
+                    alt="Diamond Jewellery"
+                    class="pratik-edit-image">
+
+            </a>
+
+            <div class="pratik-edit-info">
+
+                <span class="pratik-edit-category">
+                    DIAMOND
+                </span>
+
+                <h3>
+                    Enduring Brilliance
+                </h3>
+
+                <p>
+                    Designed to shine forever
+                </p>
+
+                <a
+                    href="{% url 'diamond' %}"
+                    class="pratik-edit-details">
+
+                    EXPLORE
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="pratik-edit-card">
+
+            <a
+                href="{% url 'silver' %}"
+                class="pratik-edit-image-link">
+
+                <img
+                    src="/media/products/pratik_edit2.jpg"
+                    alt="Classic Gold Jewellery"
+                    class="pratik-edit-image">
+
+            </a>
+
+            <div class="pratik-edit-info">
+
+                <span class="pratik-edit-category">
+                    SILVER
+                </span>
+
+                <h3>
+                    Classic Elegance
+                </h3>
+
+                <p>
+                    Made for every occasion
+                </p>
+
+                <a
+                    href="{% url 'silver' %}"
+                    class="pratik-edit-details">
+
+                    EXPLORE
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="pratik-edit-card">
+
+            <a
+                href="{% url 'custom' %}"
+                class="pratik-edit-image-link">
+
+                <img
+                    src="/media/products/pratik_edit4.jpg"
+                    alt="Bespoke Jewellery"
+                    class="pratik-edit-image">
+
+            </a>
+
+            <div class="pratik-edit-info">
+
+                <span class="pratik-edit-category">
+                    BESPOKE
+                </span>
+
+                <h3>
+                    Personal Story
+                </h3>
+
+                <p>
+                    Made especially for you
+                </p>
+
+                <a
+                    href="{% url 'custom' %}"
+                    class="pratik-edit-details">
+
+                    EXPLORE
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         VIEW ALL
+    ================================================== -->
+
+    <div class="pratik-edit-footer">
+
+        <a
+            href="{% url 'search' %}"
+            class="pratik-edit-view-all">
+
+            VIEW ALL JEWELLERY
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     20F — SHOP BY OCCASION
+====================================================== -->
+
+<section class="shop-occasion">
+
+    <div class="shop-occasion-header">
+
+        <span class="shop-occasion-label">
+            SHOP BY OCCASION
+        </span>
+
+        <h2>
+            Jewellery for every moment.
+        </h2>
+
+        <p>
+            Discover pieces chosen for the occasions
+            that make life unforgettable.
+        </p>
+
+    </div>
+
+
+    <div class="shop-occasion-grid">
+
+
+        <!-- EVERYDAY -->
+
+        <a href="{% url 'everyday' %}" class="occasion-card">
+
+            <div class="occasion-image">
+
+                <img
+                     src="/media/products/gold_chain.jpg"
+                    alt="Everyday Jewellery">
+
+            </div>
+
+            <div class="occasion-content">
+
+                <span>EVERYDAY</span>
+
+                <h3>
+                    Everyday Elegance
+                </h3>
+
+                <p>
+                    Timeless pieces for every day.
+                </p>
+
+                <strong>
+                    EXPLORE →
+                </strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- WEDDING -->
+
+        <a href="{% url 'bridal' %}" class="occasion-card">
+
+            <div class="occasion-image">
+
+                <img
+                    src="/media/products/bridal_jewellery.jpg"
+                    alt="Wedding Jewellery">
+
+            </div>
+
+            <div class="occasion-content">
+
+                <span>WEDDING</span>
+
+                <h3>
+                    For the Big Day
+                </h3>
+
+                <p>
+                    Jewellery for unforgettable moments.
+                </p>
+
+                <strong>
+                    EXPLORE →
+                </strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- FESTIVE -->
+
+        <a href="{% url 'gold' %}" class="occasion-card">
+
+            <div class="occasion-image">
+
+                <img
+                    src="/media/products/fevsital_jewellery.jpg"
+                    alt="Festive Jewellery">
+
+            </div>
+
+            <div class="occasion-content">
+
+                <span>FESTIVE</span>
+
+                <h3>
+                    Celebrate in Gold
+                </h3>
+
+                <p>
+                    Traditional beauty with a modern touch.
+                </p>
+
+                <strong>
+                    EXPLORE →
+                </strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- GIFTING -->
+
+        <a href="{% url 'diamond' %}" class="occasion-card">
+
+            <div class="occasion-image">
+
+                <img
+                    src="/media/products/diamond_jewellery.jpg"
+                    alt="Jewellery Gifting">
+
+            </div>
+
+            <div class="occasion-content">
+
+                <span>GIFTING</span>
+
+                <h3>
+                    Something Unforgettable
+                </h3>
+
+                <p>
+                    A little brilliance for someone special.
+                </p>
+
+                <strong>
+                    EXPLORE →
+                </strong>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     20G — CUSTOM JEWELLERY STUDIO
+====================================================== -->
+
+<section class="custom-studio">
+
+    <div class="custom-studio-image">
+
+        <img
+            src="/media/products/custom_jewellery.jpg"
+            alt="Custom Jewellery Design">
+
+    </div>
+
+
+    <div class="custom-studio-overlay"></div>
+
+
+    <div class="custom-studio-content">
+
+        <span class="custom-studio-label">
+            THE CUSTOM STUDIO
+        </span>
+
+        <h2>
+            Create something<br>
+            personal.
+        </h2>
+
+        <p>
+            Your idea, your story, your jewellery.
+            Work with our craftsmen to create a piece
+            made especially for you.
+        </p>
+
+        <a
+            href="{% url 'custom' %}"
+            class="custom-studio-link">
+
+            EXPLORE CUSTOM
             <span>→</span>
 
         </a>
@@ -434,130 +946,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </div>
 
 
-    <div class="bridal-campaign-image">
+    <div class="custom-studio-options">
 
-        <img
-            src="/media/products/bridal_haram.jpg"
-            alt="Bridal Jewellery Collection">
-
-    </div>
-
-</section>
-
-<!-- =====================================================
-     20E — THE PRATIK EDIT
-====================================================== -->
-
-<section class="pratik-edit">
-    
-
-    <div class="pratik-edit-heading">
-
-        <span class="pratik-edit-label">
-            THE PRATIK EDIT
-        </span>
-
-        <h2>
-            A curated selection of pieces<br>
-            worth remembering.
-        </h2>
-
-    </div>
-
-
-    <div class="pratik-edit-grid">
-
-        {% for product in pratik_edit_products %}
-
-        <a
-            href="{% url 'product_detail' product.id %}"
-            class="pratik-edit-card"
-        >
-
-            <div class="pratik-edit-image">
-
-                <img
-                    src="{{ product.image.url }}"
-                    alt="{{ product.name }}"
-                >
-
-            </div>
-
-
-            <div class="pratik-edit-info">
-
-                <span class="pratik-edit-category">
-                    {{ product.category }}
-                </span>
-
-                <h3>
-                    {{ product.name }}
-                </h3>
-
-                <p class="pratik-edit-price">
-                    ₹ {{ product.calculated_price|floatformat:2 }}
-                </p>
-
-                <span class="pratik-edit-explore">
-                    VIEW PIECE <span>→</span>
-                </span>
-
-            </div>
-
+        <a href="{% url 'custom' %}">
+            CUSTOM RINGS
         </a>
 
-        {% empty %}
+        <span>•</span>
 
-        <p class="pratik-edit-empty">
-            Discover our latest collection.
-        </p>
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-<section class="customized">
-
-    <h2>Customized Jewellery</h2>
-
-    <p class="section-subtitle">
-        Design your dream jewellery with our expert craftsmanship.
-    </p>
-
-    <div class="customized-grid">
-
-        <a href="{% url 'custom' %}" class="custom-link">
-            <div class="custom-card">
-                <img src="{% static 'home/images/custom1.jpg' %}" alt="Custom Ring">
-                <h3>Custom Rings</h3>
-                <p>Crafted exactly to your style.</p>
-            </div>
+        <a href="{% url 'custom' %}">
+            NAME PENDANTS
         </a>
 
-        <a href="{% url 'custom' %}" class="custom-link">
-            <div class="custom-card">
-                <img src="{% static 'home/images/custom2.jpg' %}" alt="Name Pendant">
-                <h3>Name Pendants</h3>
-                <p>Personalized gold pendants with your name.</p>
-            </div>
+        <span>•</span>
+
+        <a href="{% url 'custom' %}">
+            OLD GOLD REDESIGN
         </a>
 
-        <a href="{% url 'custom' %}" class="custom-link">
-            <div class="custom-card">
-                <img src="{% static 'home/images/custom3.jpg' %}" alt="Bridal Jewellery">
-                <h3>Bridal Jewellery</h3>
-                <p>Exclusive bridal sets for your special day.</p>
-            </div>
-        </a>
+        <span>•</span>
 
-        <a href="{% url 'custom' %}" class="custom-link">
-            <div class="custom-card">
-                <img src="{% static 'home/images/custom4.jpg' %}" alt="Old Gold Redesign">
-                <h3>Old Gold Redesign</h3>
-                <p>Transform your old jewellery into a modern masterpiece.</p>
-            </div>
+        <a href="{% url 'custom' %}">
+            BESPOKE DESIGNS
         </a>
 
     </div>
