@@ -30057,3 +30057,121 @@ body:has(.coins-card) span {
         color: #292722 !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WARM WHITE SECTIONS — TEXT
+   ========================================================= */
+
+.why-us,
+.help-strip,
+.footer-features,
+.footer,
+.custom-design-section,
+.everyday-page,
+.contact-section,
+.about-section {
+    color: #292722 !important;
+}
+
+.why-us a,
+.help-strip a,
+.footer-features a,
+.footer a,
+.custom-design-section a,
+.everyday-page a,
+.contact-section a,
+.about-section a {
+    color: #292722 !important;
+}
+
+.why-us a:hover,
+.help-strip a:hover,
+.footer-features a:hover,
+.footer a:hover,
+.custom-design-section a:hover,
+.everyday-page a:hover,
+.contact-section a:hover,
+.about-section a:hover {
+    color: #b59451 !important;
+}
+
+/* =========================================================
+   STEP 2 — WHY CHOOSE PRATIK JEWELLERS
+   ========================================================= */
+
+.why-us {
+   background: #ffffff !important;
+    color: #292722 !important;
+}
+
+.why-us h2 {
+    color: #292722 !important;
+}
+
+.why-us h3,
+.why-us .why-card h3 {
+    color: #292722 !important;
+}
+
+.why-us p,
+.why-us .why-card p {
+    color: #716b61 !important;
+}
+
+/* Gold icon */
+.why-us i,
+.why-us .why-icon {
+    color: #b59451 !important;
+}
+
+/* Hover — text becomes gold */
+.why-us .why-card:hover h3 {
+    color: #b59451 !important;
+}
+
+
+/* =========================================================
+   WHY CHOOSE — REMOVE CARD SHADOW
+   ========================================================= */
+
+.why-us .why-card {
+    box-shadow: none !important;
+}
+
+/* Hover par bhi shadow nahi */
+.why-us .why-card:hover {
+    box-shadow: none !important;
+}
+
+/* Normal subtle hover movement */
+@media (min-width: 769px) {
+    .why-us .why-card {
+        transition: transform 0.3s ease, color 0.3s ease !important;
+    }
+
+    .why-us .why-card:hover {
+        transform: translateY(-4px) !important;
+    }
+}
+
+
