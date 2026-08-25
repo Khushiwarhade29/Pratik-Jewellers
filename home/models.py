@@ -394,3 +394,69 @@ class CustomGallery(models.Model):
 
     def __str__(self):
         return f"{self.category} - {self.title}"
+    
+class CustomDesign(models.Model):
+
+    image = models.ImageField(upload_to="custom_designs/")
+
+    def __str__(self):
+        return "Custom Design"
+    
+
+class SavingScheme(models.Model):
+
+    name = models.CharField(max_length=200)
+
+    duration = models.CharField(
+        max_length=100,
+        help_text="Example: 11 Months"
+    )
+
+    monthly_amount = models.CharField(
+        max_length=100,
+        help_text="Example: ₹5000/month"
+    )
+
+    description = models.TextField()
+
+    benefits = models.TextField(
+        help_text="Write each benefit in new line"
+    )
+
+    terms_conditions = models.TextField()
+
+    is_active = models.BooleanField(
+        default=True
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+
+
+    def __str__(self):
+        return self.name
+    
+    
+class SchemeEnquiry(models.Model):
+
+    name = models.CharField(max_length=100)
+
+    phone = models.CharField(max_length=15)
+
+    scheme = models.ForeignKey(
+        SavingScheme,
+        on_delete=models.CASCADE
+    )
+
+    message = models.TextField(
+        blank=True
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+
+
+    def __str__(self):
+        return self.name

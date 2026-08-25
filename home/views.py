@@ -5,6 +5,8 @@ from decimal import Decimal
 from .models import Product, Wishlist, Contact, MetalRate
 from .models import CustomEnquiry
 from .models import CustomGallery
+from urllib.parse import quote
+from .models import SavingScheme, SchemeEnquiry
 
 
 def calculate_product_price(product):
@@ -902,26 +904,26 @@ def custom_category(request, jewellery_type):
 
         enquiry = CustomEnquiry.objects.create(
 
-        name=request.POST.get("name"),
+            name=request.POST.get("name"),
 
-        phone=request.POST.get("phone"),
+            phone=request.POST.get("phone"),
 
-        jewellery_type=jewellery_type,
+            jewellery_type=jewellery_type,
 
-        gold_purity=request.POST.get("gold_purity"),
+            gold_purity=request.POST.get("gold_purity"),
 
-        budget=request.POST.get("budget"),
+            budget=request.POST.get("budget"),
 
-        design_idea=request.POST.get("design_idea"),
+            design_idea=request.POST.get("design_idea"),
 
-)
+        )
 
 
-    if request.FILES.get("reference_image"):
+        if request.FILES.get("reference_image"):
 
-        enquiry.reference_image = request.FILES.get("reference_image")
+            enquiry.reference_image = request.FILES.get("reference_image")
 
-        enquiry.save()
+            enquiry.save()
 
 
     data = {
@@ -957,7 +959,13 @@ def custom_category(request, jewellery_type):
         }
 
     }
-    gallery = CustomGallery.objects.filter(category=jewellery_type)
+
+
+    # Sirf reference images ke liye 4 images
+    gallery = CustomGallery.objects.filter(
+        category=jewellery_type
+    )[:4]
+
 
     return render(
         request,
@@ -965,9 +973,9 @@ def custom_category(request, jewellery_type):
         {
             "category": data.get(jewellery_type),
             "gallery": gallery,
+            "products": [],   # IMPORTANT - custom products hide honge
         }
-    )
-    
+    )    
 # =====================================================
 # EVERYDAY JEWELLERY
 # =====================================================
@@ -989,4 +997,49 @@ def everyday(request):
         request,
         "home/everyday.html",
         context
+    )
+    
+# =====================================================
+# SAVING SCHEME
+# =====================================================
+
+def saving_scheme(request):
+
+    schemes = SavingScheme.objects.all()
+
+    if request.method == "POST":
+
+        scheme_id = request.POST.get("scheme")
+
+        scheme = SavingScheme.objects.get(id=scheme_id)
+
+        enquiry = SchemeEnquiry.objects.create(
+
+            scheme=scheme,
+
+            name=request.POST.get("name"),
+
+            phone=request.POST.get("phone"),
+
+            message=request.POST.get("message"),
+
+        )
+
+
+        return render(
+            request,
+            "home/saving_scheme.html",
+            {
+                "schemes": schemes,
+                "success": True
+            }
+        )
+
+
+    return render(
+        request,
+        "home/saving_scheme.html",
+        {
+            "schemes": schemes
+        }
     )

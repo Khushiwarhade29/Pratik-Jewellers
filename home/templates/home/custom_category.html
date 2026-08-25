@@ -31,85 +31,53 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 {% include "home/navbar.html" %}
 
 
-
-<section class="container py-5 mt-5">
-
-
-<div class="text-center mb-5">
-
-
-<h1 class="display-4 fw-bold">
-
-{{ category.icon }}
-
-{{ category.title }}
-
-</h1>
-
-
-<div class="hero-line"></div>
-
-
-<p class="mt-3 text-muted">
-
-Get inspired by our handcrafted jewellery designs.
-Create your own unique piece with Pratik Jewellers.
-
-</p>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
 <section class="container py-5">
 
+    <div class="text-center mb-5">
 
-<h2 class="text-center fw-bold mb-5">
+        <span class="custom-section-label">
+            OUR CUSTOM COLLECTION
+        </span>
 
-Design Inspiration
+        <h2 class="fw-bold">
+            {{ category.title }}
+        </h2>
 
-</h2>
-
-
-
-<div class="row g-4">
-
-    {% for item in gallery %}
-
-    <div class="col-lg-3 col-md-6">
-
-        <div class="inspiration-card">
-
-            <img src="{{ item.image.url }}"
-                 class="img-fluid"
-                 alt="{{ item.title }}">
-
-            <h5 class="text-center mt-3">
-                {{ item.title }}
-            </h5>
-
-        </div>
+        <p class="text-muted">
+            Explore our handcrafted designs and get inspired.
+        </p>
 
     </div>
 
-    {% empty %}
 
-    <div class="col-12 text-center">
-        <h5>No designs available.</h5>
+   <div class="row g-4">
+
+{% for design in gallery %}
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="inspiration-card">
+
+        <img src="{{ design.image.url }}"
+             class="img-fluid"
+             alt="{{ design.title }}">
+
     </div>
-
-    {% endfor %}
 
 </div>
 
+{% empty %}
 
+<div class="col-12 text-center">
+    <p class="text-muted">
+        No reference images available.
+    </p>
+</div>
 
+{% endfor %}
+
+</div>
+    </div>
 
 </section>
 
@@ -121,7 +89,7 @@ Design Inspiration
 Create Your Own Design
 </h2>
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" onsubmit="sendCustomDesign(); return false;">
 
 {% csrf_token %}
 
@@ -230,6 +198,7 @@ class="form-control">
 <div class="text-center">
 
 <button type="submit"
+onclick="sendCustomDesign()"
 class="btn btn-dark px-5 py-3">
 
 <i class="fab fa-whatsapp"></i>
@@ -237,7 +206,6 @@ class="btn btn-dark px-5 py-3">
 Send Design Request
 
 </button>
-
 </div>
 
 
@@ -282,8 +250,8 @@ I want to create custom jewellery.`;
 
 
 window.open(
-`https://wa.me/919766688337?text=${encodeURIComponent(message)}`,
-"_blank"
+    "https://wa.me/919766688337?text=" + encodeURIComponent(message),
+    "_blank"
 );
 
 

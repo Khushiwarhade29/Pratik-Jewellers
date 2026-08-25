@@ -41,32 +41,74 @@ if (voiceBtn && searchInput) {
    20H-2 — HERO AUTO SLIDER
    ========================================================= */
 
+
+
+
+
+/* =========================================================
+   HERO AUTO SLIDER
+========================================================= */
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const heroSlides = document.querySelectorAll(".hero-slide");
+    const heroContent = document.getElementById("mainHeroContent");
 
     if (!heroSlides.length) return;
 
+
     let currentSlide = 0;
+
 
     function showHeroSlide(index) {
 
+
         heroSlides.forEach((slide, i) => {
-            slide.classList.toggle("active", i === index);
+
+            slide.classList.remove("active");
+
+            if(i === index){
+                slide.classList.add("active");
+            }
+
         });
+
+
+
+        if(heroSlides[index].classList.contains("saving-slide")){
+
+            heroContent.style.visibility = "hidden";
+
+        }
+        else{
+
+            heroContent.style.visibility = "visible";
+
+        }
+
 
     }
 
-    setInterval(function () {
+
+    showHeroSlide(currentSlide);
+
+
+
+    setInterval(function(){
 
         currentSlide++;
 
-        if (currentSlide >= heroSlides.length) {
+        if(currentSlide >= heroSlides.length){
+
             currentSlide = 0;
+
         }
+
 
         showHeroSlide(currentSlide);
 
-    }, 5000);
+
+    },5000);
+
 
 });

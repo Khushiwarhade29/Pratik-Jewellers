@@ -54,23 +54,17 @@ nav {
    HERO
 ===================================================== */
 
-.hero {
-    position: relative;
-    height: 100vh;
+.hero { 
+    position: relative; 
+    height: 100vh; 
 
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url("../images/hero-bg.jpg");
+    background: #f5f1eb;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    color: white; 
 }
 
 .hero h3 {
@@ -3202,30 +3196,21 @@ nav {
    HERO FIX
 ===================================================== */
 
-.hero {
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 72px);
+.hero { 
+    position: relative; 
+    width: 100%; 
+    min-height: calc(100vh - 72px); 
 
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.55)
-        ),
-        url("../images/hero-bg.jpg");
+    background: #f5f1eb;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center; 
+    color: white; 
 
-    text-align: center;
-    color: white;
-
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 
@@ -3354,25 +3339,16 @@ nav {
    HERO - NAVBAR KE NEECHE RAHEGA
 ===================================================== */
 
-.hero {
-    position: relative !important;
-    z-index: 1 !important;
+.hero { 
+    position: relative !important; 
+    z-index: 1 !important; 
 
-    width: 100%;
+    width: 100%; 
 
     height: calc(100vh - 72px);
     min-height: calc(100vh - 72px);
 
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.55)
-        ),
-        url("../images/hero-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #f5f1eb;
 
     display: flex;
     justify-content: center;
@@ -27608,16 +27584,16 @@ font-size:10px;
 }
 
 /* Slider wrapper */
-.hero-slider {
-    position: absolute !important;
-    inset: 0 !important;
+.hero-slider { 
+    position: absolute !important; 
+    inset: 0 !important; 
 
-    width: 100% !important;
-    height: 100% !important;
+    width: 100% !important; 
+    height: 100% !important; 
 
-    overflow: hidden !important;
+    overflow: hidden !important; 
 
-    z-index: -2 !important;
+    z-index: 0 !important;
 }
 
 /* Individual slides */
@@ -27734,7 +27710,7 @@ font-size:10px;
 /* Keep hero content above slider */
 .hero-content {
     position: relative !important;
-    z-index: 3 !important;
+     z-index: 2;
 }
 
 .hero-overlay {
@@ -30174,4 +30150,1542 @@ body:has(.coins-card) span {
     }
 }
 
+
+
+
+
+
+/* =========================================================
+   STEP 3 — JEWELLERY CATEGORY VISUAL STRIP
+   ========================================================= */
+
+.jewellery-category-strip {
+    width: 100%;
+    background: #ffffff !important;
+    padding: 22px 20px 26px;
+    overflow: hidden;
+}
+
+.jewellery-category-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 34px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.jewellery-category-item {
+    flex: 0 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 105px;
+
+    text-decoration: none !important;
+    color: #292722 !important;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.jewellery-category-image {
+    width: 72px;
+    height: 72px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e4d6b8;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.jewellery-category-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.jewellery-category-item span {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+    white-space: nowrap;
+
+    color: #292722;
+}
+
+/* HOVER */
+.jewellery-category-item:hover {
+    color: #b59451 !important;
+    transform: translateY(-3px);
+}
+
+.jewellery-category-item:hover span {
+    color: #b59451 !important;
+}
+
+.jewellery-category-item:hover
+.jewellery-category-image {
+    border-color: #b59451;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    .jewellery-category-strip {
+        padding: 16px 10px 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .jewellery-category-strip::-webkit-scrollbar {
+        display: none;
+    }
+
+    .jewellery-category-track {
+        justify-content: flex-start;
+        gap: 22px;
+
+        width: max-content;
+        max-width: none;
+    }
+
+    .jewellery-category-item {
+        min-width: 78px;
+    }
+
+    .jewellery-category-image {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 8px;
+    }
+
+    .jewellery-category-item span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   CUSTOM PAGE — EVERYDAY STYLE HERO
+   ========================================================= */
+
+.custom-hero {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 560px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    overflow: hidden !important;
+
+    background:
+        linear-gradient(
+            rgba(35, 30, 24, 0.35),
+            rgba(35, 30, 24, 0.35)
+        ),
+        url("/media/products/custom_jewellery.jpg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* Text image ke upar clearly dikhe */
+.custom-hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+
+    max-width: 650px !important;
+    padding: 80px 60px !important;
+
+    color: #ffffff !important;
+}
+
+
+/* Eyebrow */
+.custom-eyebrow {
+    color: #e1c27b !important;
+}
+
+
+/* Main heading */
+.custom-hero-content h1 {
+    color: #ffffff !important;
+}
+
+
+/* Description */
+.custom-hero-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+
+/* Start creating */
+.custom-hero-link {
+    color: #ffffff !important;
+}
+
+.custom-hero-link span {
+    color: #e1c27b !important;
+}
+
+/* =========================================================
+   CUSTOM HERO — PREMIUM TEXT POSITION
+   ========================================================= */
+
+.custom-hero-content {
+    width: 100% !important;
+    max-width: 900px !important;
+
+    padding: 80px 60px !important;
+
+    text-align: left !important;
+}
+
+
+/* Small label */
+.custom-eyebrow {
+    display: inline-block !important;
+
+    margin-bottom: 22px !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 10px !important;
+    font-weight: 600 !important;
+
+    letter-spacing: 4px !important;
+}
+
+
+/* Main heading */
+.custom-hero-content h1 {
+    margin: 0 !important;
+
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+
+    font-size: clamp(52px, 6vw, 82px) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 0.98 !important;
+
+    letter-spacing: -1px !important;
+}
+
+
+/* Description */
+.custom-hero-content p {
+    max-width: 520px !important;
+
+    margin: 28px 0 0 !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.8 !important;
+}
+
+
+/* CTA */
+.custom-hero-link {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    gap: 10px !important;
+
+    margin-top: 30px !important;
+
+    padding-bottom: 8px !important;
+
+    border-bottom: 1px solid #e1c27b !important;
+
+    text-decoration: none !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 2px !important;
+}
+
+
+/* Arrow */
+.custom-hero-link span {
+    font-size: 15px !important;
+
+    transition: transform 0.3s ease !important;
+}
+
+
+/* Hover */
+.custom-hero-link:hover span {
+    transform: translateX(5px) !important;
+}
+
+/* =========================================================
+   CUSTOM PAGE — DESIGN SECTION
+   ========================================================= */
+
+.custom-design-section {
+    width: 100% !important;
+
+    max-width: 1280px !important;
+
+    margin: 0 auto !important;
+
+    padding: 90px 40px !important;
+
+    background: #ffffff !important;
+
+    color: #292722 !important;
+}
+
+
+/* HEADER */
+
+.custom-design-header {
+    text-align: center !important;
+
+    margin-bottom: 55px !important;
+}
+
+.custom-section-label {
+    display: inline-block !important;
+
+    margin-bottom: 15px !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 3px !important;
+
+    color: #b59451 !important;
+}
+
+.custom-design-header h2 {
+    margin: 0 0 15px !important;
+
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+
+    font-size: clamp(38px, 4vw, 58px) !important;
+
+    font-weight: 400 !important;
+
+    color: #292722 !important;
+}
+
+.custom-design-header p {
+    margin: 0 auto !important;
+
+    max-width: 550px !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.8 !important;
+
+    color: #716b61 !important;
+}
+
+/* =========================================================
+   CUSTOM PAGE — DESIGN CARDS
+   ========================================================= */
+
+.custom-design-item {
+    margin-bottom: 0 !important;
+}
+
+
+/* CARD */
+
+.custom-design-section .design-card {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 190px !important;
+
+    padding: 30px 20px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e8e2d8 !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    text-decoration: none !important;
+
+    color: #292722 !important;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease !important;
+}
+
+
+/* ICON / EMOJI */
+
+.custom-design-section .design-card {
+    font-size: 34px;
+}
+
+
+/* CARD HEADING */
+
+.custom-design-section .design-card h4 {
+    margin: 15px 0 0 !important;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif !important;
+
+    font-size: 25px !important;
+
+    font-weight: 500 !important;
+
+    color: #292722 !important;
+
+    transition: color 0.3s ease !important;
+}
+
+
+/* HOVER */
+
+.custom-design-section .design-card:hover {
+    transform: translateY(-6px) !important;
+
+    border-color: #b59451 !important;
+
+    box-shadow: none !important;
+
+    color: #b59451 !important;
+}
+
+.custom-design-section .design-card:hover h4 {
+    color: #b59451 !important;
+}
+
+@media (max-width: 768px) {
+
+    /* Custom design section */
+    .custom-design-section {
+        padding: 65px 18px !important;
+    }
+
+    .custom-design-header {
+        margin-bottom: 35px !important;
+    }
+
+    /* Cards */
+    .custom-design-section .design-card {
+        min-height: 155px !important;
+        padding: 25px 15px !important;
+    }
+
+    /* Card icon */
+    .custom-design-section .design-card {
+        font-size: 30px !important;
+    }
+
+    /* Card title */
+    .custom-design-section .design-card h4 {
+        margin-top: 12px !important;
+        font-size: 22px !important;
+    }
+
+}
+
+
+/* =========================================================
+   CUSTOM CATEGORY — PRODUCT CARDS
+   ========================================================= */
+
+.custom-product-card {
+    background: #ffffff !important;
+
+    border: 1px solid #e8e2d8 !important;
+
+    overflow: hidden !important;
+
+    box-shadow: none !important;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease !important;
+}
+
+
+/* IMAGE */
+
+.custom-product-image {
+    width: 100% !important;
+
+    height: 330px !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    background: #f7f3ec !important;
+
+    transition: transform 0.5s ease !important;
+}
+
+
+/* HOVER IMAGE */
+
+.custom-product-card:hover .custom-product-image {
+    transform: scale(1.03) !important;
+}
+
+
+/* CARD INFO */
+
+.custom-product-info {
+    padding: 22px 20px 25px !important;
+}
+
+
+/* CATEGORY */
+
+.custom-product-category {
+    display: block !important;
+
+    margin-bottom: 7px !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 9px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 2px !important;
+
+    text-transform: uppercase !important;
+
+    color: #b59451 !important;
+}
+
+
+/* PRODUCT NAME */
+
+.custom-product-info h3 {
+    margin: 0 !important;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif !important;
+
+    font-size: 27px !important;
+
+    font-weight: 500 !important;
+
+    color: #292722 !important;
+}
+
+
+/* PRODUCT DETAILS */
+
+.custom-product-info p {
+    margin: 8px 0 18px !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 11px !important;
+
+    color: #81796d !important;
+}
+
+
+/* VIEW DETAILS */
+
+.custom-product-link {
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    gap: 9px !important;
+
+    text-decoration: none !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 9px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 2px !important;
+
+    color: #292722 !important;
+
+    transition: color 0.3s ease !important;
+}
+
+
+.custom-product-link span {
+    color: #b59451 !important;
+
+    font-size: 15px !important;
+
+    transition: transform 0.3s ease !important;
+}
+
+
+/* HOVER */
+
+.custom-product-card:hover {
+    transform: translateY(-5px) !important;
+
+    border-color: #d2b66f !important;
+}
+
+.custom-product-card:hover .custom-product-link {
+    color: #b59451 !important;
+}
+
+.custom-product-card:hover .custom-product-link span {
+    transform: translateX(4px) !important;
+}
+
+@media (max-width: 768px) {
+
+    .custom-product-image {
+        height: 280px !important;
+    }
+
+    .custom-product-info {
+        padding: 18px 16px 22px !important;
+    }
+
+    .custom-product-info h3 {
+        font-size: 24px !important;
+    }
+
+    .custom-product-info p {
+        font-size: 10px !important;
+    }
+
+    .custom-product-link {
+        font-size: 8px !important;
+    }
+
+}
+
+
+.footer-copyright,
+.footer-crafted {
+    display: block !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: black !important;
+}
+
+.footer-copyright span {
+    color: #c9a227 !important;
+}
+
+.footer {
+    overflow: visible !important;
+}
+
+.footer-copyright,
+.footer-crafted {
+    display: block !important;
+    color: #333 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.footer-copyright span {
+    color: #c9a227 !important;
+}
+
+.footer .container {
+    overflow: visible !important;
+}
+
+
+.footer-copyright,
+.footer-crafted {
+    color: #333333 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.footer-copyright span {
+    color: #c9a227 !important;
+}
+
+.footer-copyright {
+    font-size: 15px !important;
+    text-align: center !important;
+}
+
+.footer-crafted {
+    font-size: 14px !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+}
+
+/* Footer Bottom Text Fix */
+
+.footer-copyright {
+    color: #292722 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 15px !important;
+    text-align: center !important;
+}
+
+.footer-copyright span {
+    color: #b59451 !important;
+}
+
+.footer-crafted {
+    color: #292722 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+}
+
+
+
+footer .footer-copyright,
+footer .footer-crafted {
+    color: #292722 !important;
+    -webkit-text-fill-color: #292722 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+footer .footer-copyright span {
+    color: #b59451 !important;
+    -webkit-text-fill-color: #b59451 !important;
+}
+
+footer .footer-crafted {
+    margin-top: 10px !important;
+}
+
+
+/* Mobile Menu Text Color Fix */
+
+@media (max-width: 991px) {
+
+    .mobile-menu {
+        background: #ffffff !important;
+    }
+
+    .mobile-menu .mobile-menu-link,
+    .mobile-menu .mobile-collection-btn,
+    .mobile-menu .mobile-collection-btn span,
+    .mobile-collection-menu a {
+        color: #292722 !important;
+        -webkit-text-fill-color: #292722 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mobile-menu .mobile-menu-link:hover,
+    .mobile-menu .mobile-collection-btn:hover,
+    .mobile-collection-menu a:hover {
+        color: #b59451 !important;
+    }
+
+    .mobile-arrow {
+        color: #b59451 !important;
+    }
+
+}
+
+/* Mobile Hero Button Text Color Only */
+
+@media (max-width: 768px) {
+
+    .hero-actions .hero-btn {
+        color: #b59451 !important;
+        text-decoration: none !important;
+    }
+
+}
+
+/* Pratik Edit Mobile Link Color Fix */
+
+@media (max-width: 768px) {
+
+    .pratik-edit a {
+        color: #292722 !important;
+        text-decoration: none !important;
+    }
+
+}
+
+
+/* Custom Studio Fix */
+
+.custom-studio-link {
+    color: #292722 !important;
+    text-decoration: none !important;
+}
+
+/* Hide Custom Studio Options */
+
+.custom-studio-options {
+    display: none !important;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .silver-editorial {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .silver-editorial-gallery {
+        order: 1;
+    }
+
+    .silver-editorial-content {
+        order: 2;
+    }
+
+}
+
+
+.silver-editorial-content h2::after,
+.silver-editorial-content h2::before {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+
+    .earrings-editorial {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .earrings-editorial-image {
+        order: 1;
+    }
+
+    .earrings-editorial-content {
+        order: 2;
+    }
+
+}
+
+/* Collection headings and explore text gold */
+
+.editorial-collections-heading span,
+.editorial-label,
+.editorial-explore {
+    color: #c9a227 !important;
+}
+
+/* Silver section gold text color */
+
+.silver-editorial-label,
+.silver-editorial-link,
+.silver-editorial-link span {
+    color: #c9a227 !important;
+}
+
+.silver-editorial-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.silver-editorial-link::before {
+    display: none !important;
+}
+
+/* Necklace Edit styling */
+
+.necklace-editorial-content h2 {
+    font-weight: 400 !important;
+}
+
+.necklace-editorial-link,
+.necklace-editorial-link span {
+    color: #c9a227 !important;
+    text-decoration: none !important;
+}
+
+/* Necklace Edit text matching with other collections */
+
+.necklace-editorial-label {
+    font-weight: 400 !important;
+}
+
+.necklace-editorial-link {
+    font-weight: 400 !important;
+}
+
+.necklace-editorial-link span {
+    font-weight: 400 !important;
+}
+
+/* Earring Edit Explore gold color */
+
+.earrings-editorial-link,
+.earrings-editorial-link span {
+    color: #c9a227 !important;
+    text-decoration: none !important;
+}
+
+/* Silver section top line gold color */
+
+.silver-editorial-label::before {
+    background-color: #c9a227 !important;
+}
+
+@media (min-width: 769px) {
+
+    .silver-editorial .silver-editorial-link {
+        position: relative !important;
+        display: inline-block !important;
+        color: #c9a227 !important;
+        padding-bottom: 10px !important;
+    }
+
+    .silver-editorial .silver-editorial-link:after {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #c9a227 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .silver-editorial .silver-editorial-link {
+        padding-bottom: 8px !important;
+    }
+
+    .silver-editorial .silver-editorial-link::after {
+        height: 1px !important;
+        background: #c9a227 !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .editorial-label,
+    .silver-editorial-label,
+    .earrings-editorial-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .editorial-label::before,
+    .silver-editorial-label::before,
+    .earrings-editorial-label::before {
+        content: "";
+        width: 35px;
+        height: 1px;
+        background: #c9a227;
+        display: inline-block;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .silver-editorial-link::after {
+        display: none !important;
+    }
+
+}
+
+
+/* Home page section spacing balance */
+
+.collections,
+.silver-editorial,
+.necklace-editorial,
+.earrings-editorial,
+.pratik-edit,
+.shop-occasion,
+.custom-studio,
+.why-us,
+.about,
+.help-strip,
+.testimonials {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.collections,
+.silver-editorial,
+.necklace-editorial,
+.earrings-editorial,
+.pratik-edit,
+.shop-occasion,
+.custom-studio {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+
+
+/* =====================================================
+   COLLECTION PAGE — CONSISTENT SPACING
+   Gold / Silver / Diamond / Bridal / Coins
+   ===================================================== */
+
+.collection-hero-section {
+    padding-top: 45px !important;
+    padding-bottom: 30px !important;
+    margin-top: 0 !important;
+}
+
+.collection-hero-section .text-center {
+    margin-bottom: 25px !important;
+}
+
+.collection-hero-section h1 {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.collection-hero-section .hero-line {
+    margin: 10px auto !important;
+}
+
+.collection-hero-section p {
+    margin-top: 12px !important;
+    margin-bottom: 20px !important;
+}
+
+.collection-hero-section .gold-filter {
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+}
+
+/* COLLECTION PAGE — FORCE SPACING FIX */
+
+.collection-hero-section {
+    padding: 25px 15px 20px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+}
+
+.collection-hero-section .text-center {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.collection-hero-section h1 {
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+}
+
+.collection-hero-section .hero-line {
+    margin: 8px auto !important;
+}
+
+.collection-hero-section p {
+    margin: 10px 0 18px 0 !important;
+    padding: 0 !important;
+}
+
+.collection-hero-section .gold-filter {
+    margin: 15px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+/* REMOVE LARGE TOP GAP FROM COLLECTION PAGES */
+
+.collection-hero-section {
+    position: relative !important;
+    top: 0 !important;
+
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.collection-hero-section::before,
+.collection-hero-section::after {
+    display: none !important;
+}
+
+.collection-hero-section > .text-center {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.collection-hero-section h1 {
+    margin-top: 0 !important;
+}
+
+/* =========================================================
+   COLLECTION PAGES — FINAL SPACING FIX
+   Gold / Silver / Diamond / Bridal / Coins
+   ========================================================= */
+
+.collection-hero-section {
+    margin-top: 0 !important;
+    padding-top: 45px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Heading area */
+.collection-hero-section > .text-center.mb-5 {
+    margin-bottom: 30px !important;
+}
+
+/* Heading */
+.collection-hero-section h1.display-3 {
+    margin: 0 !important;
+}
+
+/* Gold line */
+.collection-hero-section .hero-line {
+    margin: 14px auto 0 !important;
+}
+
+/* Description */
+.collection-hero-section .text-center.mb-5 > p {
+    margin: 16px auto 0 !important;
+}
+
+/* Category buttons */
+.collection-hero-section .gold-filter {
+    margin: 24px auto 0 !important;
+}
+
+/* Filter + product cards */
+.collection-hero-section .gold-shop-layout {
+    margin-top: 0 !important;
+}
+
+/* =====================================================
+   COLLECTION HERO - FINAL SPACING FIX
+   Gold / Silver / Diamond / Bridal / Coins
+   ===================================================== */
+
+.collection-hero-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    padding-top: 25px !important;
+    padding-bottom: 20px !important;
+
+    min-height: auto !important;
+    height: auto !important;
+
+    display: block !important;
+    align-items: unset !important;
+    justify-content: unset !important;
+}
+
+/* Heading */
+.collection-hero-section h1 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Line */
+.collection-hero-section .hero-line {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+/* Description */
+.collection-hero-section p {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Filter buttons */
+.collection-hero-section .gold-filter {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Section immediately after collection hero */
+.collection-hero-section + section {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+}
+
+
+
+.collection-hero-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.collection-heading {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.collection-heading h1 {
+    margin: 0 !important;
+}
+
+.collection-heading .hero-line {
+    margin: 12px auto !important;
+}
+
+.collection-heading p {
+    margin: 12px 0 20px !important;
+}
+
+.collection-heading .gold-filter {
+    margin: 0 !important;
+}
+
+/* COLLECTION HEADING - REMOVE TOP BLANK SPACE */
+
+.collection-hero-section .collection-heading {
+    position: relative !important;
+    top: -80px !important;
+}
+
+/* =====================================================
+   COLLECTION FILTER + PRODUCTS — FINAL DESKTOP ALIGNMENT
+   ===================================================== */
+
+.gold-shop-layout {
+    display: grid !important;
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+    column-gap: 30px !important;
+
+    align-items: start !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* LEFT FILTER */
+.gold-shop-layout .gold-sidebar {
+    width: 240px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    align-self: start !important;
+}
+
+/* RIGHT PRODUCTS */
+.gold-shop-layout .gold-products-area {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    align-self: start !important;
+}
+
+/* PRODUCT ROW */
+.gold-shop-layout .gold-products-area > .row {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* FIRST PRODUCT CARD */
+.gold-shop-layout .gold-products-area .row > div:first-child {
+    margin-top: 0 !important;
+}
+
+/* =========================================
+   FILTER SIDEBAR CONTENT SPACING
+   ========================================= */
+
+.gold-sidebar {
+    padding: 28px 24px !important;
+    box-sizing: border-box !important;
+}
+
+.gold-sidebar h3 {
+    margin: 0 0 12px 0 !important;
+}
+
+.gold-sidebar .sidebar-line {
+    margin: 0 0 28px 0 !important;
+}
+
+.gold-sidebar .filter-section {
+    margin-bottom: 28px !important;
+}
+
+.gold-sidebar .filter-section h4 {
+    margin: 0 0 15px 0 !important;
+}
+
+.gold-sidebar .filter-section label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+
+    margin: 0 0 12px 0 !important;
+}
+
+.gold-sidebar .filter-section input[type="checkbox"] {
+    margin: 0 !important;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.customer-details{
+    width:90%;
+    max-width:1100px;
+    margin:80px auto;
+}
+
+
+.customer-detail-card{
+
+    display:flex;
+    gap:30px;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    margin-bottom:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+}
+
+
+.customer-detail-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.detail-icon{
+
+    min-width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#c9a227;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+.detail-content h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    color:#222;
+
+}
+
+
+.detail-content p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
+.detail-content ul{
+
+    padding-left:20px;
+
+}
+
+
+.detail-content li{
+
+    margin-bottom:10px;
+
+}
+
+
+/* Scroll position */
+
+#jewellery-care,
+#bis-hallmark,
+#ring-size-guide,
+#faq{
+
+    scroll-margin-top:120px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.customer-detail-card{
+
+    flex-direction:column;
+
+    padding:25px;
+
+}
+
+
+.detail-content h2{
+
+    font-size:25px;
+
+}
+
+}
+
+.customer-main-title{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:50px;
+
+font-weight:600;
+
+}
+
+
+.saving-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+#mainHeroContent{
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .saving-slide {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-color: #fff !important;
+    }
+
+
+    .hero {
+        min-height: 420px !important;
+    }
+
+
+    .hero-slider,
+    .hero-slide {
+        min-height: 420px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .saving-slide {
+
+        background-size: cover !important;
+        background-position: center !important;
+
+    }
+
+
+    .hero,
+    .hero-slider,
+    .hero-slide {
+
+        height: 450px !important;
+
+    }
+
+}
 

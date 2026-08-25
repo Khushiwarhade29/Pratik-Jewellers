@@ -5,6 +5,36 @@ from .models import Product, Wishlist, Contact, MetalRate
 
 from .models import CustomEnquiry
 from .models import CustomGallery
+from .models import CustomDesign
+from .models import SavingScheme, SchemeEnquiry
+
+
+@admin.register(SavingScheme)
+class SavingSchemeAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "name",
+        "duration",
+        "monthly_amount",
+        "is_active"
+    )
+
+
+@admin.register(SchemeEnquiry)
+class SchemeEnquiryAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "name",
+        "phone",
+        "scheme",
+        "created_at"
+    )
+
+
+
+@admin.register(CustomDesign)
+class CustomDesignAdmin(admin.ModelAdmin):
+    list_display = ['id']
 
 @admin.register(CustomGallery)
 class CustomGalleryAdmin(admin.ModelAdmin):

@@ -43,8 +43,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
              style="background-image: url('{% static "home/images/hero/hero-silver.jpg" %}');">
         </div>
 
-        <div class="hero-slide"
-             style="background-image: url('{% static "home/images/hero/hero-offer.jpg.jpg" %}');">
+       <div class="hero-slide saving-slide"
+            style="background-image: url('{% static "home/images/hero/gold_saving_banner.jpg" %}');">
         </div>
 
     </div>
@@ -54,8 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 
     <!-- Hero Content -->
-    <div class="hero-content">
-
+    <div class="hero-content" id="mainHeroContent">
         <span class="hero-eyebrow">
             PRATIK JEWELLERS
         </span>
@@ -130,49 +129,121 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="jewellery-category-track">
 
-        <a href="{% url 'gold' %}?category=Necklace">
-            NECKLACE SETS
+        <!-- NECKLACE SETS -->
+        <a href="{% url 'gold' %}?category=Necklace"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/necklace-sets.jpg"
+                     alt="Necklace Sets">
+            </div>
+
+            <span>NECKLACE SETS</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Chain">
-            CHAINS
+
+        <!-- CHAINS -->
+        <a href="{% url 'gold' %}?category=Chain"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/chains.jpg"
+                     alt="Chains">
+            </div>
+
+            <span>CHAINS</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Pendant">
-            PENDANTS
+
+        <!-- PENDANTS -->
+        <a href="{% url 'gold' %}?category=Pendant"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/pendants.jpg"
+                     alt="Pendants">
+            </div>
+
+            <span>PENDANTS</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Mangalsutra">
-            MANGALSUTRA
+
+        <!-- MANGALSUTRA -->
+        <a href="{% url 'gold' %}?category=Mangalsutra"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/mangalsutra.jpg"
+                     alt="Mangalsutra">
+            </div>
+
+            <span>MANGALSUTRA</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Earrings">
-            EARRINGS
+
+        <!-- EARRINGS -->
+        <a href="{% url 'gold' %}?category=Earrings"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/earrings.jpg"
+                     alt="Earrings">
+            </div>
+
+            <span>EARRINGS</span>
+
         </a>
-        <span>|</span>
 
 
-        <a href="{% url 'gold' %}?category=Bangles">
-            BANGLES
+        <!-- BANGLES -->
+        <a href="{% url 'gold' %}?category=Bangles"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/bangles.jpg"
+                     alt="Bangles">
+            </div>
+
+            <span>BANGLES</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Ring">
-            RINGS
+
+        <!-- RINGS -->
+        <a href="{% url 'gold' %}?category=Ring"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/rings.jpg"
+                     alt="Rings">
+            </div>
+
+            <span>RINGS</span>
+
         </a>
-        <span>|</span>
 
-        <a href="{% url 'gold' %}?category=Nose%20Pin">
-            NATH
+
+        <!-- NATH -->
+        <a href="{% url 'gold' %}?category=Nose%20Pin"
+           class="jewellery-category-item">
+
+            <div class="jewellery-category-image">
+                <img src="/media/products/category-icons/nath.jpg"
+                     alt="Nath">
+            </div>
+
+            <span>NATH</span>
+
         </a>
 
     </div>
 
 </section>
+
 
 <section class="collections editorial-collections">
 
@@ -381,7 +452,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 
     <!-- MEN'S JEWELLERY -->
-    <a href="{% url 'custom' %}"
+    <a href="{% url 'gold' %}?type=Men"
        class="collection-link editorial-collection-item reverse">
 
         <div class="editorial-collection-image">

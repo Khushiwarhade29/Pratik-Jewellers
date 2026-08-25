@@ -33,6 +33,12 @@ urlpatterns = [
     name="everyday"
 ),
     
+    path(
+    "saving-scheme/",
+    views.saving_scheme,
+    name="saving_scheme"
+),
+    
     path('custom/<str:jewellery_type>/', views.custom_category, name='custom_category'),
     # Product Detail Page
     path('product/<int:id>/', views.product_detail, name='product_detail'),

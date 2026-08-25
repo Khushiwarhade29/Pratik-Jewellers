@@ -1,0 +1,401 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saving Scheme | Pratik Jewellers</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+{% include "home/navbar.html" %}
+
+
+
+<!-- Hero Section -->
+
+<section class="container py-5 mt-5 text-center">
+
+
+<h1 class="fw-bold display-4">
+
+💰 Gold Saving Schemes
+
+</h1>
+
+
+<div class="hero-line"></div>
+
+
+<p class="text-muted mt-3">
+
+Save monthly and make your dream jewellery with Pratik Jewellers.
+
+</p>
+
+
+</section>
+
+
+
+
+<!-- Scheme Cards -->
+
+
+<section class="container py-4">
+
+
+<div class="row g-4">
+
+
+{% for scheme in schemes %}
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="card shadow-sm h-100 p-4">
+
+
+<h3 class="fw-bold text-center">
+
+{{ scheme.name }}
+
+</h3>
+
+
+<hr>
+
+
+<h5>
+
+Duration:
+
+</h5>
+
+<p>
+{{ scheme.duration }}
+</p>
+
+
+
+<h5>
+
+Monthly Amount:
+
+</h5>
+
+<p>
+{{ scheme.monthly_amount }}
+</p>
+
+
+
+<p>
+
+{{ scheme.description }}
+
+</p>
+
+
+
+<h5>
+Benefits:
+</h5>
+
+
+<p>
+{{ scheme.benefits|linebreaks }}
+</p>
+
+
+
+<button 
+class="hero-btn hero-btn-primary w-100"
+data-bs-toggle="modal"
+data-bs-target="#schemeModal{{scheme.id}}">
+
+Join Scheme
+
+</button>
+</div>
+
+
+</div>
+
+
+
+
+<!-- Modal Form -->
+
+
+<div class="modal fade"
+id="schemeModal{{scheme.id}}">
+
+
+<div class="modal-dialog">
+
+
+<div class="modal-content">
+
+
+<form method="POST" onsubmit="sendSchemeWhatsApp(event);">
+
+
+
+
+{% csrf_token %}
+
+
+<div class="modal-header">
+
+<h5>
+Join {{scheme.name}}
+</h5>
+
+<button 
+type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+
+
+
+<div class="modal-body">
+
+
+
+
+
+<input 
+type="hidden"
+name="scheme"
+value="{{scheme.id}}">
+
+
+<input  
+type="hidden" 
+id="schemeName{{scheme.id}}" 
+value="{{scheme.name}}">
+
+
+
+<input 
+class="form-control mb-3"
+name="name"
+placeholder="Your Name"
+required>
+
+
+
+<input 
+class="form-control mb-3"
+name="phone"
+placeholder="Mobile Number"
+required>
+
+
+
+<textarea
+class="form-control"
+name="message"
+placeholder="Your Message">
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+<div class="modal-footer">
+
+
+<button class="hero-btn hero-btn-primary">
+    Submit Request
+</button>
+
+
+</div>
+
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+{% empty %}
+
+
+<div class="text-center">
+
+<h5>
+No Saving Schemes Available
+</h5>
+
+</div>
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Terms & Conditions -->
+
+
+<section class="container py-5">
+
+
+<div class="p-4 shadow rounded">
+
+
+<h2 class="fw-bold text-center mb-4">
+
+Terms & Conditions
+
+</h2>
+
+
+<ul>
+
+
+<li>
+Customer must complete monthly instalments.
+</li>
+
+
+<li>
+Scheme amount can be used only for jewellery purchase.
+</li>
+
+
+<li>
+Cash refund is not applicable.
+</li>
+
+
+<li>
+Valid ID proof may be required.
+</li>
+
+
+<li>
+Benefits depend on active scheme offers.
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+function sendSchemeWhatsApp(event){
+
+    event.preventDefault();
+
+
+    let name = event.target.name.value;
+
+    let phone = event.target.phone.value;
+
+    let message = event.target.message.value;
+
+
+    let schemeInput = event.target.querySelector(
+        'input[name="scheme"]'
+    );
+
+
+    let schemeId = schemeInput.value;
+
+
+    let schemeName = document.getElementById(
+        "schemeName" + schemeId
+    ).value;
+
+
+
+    let whatsappMessage = 
+`Hello Pratik Jewellers,
+
+I want to join Gold Saving Scheme.
+
+Scheme Name: ${schemeName}
+
+Name: ${name}
+
+Mobile: ${phone}
+
+Message:
+${message}`;
+
+
+
+    // Database save hone ke liye form submit karo
+    event.target.submit();
+
+
+    // WhatsApp open
+    window.open(
+        "https://wa.me/919766688337?text="
+        + encodeURIComponent(whatsappMessage),
+        "_blank"
+    );
+
+
+}
+
+</script>
+
+</body>
+
+</html>
