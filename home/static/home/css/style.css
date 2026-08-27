@@ -5220,7 +5220,7 @@ nav {
         display: grid;
         grid-template-columns: 210px minmax(0, 1fr);
         gap: 45px;
-        align-items: start;
+        align-items: stretch;
 
         width: 100%;
         max-width: 100%;
@@ -31689,3 +31689,1011 @@ font-weight:600;
 
 }
 
+/* =========================================================
+   FINAL HERO SLIDER FIX
+   Remove old hero-bg.jpg background
+   ========================================================= */
+
+.hero {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Show the 4 new hero images */
+.hero-slider {
+    z-index: 0 !important;
+}
+
+/* Keep overlay above images */
+.hero-overlay {
+    z-index: 1 !important;
+}
+
+/* Keep text/buttons above everything */
+.hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* =========================================================
+   HERO SLIDER — CLICK + MANUAL SWIPE
+   ========================================================= */
+
+.hero-slider {
+    cursor: grab !important;
+    touch-action: pan-y !important;
+}
+
+.hero-slider:active {
+    cursor: grabbing !important;
+}
+
+.hero-slide {
+    pointer-events: auto !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+/* =========================================================
+   FINAL GOLD COLLECTION — FILTER + CARD ALIGNMENT
+   ========================================================= */
+
+/* ---------- FILTER SIDEBAR ---------- */
+
+body:has(.gold-card) .gold-sidebar {
+    padding: 28px 24px !important;
+    box-sizing: border-box !important;
+}
+
+body:has(.gold-card) .gold-sidebar h3 {
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+}
+
+body:has(.gold-card) .gold-sidebar .sidebar-line {
+    margin: 0 0 28px 0 !important;
+}
+
+/* Filter headings */
+body:has(.gold-card) .gold-sidebar .filter-section h4 {
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+}
+
+/* Actual checkbox rows */
+body:has(.gold-card) .gold-sidebar .filter-section label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    margin: 0 0 12px 0 !important;
+    padding: 0 0 0 10px !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Checkbox */
+body:has(.gold-card) .gold-sidebar .filter-section label input[type="checkbox"] {
+    flex: 0 0 auto !important;
+
+    width: 17px !important;
+    height: 17px !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   PRODUCT CARD ALIGNMENT
+   ========================================================= */
+
+body:has(.gold-card) .gold-products-area .row {
+    align-items: stretch !important;
+}
+
+body:has(.gold-card) .gold-products-area .row > div {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+body:has(.gold-card) .gold-products-area .gold-card {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Product image stays fixed */
+body:has(.gold-card) .gold-image {
+    flex: 0 0 255px !important;
+    height: 255px !important;
+}
+
+
+/* Product information becomes flexible */
+body:has(.gold-card) .gold-info {
+    flex: 1 1 auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Product title gets same space */
+body:has(.gold-card) .gold-info h3 {
+    width: 100% !important;
+    min-height: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 0 12px 0 !important;
+}
+
+
+/* Product details */
+body:has(.gold-card) .gold-info p {
+    width: 100% !important;
+    margin: 4px 0 !important;
+}
+
+
+/* Price */
+body:has(.gold-card) .gold-info h4 {
+    margin: 13px 0 17px 0 !important;
+}
+
+
+/* ---------- VIEW DETAILS ---------- */
+
+body:has(.gold-card) .gold-info .gold-btn {
+    margin-top: auto !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    min-height: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    padding: 0 15px !important;
+}
+
+/* =========================================
+   VIEW DETAILS — TRUE CENTER
+========================================= */
+
+body:has(.gold-card) .gold-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+body:has(.gold-card) .gold-info > .gold-btn {
+    position: static !important;
+
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    width: 175px !important;
+    max-width: 175px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    align-self: center !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+/* =========================================================
+   WISHLIST BUTTONS — SAME UI AS PRODUCT VIEW DETAILS
+   ========================================================= */
+
+.wishlist-buttons {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+.wishlist-buttons a {
+    flex: 1;
+    width: 50%;
+    height: 54px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 12px !important;
+
+    border-radius: 0 !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+}
+
+/* View Details */
+.wishlist-buttons .btn-warning {
+    background: transparent !important;
+    color: #c99a18 !important;
+    border: 1px solid #e0c477 !important;
+}
+
+/* Remove */
+.wishlist-buttons .btn-danger {
+    background: transparent !important;
+    color: #c99a18 !important;
+    border: 1px solid #e0c477 !important;
+}
+
+/* Remove icon */
+.wishlist-buttons .btn-danger i {
+    margin-right: 8px;
+    color: #c99a18 !important;
+}
+
+/* Hover — same premium gold feel */
+.wishlist-buttons .btn-warning:hover,
+.wishlist-buttons .btn-danger:hover {
+    background: #d9b238 !important;
+    color: #fff !important;
+    border-color: #d9b238 !important;
+}
+
+.wishlist-buttons .btn-danger:hover i {
+    color: #fff !important;
+}
+
+/* =====================================================
+   SAVING SCHEME BUTTON
+   Same UI as Wishlist View Details button
+===================================================== */
+
+.wishlist-view-btn {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d9b329;
+    color: #ffffff;
+
+    border: 1px solid #d9b329;
+    border-radius: 0;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.wishlist-view-btn:hover {
+    background: transparent;
+    color: #c49b1c;
+    border-color: #d9b329;
+
+    transform: translateY(-1px);
+}
+
+/* =====================================================
+   DIAMOND / COLLECTION PAGE
+   CATEGORY TABS → FILTER + CARDS GAP
+===================================================== */
+
+@media (min-width: 992px) {
+
+    .collection-hero-section .gold-shop-layout {
+        margin-top: 65px !important;
+    }
+
+}
+
+
+/* =====================================================
+   RELATED PRODUCTS — VIEW DETAILS BUTTON
+   SAME UI AS MAIN PRODUCT BUTTON
+===================================================== */
+
+.product-details + section.container .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.product-details + section.container .card-body .btn {
+    width: 175px !important;
+    max-width: 175px !important;
+    min-width: 175px !important;
+
+    height: 42px !important;
+    min-height: 42px !important;
+
+    margin: 18px auto 0 !important;
+    padding: 0 15px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: transparent !important;
+    color: #c99a18 !important;
+
+    border: 1px solid rgba(212,175,55,.52) !important;
+    border-radius: 0 !important;
+
+    font-size: 10px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: .08em !important;
+    text-transform: uppercase !important;
+
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Hover */
+.product-details + section.container .card-body .btn:hover {
+    background: #d4af37 !important;
+    color: #fff !important;
+    border-color: #d4af37 !important;
+
+    transform: none !important;
+}
+
+.hero {
+    touch-action: pan-y !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    cursor: grab;
+}
+
+.hero:active {
+    cursor: grabbing;
+}
+
+/* HERO SLIDER DOTS */
+
+.hero-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    z-index: 20;
+}
+
+.hero-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+
+    display: block;
+}
+
+.hero-dot.active {
+    background: #ffffff;
+    transform: scale(1.25);
+}
+
+
+.hero-slider {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    cursor: grab;
+}
+
+.hero-slider:active {
+    cursor: grabbing;
+}
+
+.hero-slide {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* STEP 3C — HERO SWIPE FIX */
+
+.hero-slider {
+    pointer-events: auto !important;
+    touch-action: pan-y !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+.hero-slide {
+    pointer-events: none !important;
+}
+
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+
+    .gold-shop-layout {
+        align-items: flex-start;
+    }
+
+    .gold-filter-sidebar {
+        position: sticky;
+        top: 120px;
+        align-self: flex-start;
+        height: fit-content;
+    }
+
+    .gold-products-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gold-products-area > .row {
+        align-items: stretch;
+    }
+
+    .gold-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gold-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gold-actions {
+        margin-top: auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+
+    .bridal-shop-layout,
+    .coins-shop-layout,
+    .gold-shop-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .bridal-filter-sidebar,
+    .coins-filter-sidebar,
+    .gold-filter-sidebar {
+        position: sticky;
+        top: 120px;
+        align-self: flex-start;
+        height: fit-content;
+    }
+
+    .bridal-products-area,
+    .coins-products-area,
+    .gold-products-area {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   GOLD PAGE — MOBILE PRODUCT CARDS
+   Desktop completely untouched
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .gold-shop-layout {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .gold-products-area {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .gold-products-area > .row {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+        margin: 0 !important;
+    }
+
+    .gold-products-area > .row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .gold-card {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .gold-image {
+        width: 100% !important;
+        height: 165px !important;
+        min-height: 165px !important;
+        max-height: 165px !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+
+    .gold-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+
+    .gold-info {
+        width: 100% !important;
+        padding: 12px 8px 14px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .gold-info h3 {
+        width: 100% !important;
+        margin: 0 0 7px !important;
+        font-size: 15px !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+    }
+
+    .gold-info p {
+        width: 100% !important;
+        margin: 0 0 8px !important;
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+    }
+
+    .gold-btn {
+        width: 100% !important;
+        max-width: 125px !important;
+        min-height: 34px !important;
+        margin: 4px auto 0 !important;
+        padding: 8px 6px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .wishlist-btn {
+        width: 32px !important;
+        height: 32px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: 8px !important;
+        right: 8px !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL DESKTOP FIX
+   FILTER + PRODUCT CARDS HEIGHT / ALIGNMENT
+   COINS + BRIDAL + GOLD
+   MOBILE NOT TOUCHED
+========================================================= */
+
+@media (min-width: 992px) {
+
+    /* Main filter + products wrapper */
+    .gold-shop-layout {
+        display: grid !important;
+        grid-template-columns: 240px minmax(0, 1fr) !important;
+        gap: 30px !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+
+    /* LEFT FILTER */
+    .gold-shop-layout > .gold-sidebar {
+        width: 240px !important;
+        min-width: 240px !important;
+
+        height: 100% !important;
+        min-height: 100% !important;
+
+        align-self: stretch !important;
+
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* RIGHT SIDE
+       Coins page mein .row direct hai */
+    .gold-shop-layout > .row {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 22px !important;
+
+        align-items: stretch !important;
+    }
+
+
+    /* GOLD page mein .gold-products-area hai */
+    .gold-shop-layout > .gold-products-area {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .gold-shop-layout > .gold-products-area > .row {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 22px !important;
+
+        align-items: stretch !important;
+    }
+
+
+    /* Bootstrap columns */
+    .gold-shop-layout .row > .col-lg-4,
+    .gold-shop-layout .row > .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: flex !important;
+    }
+
+
+    /* PRODUCT CARD */
+    .gold-shop-layout .gold-card {
+        width: 100% !important;
+
+        height: 100% !important;
+        min-height: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* IMAGE */
+    .gold-shop-layout .gold-image {
+        width: 100% !important;
+        height: 280px !important;
+        min-height: 280px !important;
+
+        flex-shrink: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .gold-shop-layout .gold-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+
+    /* CARD CONTENT */
+    .gold-shop-layout .gold-info {
+        flex: 1 1 auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* BUTTON ALWAYS AT BOTTOM */
+    .gold-shop-layout .gold-info .gold-btn {
+        margin-top: auto !important;
+    }
+
+}
+
+/* =====================================================
+   GOLD COLLECTION - DESKTOP PREMIUM LAYOUT
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    /* MAIN LAYOUT */
+
+    .gold-shop-layout {
+        display: grid;
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 45px;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin-left: -10px;
+    }
+
+
+    /* SIDEBAR */
+
+    .gold-sidebar {
+        width: 240px;
+        min-width: 210px;
+        margin: 0;
+
+        align-self: stretch;
+    }
+
+
+    /* PRODUCTS AREA */
+
+    .gold-products-area {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    /* REMOVE BOOTSTRAP ROW BEHAVIOUR */
+
+    .gold-products-area .row {
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 22px;
+
+        width: 100%;
+
+        margin: 0;
+
+        align-items: stretch;
+    }
+
+
+    /* REMOVE BOOTSTRAP COLUMN WIDTH/PADDING */
+
+    .gold-products-area .col-lg-4,
+    .gold-products-area .col-md-6 {
+        width: auto;
+        max-width: none;
+
+        padding: 0;
+        margin: 0 !important;
+
+        display: flex;
+    }
+
+
+    /* PRODUCT CARD */
+
+    .gold-card {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+
+        overflow: hidden;
+
+        border-radius: 22px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* PRODUCT IMAGE */
+
+    .gold-image {
+        width: 100%;
+        height: 255px;
+
+        overflow: hidden;
+
+        flex-shrink: 0;
+    }
+
+
+    .gold-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* PRODUCT INFO */
+
+    .gold-info {
+        padding: 20px 18px 22px;
+
+        text-align: left;
+
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* PRODUCT NAME */
+
+    .gold-info h3 {
+        font-size: 20px;
+        line-height: 1.25;
+
+        margin: 0 0 14px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        text-align: center;
+    }
+
+
+    /* PURITY + WEIGHT */
+
+    .gold-info p {
+        font-size: 16px;
+        line-height: 1.3;
+
+        margin: 0 0 18px;
+
+        text-align: left;
+    }
+
+
+    /* VIEW DETAILS */
+
+    .gold-info .gold-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: fit-content;
+        min-width: 175px;
+
+        margin: auto auto 0;
+
+        padding: 11px 20px;
+
+        font-size: 16px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+    }
+
+}
+
+/* Gold Collection Top Section */
+.collection-hero-section{
+    padding-top: 50px;
+    padding-bottom: 20px !important;
+}
+
+/* Heading ke niche gap */
+.collection-heading{
+    margin-bottom: 20px !important;
+}
+
+/* All/Women/Men/Kids buttons */
+.gold-filter{
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 0 !important;
+}
+
+/* Products section ko upar lao */
+.gold-shop-layout{
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+}
+
+
+/* ===== Remove Gap Between Filter & Products ===== */
+
+.collection-hero-section{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.gold-filter{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.gold-shop-layout{
+    margin-top: -30px !important;
+    padding-top: 0 !important;
+}
+
+.gold-products-area,
+.gold-sidebar{
+    margin-top: 0 !important;
+}

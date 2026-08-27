@@ -29,25 +29,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <section class="hero">
 
     <!-- HERO BACKGROUND SLIDER -->
-    <div class="hero-slider">
+    <div class="hero-slider" id="heroSlider">
 
-        <div class="hero-slide active"
-             style="background-image: url('{% static "home/images/hero/hero-gold.jpg" %}');">
-        </div>
+    <a href="{% url 'gold' %}"
+       class="hero-slide active"
+       style="background-image: url('{% static "home/images/hero/hero-gold.jpg" %}');">
+    </a>
 
-        <div class="hero-slide"
-             style="background-image: url('{% static "home/images/hero/hero-diamond.jpg" %}');">
-        </div>
+    <a href="{% url 'diamond' %}"
+       class="hero-slide"
+       style="background-image: url('{% static "home/images/hero/hero-diamond.jpg" %}');">
+    </a>
 
-        <div class="hero-slide"
-             style="background-image: url('{% static "home/images/hero/hero-silver.jpg" %}');">
-        </div>
+    <div class="hero-slide saving-slide"
+     style="background-image: url('{% static "home/images/hero/hero-silver.jpg" %}');">
+</div>
 
-       <div class="hero-slide saving-slide"
-            style="background-image: url('{% static "home/images/hero/gold_saving_banner.jpg" %}');">
-        </div>
+    <a href="{% url 'coins' %}"
+       class="hero-slide saving-slide"
+       style="background-image: url('{% static "home/images/hero/gold_saving_banner.jpg" %}');">
+    </a>
 
-    </div>
+</div>
+
+<div class="hero-dots" id="heroDots">
+    <span class="hero-dot active"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+</div>
 
     <!-- Existing Overlay -->
     <div class="hero-overlay"></div>
