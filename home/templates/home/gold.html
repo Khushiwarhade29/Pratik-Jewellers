@@ -33,30 +33,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <p class="mt-4 fs-5">
         Explore our exclusive handcrafted 22K & 24K Hallmarked Gold Jewellery.
     </p>
-    <div class="gold-filter text-center my-4">
-        
-
-    <a href="{% url 'gold' %}?type=all"
-       class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
-        All
-    </a>
-
-    <a href="{% url 'gold' %}?type=Women"
-       class="filter-btn {% if filter_type == 'Women' %}active{% endif %}">
-        Women
-    </a>
-
-    <a href="{% url 'gold' %}?type=Men"
-       class="filter-btn {% if filter_type == 'Men' %}active{% endif %}">
-        Men
-    </a>
-
-    <a href="{% url 'gold' %}?type=Kids"
-       class="filter-btn {% if filter_type == 'Kids' %}active{% endif %}">
-        Kids
-    </a>
-
-</div>
+    
 
 </div>
 
@@ -80,6 +57,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </button>
 
     </div>
+
+    <!-- SHOP BY -->
+
+<div class="mobile-filter-section mobile-shop-by">
+
+    <div class="mobile-filter-title" onclick="toggleMobileFilterSection(this)">
+        <span>Shop By</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <div class="mobile-filter-options">
+
+        <a href="{% url 'gold' %}?type=all"
+           class="{% if filter_type == 'all' %}active{% endif %}">
+            All
+        </a>
+
+        <a href="{% url 'gold' %}?type=Women"
+           class="{% if filter_type == 'Women' %}active{% endif %}">
+            Women
+        </a>
+
+        <a href="{% url 'gold' %}?type=Men"
+           class="{% if filter_type == 'Men' %}active{% endif %}">
+            Men
+        </a>
+
+        <a href="{% url 'gold' %}?type=Kids"
+           class="{% if filter_type == 'Kids' %}active{% endif %}">
+            Kids
+        </a>
+
+    </div>
+
+</div>
 
 
     <!-- SUB CATEGORIES -->
@@ -237,6 +249,42 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <h3>Filter Jewellery</h3>
 
         <div class="sidebar-line"></div>
+
+        <!-- AUDIENCE FILTER -->
+
+<div class="filter-section audience-filter">
+
+    <h4>Shop By</h4>
+
+    <label class="filter-link">
+        <a href="{% url 'gold' %}?type=all"
+           class="{% if filter_type == 'all' %}active{% endif %}">
+            All
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'gold' %}?type=Women"
+           class="{% if filter_type == 'Women' %}active{% endif %}">
+            Women
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'gold' %}?type=Men"
+           class="{% if filter_type == 'Men' %}active{% endif %}">
+            Men
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'gold' %}?type=Kids"
+           class="{% if filter_type == 'Kids' %}active{% endif %}">
+            Kids
+        </a>
+    </label>
+
+</div>
 
         <div class="filter-section">
 
@@ -396,9 +444,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         {% empty %}
 
-        <div class="text-center">
-            <h3>No Gold Products Available.</h3>
-        </div>
+<div class="no-products-state">
+
+    <div class="no-products-icon">
+        <i class="fas fa-gem"></i>
+    </div>
+
+    <h3>No Gold Products Available</h3>
+
+    <p>
+        We couldn't find any jewellery matching your selected filter.
+    </p>
+
+    <a href="{% url 'gold' %}" class="gold-btn">
+        View All Jewellery
+    </a>
+
+</div>
 
 {% endfor %}
 

@@ -32697,3 +32697,1641 @@ body:has(.gold-card) .gold-info > .gold-btn {
 .gold-sidebar{
     margin-top: 0 !important;
 }
+
+/* =========================================================
+   FINAL FILTER HEIGHT FIX
+   Desktop only
+========================================================= */
+
+@media (min-width: 992px) {
+
+    /* Filter ko content ke according hi height do */
+    .gold-shop-layout {
+        align-items: start !important;
+    }
+
+    .gold-shop-layout .gold-sidebar {
+        height: fit-content !important;
+        min-height: 0 !important;
+        align-self: start !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Filter ke andar koi forced height nahi */
+    .gold-shop-layout .gold-sidebar > * {
+        max-height: none !important;
+    }
+
+    /* Last Clear Filters ke baad extra space nahi */
+    .gold-shop-layout .clear-filters-box {
+        margin-bottom: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   DIAMOND PAGE — DESCRIPTION TO FILTER GAP
+   Desktop only
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .collection-hero-section .collection-heading p {
+        margin-bottom: 5px !important;
+    }
+
+    .collection-hero-section .gold-filter {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+}
+
+/* =========================================================
+   DIAMOND COLLECTION — HEADING TO FILTER GAP FIX
+   Same compact spacing as Gold
+========================================================= */
+
+@media (min-width: 769px) {
+
+    body:has(.diamond-card) .collection-heading {
+        margin-bottom: 0 !important;
+    }
+
+    body:has(.diamond-card) .collection-heading p {
+        margin-top: 12px !important;
+        margin-bottom: 8px !important;
+    }
+
+    body:has(.diamond-card) .gold-filter {
+        margin-top: 8px !important;
+        margin-bottom: 20px !important;
+    }
+
+}
+
+/* =========================================================
+   DIAMOND PAGE — REDUCE DESCRIPTION → FILTER GAP
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    body:has(.diamond-card) .collection-heading {
+        margin-bottom: -80px !important;
+    }
+
+    body:has(.diamond-card) .gold-filter {
+        margin-top: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   DIAMOND COLLECTION — DESCRIPTION TO FILTER GAP
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    .diamond-collection-section .gold-filter {
+        margin-top: -70px !important;
+    }
+
+}
+
+/* =========================================================
+   DIAMOND PAGE — REDUCE DESCRIPTION TO CATEGORY GAP
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    /* Diamond page only */
+    .collection-hero-section .collection-heading + .gold-filter {
+        transform: translateY(-55px) !important;
+    }
+
+}
+
+/* =========================================================
+   BRIDAL + COINS — FINAL DESKTOP SPACING FIX
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    /* -----------------------------------------
+       1. CATEGORY TABS — THODA UP
+       ----------------------------------------- */
+
+    .collection-hero-section .gold-filter {
+        transform: translateY(-35px) !important;
+    }
+
+
+    /* -----------------------------------------
+       2. PRODUCTS + FILTER — SAME TOP LINE
+       ----------------------------------------- */
+
+    .collection-hero-section .gold-shop-layout {
+        margin-top: -35px !important;
+
+        align-items: start !important;
+    }
+
+
+    /* FILTER SIDEBAR */
+    .collection-hero-section .gold-shop-layout > .gold-sidebar {
+        margin-top: 0 !important;
+    }
+
+
+    /* PRODUCT AREA */
+    .collection-hero-section .gold-shop-layout > .row {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        align-self: start !important;
+    }
+
+
+    /* PRODUCT COLUMNS */
+    .collection-hero-section .gold-shop-layout > .row > div {
+        margin-top: 0 !important;
+    }
+
+}
+
+
+/* =====================================================
+   COLLECTION PAGES - COMMON DESKTOP ALIGNMENT
+   Gold | Silver | Diamond | Bridal | Coins
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    /* -----------------------------------------
+       COLLECTION HEADER
+       ----------------------------------------- */
+
+    .gold-collection-header,
+    .silver-collection-header,
+    .diamond-collection-header,
+    .bridal-collection-header,
+    .coins-collection-header {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY BUTTONS
+       Keep same distance from description
+       ----------------------------------------- */
+
+    .gold-category-tabs,
+    .silver-category-tabs,
+    .diamond-category-tabs,
+    .bridal-category-tabs,
+    .coins-category-tabs {
+        margin-top: 28px !important;
+        margin-bottom: 24px !important;
+    }
+
+
+    /* -----------------------------------------
+       MAIN SHOP AREA
+       Filter + Cards start on SAME LINE
+       ----------------------------------------- */
+
+    .gold-shop-layout,
+    .silver-shop-layout,
+    .diamond-shop-layout,
+    .bridal-shop-layout,
+    .coins-shop-layout {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+
+        align-items: start !important;
+    }
+
+
+    /* -----------------------------------------
+       SIDEBAR
+       ----------------------------------------- */
+
+    .gold-sidebar,
+    .silver-sidebar,
+    .diamond-sidebar,
+    .bridal-sidebar,
+    .coins-sidebar {
+        margin-top: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTS
+       ----------------------------------------- */
+
+    .gold-products-area,
+    .silver-products-area,
+    .diamond-products-area,
+    .bridal-products-area,
+    .coins-products-area {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT GRID
+       ----------------------------------------- */
+
+    .gold-products-area .row,
+    .silver-products-area .row,
+    .diamond-products-area .row,
+    .bridal-products-area .row,
+    .coins-products-area .row {
+        margin-top: 0 !important;
+    }
+
+}
+
+/* =====================================================
+   BRIDAL + COINS - DESKTOP ONLY - 3 CARDS
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    /* BRIDAL */
+    .gold-shop-layout > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 22px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .gold-shop-layout > .row > .col-lg-4,
+    .gold-shop-layout > .row > .col-md-6 {
+        width: auto !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .bridal-shop-layout > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 22px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .bridal-shop-layout > .row > .col-lg-4,
+    .bridal-shop-layout > .row > .col-md-6 {
+        width: auto !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   BRIDAL + COINS — FORCE 3 CARDS DESKTOP
+   ========================================================= */
+
+@media screen and (min-width: 992px) {
+
+    /* Bridal */
+    .gold-shop-layout > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-auto-flow: row !important;
+        column-gap: 22px !important;
+        row-gap: 22px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .gold-shop-layout > .row > div[class*="col-"] {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .gold-shop-layout > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 22px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .gold-shop-layout > .row > .col-lg-4,
+    .gold-shop-layout > .row > .col-md-6 {
+        width: auto !important;
+        max-width: none !important;
+        flex: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+/* =====================================================
+   BRIDAL + COINS
+   DESKTOP = 3 CARDS PER ROW
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    .bridal-layout > .row,
+    .coins-layout > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 22px !important;
+
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .bridal-layout > .row > .col-lg-4,
+    .bridal-layout > .row > .col-md-6,
+    .coins-layout > .row > .col-lg-4,
+    .coins-layout > .row > .col-md-6 {
+        width: auto !important;
+        max-width: none !important;
+        flex: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+/* =====================================================
+   BRIDAL + COINS — DESKTOP 3 CARD LAYOUT
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    /* MAIN LAYOUT */
+    .gold-shop-layout.bridal-layout,
+    .gold-shop-layout.coins-layout {
+        display: grid !important;
+
+        grid-template-columns: 240px minmax(0, 1fr) !important;
+
+        column-gap: 45px !important;
+
+        align-items: start !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* FILTER SIDEBAR */
+    .gold-shop-layout.bridal-layout .gold-sidebar,
+    .gold-shop-layout.coins-layout .gold-sidebar {
+        width: 240px !important;
+        min-width: 240px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        align-self: start !important;
+    }
+
+
+    /* PRODUCT AREA
+       This div is the second grid item */
+    .gold-shop-layout.bridal-layout > .row,
+    .gold-shop-layout.coins-layout > .row {
+        display: grid !important;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 22px !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* BOOTSTRAP COLUMNS */
+    .gold-shop-layout.bridal-layout > .row > .col-lg-4,
+    .gold-shop-layout.bridal-layout > .row > .col-md-6,
+    .gold-shop-layout.coins-layout > .row > .col-lg-4,
+    .gold-shop-layout.coins-layout > .row > .col-md-6 {
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* CARD */
+    .gold-shop-layout.bridal-layout .gold-card,
+    .gold-shop-layout.coins-layout .gold-card {
+        width: 100% !important;
+        height: auto !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* IMAGE */
+    .gold-shop-layout.bridal-layout .gold-image,
+    .gold-shop-layout.coins-layout .gold-image {
+        width: 100% !important;
+        height: 255px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .gold-shop-layout.bridal-layout .gold-image img,
+    .gold-shop-layout.coins-layout .gold-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        display: block !important;
+    }
+
+
+    /* CARD CONTENT */
+    .gold-shop-layout.bridal-layout .gold-info,
+    .gold-shop-layout.coins-layout .gold-info {
+        padding: 20px 18px 22px !important;
+
+        text-align: left !important;
+    }
+
+
+    /* CARD TITLE */
+    .gold-shop-layout.bridal-layout .gold-info h3,
+    .gold-shop-layout.coins-layout .gold-info h3 {
+        margin: 0 0 14px !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* PURITY + WEIGHT */
+    .gold-shop-layout.bridal-layout .gold-info p,
+    .gold-shop-layout.coins-layout .gold-info p {
+        margin: 0 0 18px !important;
+
+        text-align: left !important;
+    }
+
+
+    /* BUTTON */
+    .gold-shop-layout.bridal-layout .gold-info .gold-btn,
+    .gold-shop-layout.coins-layout .gold-info .gold-btn {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: fit-content !important;
+        min-width: 175px !important;
+
+        margin: 0 auto !important;
+    }
+
+}
+
+/* =====================================================
+   BRIDAL + COINS FILTER SIDEBAR ALIGNMENT FIX
+   ===================================================== */
+
+.bridal-layout .gold-sidebar,
+.coins-layout .gold-sidebar {
+    padding: 28px 22px !important;
+    box-sizing: border-box !important;
+}
+
+/* Sidebar heading */
+.bridal-layout .gold-sidebar > h3,
+.coins-layout .gold-sidebar > h3 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Filter section headings */
+.bridal-layout .gold-sidebar .filter-section h4,
+.coins-layout .gold-sidebar .filter-section h4 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Filter labels */
+.bridal-layout .gold-sidebar .filter-section label,
+.coins-layout .gold-sidebar .filter-section label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Checkbox */
+.bridal-layout .gold-sidebar .filter-section label input[type="checkbox"],
+.coins-layout .gold-sidebar .filter-section label input[type="checkbox"] {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+/* Clear filter button */
+.bridal-layout .clear-filters-box,
+.coins-layout .clear-filters-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.bridal-layout .clear-filters-box button,
+.coins-layout .clear-filters-box button {
+    width: 100% !important;
+}
+
+/* =====================================================
+   BRIDAL + COINS SIDEBAR - FINAL SPACING
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    .gold-shop-layout.bridal-layout .gold-sidebar,
+    .gold-shop-layout.coins-layout .gold-sidebar {
+        padding: 28px 24px !important;
+        box-sizing: border-box !important;
+    }
+
+    .gold-shop-layout.bridal-layout .gold-sidebar .filter-section,
+    .gold-shop-layout.coins-layout .gold-sidebar .filter-section {
+        padding: 0 !important;
+        margin: 0 0 28px 0 !important;
+    }
+
+    .gold-shop-layout.bridal-layout .gold-sidebar .filter-section h4,
+    .gold-shop-layout.coins-layout .gold-sidebar .filter-section h4 {
+        margin: 0 0 18px 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    .gold-shop-layout.bridal-layout .gold-sidebar .filter-section label,
+    .gold-shop-layout.coins-layout .gold-sidebar .filter-section label {
+        display: flex !important;
+        align-items: center !important;
+
+        margin: 0 0 16px 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    .gold-shop-layout.bridal-layout .gold-sidebar
+    .filter-section label input[type="checkbox"],
+    .gold-shop-layout.coins-layout .gold-sidebar
+    .filter-section label input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px !important;
+
+        margin: 0 12px 0 0 !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .gold-shop-layout.bridal-layout .gold-sidebar
+    .clear-filters-box,
+    .gold-shop-layout.coins-layout .gold-sidebar
+    .clear-filters-box {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+/* =====================================================
+   GOLD DESKTOP - SHOP BY VERTICAL
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    .gold-sidebar .audience-filter {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 28px !important;
+    }
+
+    .gold-sidebar .audience-filter h4 {
+        margin-bottom: 16px !important;
+    }
+
+    .gold-sidebar .audience-filter .filter-link {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 12px 0 !important;
+        padding: 0 !important;
+    }
+
+    .gold-sidebar .audience-filter .filter-link a {
+        display: block !important;
+        width: 100% !important;
+
+        color: #555 !important;
+        text-decoration: none !important;
+
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-align: left !important;
+    }
+
+    .gold-sidebar .audience-filter .filter-link a:hover {
+        color: #b88920 !important;
+    }
+
+    .gold-sidebar .audience-filter .filter-link a.active {
+        color: #b88920 !important;
+        font-weight: 600 !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE SHOP BY FILTER
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+    .mobile-shop-by .mobile-filter-options {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .mobile-shop-by .mobile-filter-options.show {
+        display: flex;
+    }
+
+    .mobile-shop-by .mobile-filter-options a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+
+        color: #555;
+        text-decoration: none;
+
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .mobile-shop-by .mobile-filter-options a.active {
+        color: #b88920;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .mobile-shop-by .mobile-filter-options {
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-shop-by .mobile-filter-options.show {
+        display: flex;
+    }
+
+    .mobile-shop-by .mobile-filter-options a {
+        display: block;
+        padding: 10px 0;
+        color: #555;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .mobile-shop-by .mobile-filter-options a.active {
+        color: #b88920;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .mobile-shop-by .mobile-filter-options {
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-shop-by .mobile-filter-options.show {
+        display: flex;
+    }
+
+    .mobile-shop-by .mobile-filter-options a {
+        display: block;
+        padding: 10px 0;
+        color: #555;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .mobile-shop-by .mobile-filter-options a.active {
+        color: #b88920;
+        font-weight: 600;
+    }
+
+}
+
+.collection-heading p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+    .collection-hero-section {
+        overflow: visible !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .collection-heading {
+        overflow: visible !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 35px !important;
+        position: relative !important;
+    }
+
+    .collection-heading h1 {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+
+        margin: 0 0 15px 0 !important;
+        padding: 10px 5px !important;
+
+        line-height: 1.3 !important;
+        transform: none !important;
+        position: relative !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .collection-heading {
+        padding-top: 55px !important;
+        overflow: visible !important;
+    }
+
+    .collection-heading h1 {
+        margin-top: 0 !important;
+        padding-top: 8px !important;
+        line-height: 1.3 !important;
+        overflow: visible !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .collection-hero-section .collection-heading {
+        position: relative !important;
+        top: 0 !important;
+        z-index: 2 !important;
+        margin-bottom: 35px !important;
+        overflow: visible !important;
+    }
+
+    .collection-hero-section .collection-heading p {
+        margin-bottom: 30px !important;
+    }
+
+    .collection-hero-section .gold-shop-layout {
+        position: relative !important;
+        top: 0 !important;
+        z-index: 1 !important;
+        margin-top: 0 !important;
+        clear: both !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE FILTER BUTTON — SAME AS VIEW DETAILS BUTTON
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .mobile-filter-wrapper,
+    .mobile-filter-btn {
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .mobile-filter-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        margin: 20px 0 25px !important;
+    }
+
+    .mobile-filter-wrapper > button.mobile-filter-btn {
+        width: 230px !important;
+        height: 55px !important;
+
+        padding: 0 20px !important;
+
+        background: #ffffff !important;
+        color: #292722 !important;
+
+        border: 1px solid #d9b85f !important;
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+
+        font-family: inherit !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+
+        letter-spacing: 1.5px !important;
+        text-transform: uppercase !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+
+        cursor: pointer !important;
+    }
+
+    .mobile-filter-wrapper > button.mobile-filter-btn i {
+        font-size: 14px !important;
+        color: #292722 !important;
+    }
+
+    .mobile-filter-wrapper > button.mobile-filter-btn:hover {
+        background: #ffffff !important;
+        color: #292722 !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL MOBILE FILTER BUTTON FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Outer div reset */
+    div.mobile-filter-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+
+        margin: 20px 0 25px !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Actual button */
+    div.mobile-filter-btn > button.mobile-filter-btn {
+
+        width: 230px !important;
+        height: 55px !important;
+
+        min-width: 230px !important;
+        max-width: 230px !important;
+
+        margin: 0 !important;
+        padding: 0 15px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 10px !important;
+
+        background: #ffffff !important;
+
+        border: 1px solid #d9b45b !important;
+        border-radius: 0 !important;
+
+        color: #c99a2e !important;
+
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+
+        letter-spacing: 1.5px !important;
+        text-transform: uppercase !important;
+
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Filter icon */
+    div.mobile-filter-btn > button.mobile-filter-btn i {
+        color: #c99a2e !important;
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .collection-hero-section .collection-heading {
+        padding-top: 0 !important;
+        margin-top: -35px !important;
+    }
+
+}
+
+/* =========================================================
+   NO PRODUCTS STATE
+   Keeps empty filtered pages consistent with collection page
+   ========================================================= */
+
+.no-products-state {
+    width: 100%;
+    min-height: 380px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 30px;
+}
+
+.no-products-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d8b35a;
+    border-radius: 50%;
+
+    margin-bottom: 22px;
+
+    color: #c99a2e;
+    font-size: 25px;
+}
+
+.no-products-state h3 {
+    margin: 0 0 12px !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 30px !important;
+    font-weight: 500 !important;
+
+    color: #292722 !important;
+}
+
+.no-products-state p {
+    margin: 0 0 25px !important;
+
+    font-family: "Cormorant Garamond", serif !important;
+
+    font-size: 18px !important;
+
+    color: #6b675f !important;
+
+    line-height: 1.6;
+}
+
+.no-products-state .gold-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+    min-height: 50px;
+
+    padding: 12px 25px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .no-products-state {
+        min-height: 300px;
+        padding: 40px 20px;
+    }
+
+    .no-products-state h3 {
+        font-size: 25px !important;
+    }
+
+    .no-products-state p {
+        font-size: 17px !important;
+        max-width: 300px;
+    }
+
+}
+
+/* =========================================================
+   EMPTY PRODUCT PAGE - FILTER SIDEBAR FINAL FIX
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    /* Sidebar ko content ke according hi height do */
+    .gold-shop-layout {
+        align-items: flex-start !important;
+        display: grid !important;
+        grid-template-columns: 300px 1fr !important;
+        gap: 35px !important;
+    }
+
+    .gold-shop-layout .gold-sidebar {
+        width: 300px !important;
+        height: fit-content !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 25px 20px !important;
+
+        align-self: start !important;
+    }
+
+    /* Product/empty area */
+    .gold-shop-layout > .row {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        align-self: start !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE COLLECTION PAGE — HEADING FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .collection-hero-section .collection-heading {
+        position: relative !important;
+        top: 0 !important;
+
+        margin: 0 !important;
+        padding: 20px 10px 0 !important;
+
+        overflow: visible !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .collection-hero-section .collection-heading h1 {
+        margin: 0 0 12px !important;
+        padding: 0 !important;
+
+        font-size: 38px !important;
+        line-height: 1.2 !important;
+
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+
+        transform: none !important;
+    }
+
+    .collection-hero-section .collection-heading .hero-line {
+        margin: 12px auto !important;
+    }
+
+    .collection-hero-section .collection-heading p {
+        margin: 12px 0 20px !important;
+        padding: 0 5px !important;
+
+        font-size: 19px !important;
+        line-height: 1.6 !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .collection-hero-section .collection-heading h1 {
+        font-family: "Cormorant Garamond", Georgia, serif !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.02em !important;
+        font-size: 38px !important;
+        line-height: 1.2 !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE — MEN'S HERO IMAGE GAP FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .hero-content {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 15px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #mainHeroContent {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 15px !important;
+        margin-bottom: 0 !important;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .hero img,
+    .hero-image,
+    .hero-media {
+        margin-top: 0 !important;
+    }
+
+    .hero + section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE — REDUCE GAP AFTER MEN'S COLLECTION
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .editorial-collections .editorial-collection-item:last-child {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .editorial-collections + .necklace-editorial {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE — REDUCE GAP BETWEEN NECKLACE & EARRINGS EDIT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .necklace-editorial {
+        margin-bottom: 0 !important;
+        padding-bottom: 20px !important;
+    }
+
+    .necklace-editorial + .earrings-editorial {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE — REDUCE GAP BETWEEN EARRINGS & PRATIK EDIT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .earrings-editorial {
+        margin-bottom: 0 !important;
+        padding-bottom: 20px !important;
+    }
+
+    .earrings-editorial + .pratik-edit {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE — REDUCE GAP BETWEEN PRATIK EDIT & OCCASION
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .pratik-edit {
+        margin-bottom: 0 !important;
+        padding-bottom: 20px !important;
+    }
+
+    .pratik-edit + .shop-occasion {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+
+}
+/* SHOP BY OCCASION — GOLD LABEL */
+
+.shop-occasion-label {
+    color: #c9a24d !important;
+}
+
+@media (max-width: 768px) {
+
+    .occasion-card {
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .occasion-content {
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        padding: 18px 14px !important;
+
+        background: linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.55)
+        ) !important;
+
+        text-align: left !important;
+    }
+
+    .occasion-content span {
+        display: block !important;
+        color: #ffffff !important;
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        letter-spacing: 2px !important;
+    }
+
+    .occasion-content h3,
+    .occasion-content p,
+    .occasion-content strong {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-slide {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE — FIX ONLY 3RD & 4TH HERO BANNERS
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* 3RD — RAKHI SPECIAL OFFER */
+    .hero-slide:nth-child(3) {
+        background-size: cover !important;
+        background-position: left center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    /* 4TH — BHARAT YOJANA */
+    .hero-slide:nth-child(4) {
+        background-size: cover !important;
+        background-position: right center !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-slide:nth-child(3) {
+        background-size: cover !important;
+        background-position: left center !important;
+    }
+
+    .hero-slide:nth-child(4) {
+        background-size: cover !important;
+        background-position: left center !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   PRODUCT DETAIL — REMOVE WHITE IMAGE CARD
+   SHOW ONLY PRODUCT IMAGE
+   DESKTOP + MOBILE
+   ========================================================= */
+
+#productCarousel,
+#productCarousel .carousel-inner,
+#productCarousel .carousel-item,
+.product-carousel {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Actual product image */
+#productCarousel .carousel-item img {
+    width: 100% !important;
+    height: 600px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    object-fit: cover !important;
+    display: block !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    #productCarousel,
+    #productCarousel .carousel-inner,
+    #productCarousel .carousel-item,
+    .product-carousel {
+        background: transparent !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #productCarousel .carousel-item img {
+        width: 100% !important;
+        height: 360px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+
+        object-fit: cover !important;
+        display: block !important;
+    }
+}
+
+
+/* =========================================================
+   PRODUCT DETAIL — MOBILE BUTTONS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Button container */
+    .product-buttons {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+
+        margin-top: 18px !important;
+        padding: 0 !important;
+    }
+
+
+    /* WhatsApp + Back to Collection */
+    .product-buttons a {
+        width: 100% !important;
+        height: 46px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 0 18px !important;
+
+        border-radius: 6px !important;
+
+        font-size: 14px !important;
+        font-weight: 500 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* WhatsApp icon */
+    .product-buttons .btn-success i {
+        margin-right: 8px !important;
+    }
+
+
+    /* =====================================================
+       GRAND TOTAL
+       ===================================================== */
+
+    .grand-total {
+        width: 100% !important;
+
+        min-height: 46px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 8px 16px !important;
+        margin: 15px 0 0 !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 6px !important;
+    }
+
+    .grand-total h4 {
+        margin: 0 !important;
+        font-size: 14px !important;
+    }
+
+    .grand-total small {
+        font-size: 10px !important;
+    }
+
+    .grand-total h2 {
+        margin: 0 !important;
+        font-size: 17px !important;
+    }
+
+}
+
+/* =========================================================
+   PRODUCT DETAIL — DESKTOP BUTTONS
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    .product-buttons {
+        display: flex !important;
+        align-items: center !important;
+        gap: 14px !important;
+
+        margin-top: 25px !important;
+    }
+
+    .product-buttons a {
+        height: 46px !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 24px !important;
+
+        border-radius: 6px !important;
+
+        font-size: 14px !important;
+        font-weight: 500 !important;
+
+        text-decoration: none !important;
+    }
+
+    /* WhatsApp */
+    .product-buttons .btn-success {
+        min-width: 190px !important;
+    }
+
+    .product-buttons .btn-success i {
+        margin-right: 8px !important;
+    }
+
+    /* Back to Collection */
+    .product-buttons .btn-outline-dark {
+        min-width: 170px !important;
+    }
+
+
+    /* =====================================================
+       GRAND TOTAL
+       ===================================================== */
+
+    .grand-total {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 14px 20px !important;
+
+        margin-top: 20px !important;
+
+        border-radius: 6px !important;
+    }
+
+    .grand-total h4 {
+        margin: 0 !important;
+        font-size: 17px !important;
+    }
+
+    .grand-total small {
+        font-size: 12px !important;
+    }
+
+    .grand-total h2 {
+        margin: 0 !important;
+        font-size: 22px !important;
+    }
+
+}
+
+
+.hero-overlay {
+    pointer-events: none !important;
+}
+
+.hero-slide {
+    cursor: pointer;
+}

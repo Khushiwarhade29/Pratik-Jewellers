@@ -34,34 +34,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 
-<div class="gold-filter text-center my-4">
-
-    <a href="{% url 'bridal' %}?type=all"
-       class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
-        All
-    </a>
-
-    <a href="{% url 'bridal' %}?type=Bridal Sets"
-       class="filter-btn {% if filter_type == 'Bridal Sets' %}active{% endif %}">
-        Bridal Sets
-    </a>
-
-    <a href="{% url 'bridal' %}?type=Necklaces"
-       class="filter-btn {% if filter_type == 'Necklaces' %}active{% endif %}">
-        Necklaces
-    </a>
-
-    <a href="{% url 'bridal' %}?type=Bangles"
-       class="filter-btn {% if filter_type == 'Bangles' %}active{% endif %}">
-        Bangles
-    </a>
-
-    <a href="{% url 'bridal' %}?type=Earrings"
-       class="filter-btn {% if filter_type == 'Earrings' %}active{% endif %}">
-        Earrings
-    </a>
-
-</div>
 
 <!-- MOBILE FILTER BUTTON -->
 <div class="mobile-filter-wrapper">
@@ -235,7 +207,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 
 
-<div class="gold-shop-layout">
+<div class="gold-shop-layout bridal-layout">
 
     <!-- LEFT FILTER SIDEBAR -->
     <aside class="gold-sidebar">
@@ -250,31 +222,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             {% for category in sidebar_categories %}
 
-            <label>
+            <label class="filter-option">
 
-                <input type="checkbox"
-                       onchange="filterProductType('{{ category }}')"
-                       {% if product_type == category %}checked{% endif %}>
+    <input type="checkbox"
+           onchange="filterProductType('{{ category }}')"
+           {% if product_type == category %}checked{% endif %}>
 
-                {% if category == "Jewellery Set" %}
-                    Bridal Sets
+    <span>
+        {% if category == "Jewellery Set" %}
+            Bridal Sets
+        {% elif category == "Necklace" %}
+            Necklaces
+        {% elif category == "Bangles" %}
+            Bangles
+        {% elif category == "Earrings" %}
+            Earrings
+        {% else %}
+            {{ category }}
+        {% endif %}
+    </span>
 
-                {% elif category == "Necklace" %}
-                    Necklaces
-
-                {% elif category == "Bangles" %}
-                    Bangles
-
-                {% elif category == "Earrings" %}
-                    Earrings
-
-                {% else %}
-                    {{ category }}
-
-                {% endif %}
-
-            </label>
-
+</label>
             {% endfor %}
 
         </div>
@@ -283,33 +251,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <h4>Weight</h4>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterWeight('under5')"
-                       {% if weight_filter == 'under5' %}checked{% endif %}>
-                Under 5 gm
-            </label>
+            <label class="filter-option">
+    <input type="checkbox"
+           onchange="filterWeight('under5')"
+           {% if weight_filter == 'under5' %}checked{% endif %}>
+    <span>Under 5 gm</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterWeight('5to10')"
-                       {% if weight_filter == '5to10' %}checked{% endif %}>
-                5 - 10 gm
-            </label>
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterWeight('5to10')"
+           {% if weight_filter == '5to10' %}checked{% endif %}>
+    <span>5 - 10 gm</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterWeight('10to20')"
-                       {% if weight_filter == '10to20' %}checked{% endif %}>
-                10 - 20 gm
-            </label>
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterWeight('10to20')"
+           {% if weight_filter == '10to20' %}checked{% endif %}>
+    <span>10 - 20 gm</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterWeight('above20')"
-                       {% if weight_filter == 'above20' %}checked{% endif %}>
-                Above 20 gm
-            </label>
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterWeight('above20')"
+           {% if weight_filter == 'above20' %}checked{% endif %}>
+    <span>Above 20 gm</span>
+</label>
 
         </div>
 
@@ -317,34 +285,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <h4>Purity</h4>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterPurity('24K')"
-                       {% if purity_filter == '24K' %}checked{% endif %}>
-                24K
-            </label>
+            <label class="filter-option">
+    <input type="checkbox"
+           onchange="filterPurity('24K')"
+           {% if purity_filter == '24K' %}checked{% endif %}>
+    <span>24K</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterPurity('22K')"
-                       {% if purity_filter == '22K' %}checked{% endif %}>
-                22K
-            </label>
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterPurity('22K')"
+           {% if purity_filter == '22K' %}checked{% endif %}>
+    <span>22K</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterPurity('18K')"
-                       {% if purity_filter == '18K' %}checked{% endif %}>
-                18K
-            </label>
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterPurity('18K')"
+           {% if purity_filter == '18K' %}checked{% endif %}>
+    <span>18K</span>
+</label>
 
-            <label>
-                <input type="checkbox"
-                       onchange="filterPurity('14K')"
-                       {% if purity_filter == '14K' %}checked{% endif %}>
-                14K
-            </label>
-
+<label class="filter-option">
+    <input type="checkbox"
+           onchange="filterPurity('14K')"
+           {% if purity_filter == '14K' %}checked{% endif %}>
+    <span>14K</span>
+</label>
         </div>
 
         <div class="clear-filters-box">
@@ -359,7 +326,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </aside>
 
 
-    <div class="row">
+   <div class="row bridal-products-grid">
 
         {% for product in products %}
 

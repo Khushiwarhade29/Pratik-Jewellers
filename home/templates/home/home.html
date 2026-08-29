@@ -41,14 +41,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
        style="background-image: url('{% static "home/images/hero/hero-diamond.jpg" %}');">
     </a>
 
-    <div class="hero-slide saving-slide"
+   <div class="hero-slide"
      style="background-image: url('{% static "home/images/hero/hero-silver.jpg" %}');">
 </div>
 
-    <a href="{% url 'coins' %}"
-       class="hero-slide saving-slide"
-       style="background-image: url('{% static "home/images/hero/gold_saving_banner.jpg" %}');">
-    </a>
+    <a href="{% url 'saving_scheme' %}"
+   class="hero-slide saving-slide"
+   style="background-image: url('{% static "home/images/hero/gold_saving_banner.jpg" %}');">
+</a>
 
 </div>
 
@@ -63,39 +63,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <div class="hero-overlay"></div>
 
 
-    <!-- Hero Content -->
-    <div class="hero-content" id="mainHeroContent">
-        <span class="hero-eyebrow">
-            PRATIK JEWELLERS
-        </span>
+    <!-- HERO CONTENT -->
+<div class="hero-content" id="mainHeroContent">
 
-        <h1>
-            TIMELESS.<br>
-            ELEGANT.<br>
-            <span>YOURS.</span>
-        </h1>
+    <span class="hero-eyebrow" id="heroEyebrow">
+        PRATIK JEWELLERS
+    </span>
 
-        <p>
-            Discover handcrafted jewellery designed
-            to become part of your story.
-        </p>
+    <h1 id="heroTitle">
+        TIMELESS.<br>
+        ELEGANT.<br>
+        <span>YOURS.</span>
+    </h1>
 
-        <div class="hero-actions">
+    <p id="heroDescription">
+        Discover handcrafted jewellery designed
+        to become part of your story.
+    </p>
 
-            <a href="{% url 'gold' %}"
-               class="hero-btn hero-btn-primary">
-                Explore Collection
-            </a>
+    <div class="hero-actions" id="heroActions">
 
-            <a href="{% url 'contact' %}"
-               class="hero-btn hero-btn-secondary">
-                Book an Appointment
-            </a>
+        <a href="{% url 'gold' %}"
+           class="hero-btn hero-btn-primary"
+           id="heroPrimaryBtn">
+            Explore Collection
+        </a>
 
-        </div>
+        <a href="{% url 'contact' %}"
+           class="hero-btn hero-btn-secondary"
+           id="heroSecondaryBtn">
+            Book an Appointment
+        </a>
 
     </div>
 
+</div>
 
 
 </section>
@@ -238,8 +240,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 
         <!-- NATH -->
-        <a href="{% url 'gold' %}?category=Nose%20Pin"
-           class="jewellery-category-item">
+           <a href="{% url 'gold' %}?product_type=Nath"
+   class="jewellery-category-item">
 
             <div class="jewellery-category-image">
                 <img src="/media/products/category-icons/nath.jpg"
@@ -497,13 +499,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <!-- =====================================================
      20B — NECKLACE COLLECTION
 ====================================================== -->
-
 <section class="necklace-editorial">
 
     <div class="necklace-editorial-image">
 
-        <img
-            src="/media/products/home_diamond.jpg"
+        <img 
+            src="/media/products/home_diamond.jpg" 
             alt="Diamond Necklace Collection">
 
     </div>
@@ -521,12 +522,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </h2>
 
         <p>
-            Discover timeless necklaces crafted
+            Discover timeless necklaces crafted 
             to become part of your story.
         </p>
 
-        <a
-            href="{% url 'gold' %}"
+        <a 
+            href="{% url 'gold' %}?product_type=Necklace"
             class="necklace-editorial-link">
 
             EXPLORE NECKLACES
@@ -537,7 +538,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </div>
 
 </section>
-
 <!-- =====================================================
      20C — EARRINGS EDIT
 ====================================================== -->
@@ -560,14 +560,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             to bring a little brilliance to every moment.
         </p>
 
-        <a
-            href="{% url 'diamond' %}"
-            class="earrings-editorial-link">
+        <a 
+    href="{% url 'diamond' %}?type=Earrings"
+    class="earrings-editorial-link">
 
-            EXPLORE EARRINGS
-            <span>→</span>
+    EXPLORE EARRINGS 
+    <span>→</span>
 
-        </a>
+</a>
 
     </div>
 
@@ -804,14 +804,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="pratik-edit-footer">
 
-        <a
-            href="{% url 'search' %}"
-            class="pratik-edit-view-all">
+        <div class="pratik-edit-footer">
 
-            VIEW ALL JEWELLERY
-            <span>→</span>
+    <a
+        href="{% url 'gold' %}"
+        class="pratik-edit-view-all">
 
-        </a>
+        VIEW ALL JEWELLERY
+        <span>→</span>
+
+    </a>
+
+</div>
 
     </div>
 
@@ -1287,6 +1291,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
 
 <script src="{% static 'home/js/script.js' %}"></script>
+
 
 </body>
 </html>

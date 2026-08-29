@@ -289,6 +289,8 @@ def gold(request):
         "Chain",
         "Pendant",
         "Mangalsutra",
+        "Nose Pin",
+        "Nath",
     ]
 
     elif filter_type == "Men":
@@ -322,6 +324,8 @@ def gold(request):
         "Chain",
         "Pendant",
         "Mangalsutra",
+        "Nose Pin",
+        "Nath",
         "Kada",
         "Nazariya",
     ]

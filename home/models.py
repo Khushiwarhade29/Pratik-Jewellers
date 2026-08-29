@@ -67,7 +67,7 @@ class Product(models.Model):
     ('Earrings', 'Earrings'),
     ('Mangalsutra', 'Mangalsutra'),
     ('Nose Pin', 'Nose Pin'),
-    ('Nose Pin', 'Nose Pin'),
+    ("Nath", "Nath"),
     ('Anklet', 'Anklet'),
     ('Jewellery Set', 'Jewellery Set'),
     ("Men's Jewellery", "Men's Jewellery"),

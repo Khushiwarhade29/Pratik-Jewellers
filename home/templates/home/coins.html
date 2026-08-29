@@ -34,34 +34,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 
-<div class="gold-filter text-center my-4">
-
-    <a href="{% url 'coins' %}?type=all"
-       class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
-        All
-    </a>
-
-    <a href="{% url 'coins' %}?type=Gold Coin"
-       class="filter-btn {% if filter_type == 'Gold Coin' %}active{% endif %}">
-        Gold Coin
-    </a>
-
-    <a href="{% url 'coins' %}?type=Silver Coin"
-       class="filter-btn {% if filter_type == 'Silver Coin' %}active{% endif %}">
-        Silver Coin
-    </a>
-
-    <a href="{% url 'coins' %}?type=Lakshmi Ganesh"
-       class="filter-btn {% if filter_type == 'Lakshmi Ganesh' %}active{% endif %}">
-        Lakshmi Ganesh
-    </a>
-
-    <a href="{% url 'coins' %}?type=Gift Coin"
-       class="filter-btn {% if filter_type == 'Gift Coin' %}active{% endif %}">
-        Gift Coin
-    </a>
-
-</div>
 
 
 <!-- MOBILE FILTER BUTTON -->
@@ -85,6 +57,59 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     </div>
 
+
+    <!-- COIN TYPE -->
+
+<div class="mobile-filter-section">
+
+    <div class="mobile-filter-title"
+         onclick="toggleMobileFilterSection(this)">
+
+        <span>Coin Type</span>
+        <i class="fas fa-chevron-down"></i>
+
+    </div>
+
+    <div class="mobile-filter-options">
+
+        <label>
+            <input type="checkbox"
+                   onchange="filterCoinType('all')"
+                   {% if filter_type == 'all' %}checked{% endif %}>
+            All
+        </label>
+
+        <label>
+            <input type="checkbox"
+                   onchange="filterCoinType('Gold Coin')"
+                   {% if filter_type == 'Gold Coin' %}checked{% endif %}>
+            Gold Coins
+        </label>
+
+        <label>
+            <input type="checkbox"
+                   onchange="filterCoinType('Silver Coin')"
+                   {% if filter_type == 'Silver Coin' %}checked{% endif %}>
+            Silver Coins
+        </label>
+
+        <label>
+            <input type="checkbox"
+                   onchange="filterCoinType('Lakshmi Ganesh')"
+                   {% if filter_type == 'Lakshmi Ganesh' %}checked{% endif %}>
+            Lakshmi Ganesh
+        </label>
+
+        <label>
+            <input type="checkbox"
+                   onchange="filterCoinType('Gift Coin')"
+                   {% if filter_type == 'Gift Coin' %}checked{% endif %}>
+            Gift Coins
+        </label>
+
+    </div>
+
+</div>
 
     <!-- SUB CATEGORIES -->
 
@@ -232,7 +257,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </div>
 
 
-<div class="gold-shop-layout">
+<div class="gold-shop-layout coins-layout">
 
     <!-- LEFT FILTER SIDEBAR -->
     <aside class="gold-sidebar">
@@ -241,9 +266,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <div class="sidebar-line"></div>
 
+        <!-- COIN TYPE -->
+
+<div class="filter-section">
+
+    <h4>Coin Type</h4>
+
+    <label class="filter-option">
+        <input type="checkbox"
+               onchange="filterCoinType('all')"
+               {% if filter_type == 'all' %}checked{% endif %}>
+        <span>All</span>
+    </label>
+
+    <label class="filter-option">
+        <input type="checkbox"
+               onchange="filterCoinType('Gold Coin')"
+               {% if filter_type == 'Gold Coin' %}checked{% endif %}>
+        <span>Gold Coins</span>
+    </label>
+
+    <label class="filter-option">
+        <input type="checkbox"
+               onchange="filterCoinType('Silver Coin')"
+               {% if filter_type == 'Silver Coin' %}checked{% endif %}>
+        <span>Silver Coins</span>
+    </label>
+
+    <label class="filter-option">
+        <input type="checkbox"
+               onchange="filterCoinType('Lakshmi Ganesh')"
+               {% if filter_type == 'Lakshmi Ganesh' %}checked{% endif %}>
+        <span>Lakshmi Ganesh</span>
+    </label>
+
+    <label class="filter-option">
+        <input type="checkbox"
+               onchange="filterCoinType('Gift Coin')"
+               {% if filter_type == 'Gift Coin' %}checked{% endif %}>
+        <span>Gift Coins</span>
+    </label>
+
+</div>
+
         <div class="filter-section">
 
             <h4>Sub Categories</h4>
+
+            
 
             
             {% for category in sidebar_categories %}
@@ -354,7 +424,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </aside>
 
 
-    <div class="row">
+    <div class="row coins-products-grid">
 
         {% for product in products %}
 
@@ -530,6 +600,30 @@ function toggleMobileFilterSection(title) {
 
     title.nextElementSibling.classList.toggle("show");
 }
+function filterCoinType(type) {
+
+    const url = new URL(window.location.href);
+
+    if (type === "all") {
+        url.searchParams.delete("type");
+    } else {
+        url.searchParams.set("type", type);
+    }
+
+    window.location.href = url.toString();
+}
+function clearCoinsFilters() {
+
+    const url = new URL(window.location.href);
+
+    url.searchParams.delete("type");
+    url.searchParams.delete("product_type");
+    url.searchParams.delete("weight");
+    url.searchParams.delete("purity");
+
+    window.location.href = url.toString();
+}
+
 </script>
 
 

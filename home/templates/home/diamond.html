@@ -18,7 +18,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 {% include "home/navbar.html" %}
 
-<section class="container collection-hero-section">
+<section class="container collection-hero-section diamond-collection-section">
 
 <div class="text-center collection-heading">
 
@@ -34,37 +34,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 
-<div class="gold-filter text-center my-4">
-
-    <a href="{% url 'diamond' %}?type=all"
-       class="filter-btn {% if filter_type == 'all' %}active{% endif %}">
-        All
-    </a>
-
-    <a href="{% url 'diamond' %}?type=Bridal Sets"
-       class="filter-btn {% if filter_type == 'Bridal Sets' %}active{% endif %}">
-        Bridal Sets
-    </a>
-
-    <a href="{% url 'diamond' %}?type=Necklaces"
-       class="filter-btn {% if filter_type == 'Necklaces' %}active{% endif %}">
-        Necklaces
-    </a>
-
-    <a href="{% url 'diamond' %}?type=Earrings"
-       class="filter-btn {% if filter_type == 'Earrings' %}active{% endif %}">
-        Earrings
-    </a>
-
-    <a href="{% url 'diamond' %}?type=Bracelets"
-       class="filter-btn {% if filter_type == 'Bracelets' %}active{% endif %}">
-        Bracelets
-    </a>
-
-</div>
 
 <!-- MOBILE FILTER BUTTON -->
-<div class="mobile-filter-btn">
+<div class="mobile-filter-wrapper">
    <button type="button" class="mobile-filter-btn" onclick="openMobileFilter()">
     <i class="fas fa-sliders"></i>
     Filter Jewellery
@@ -84,6 +56,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     </div>
 
+    <!-- SHOP BY -->
+
+<div class="mobile-filter-section mobile-shop-by">
+
+    <div class="mobile-filter-title"
+         onclick="toggleMobileFilterSection(this)">
+
+        <span>Shop By</span>
+
+        <i class="fas fa-chevron-down"></i>
+
+    </div>
+
+    <div class="mobile-filter-options">
+
+        <a href="{% url 'diamond' %}?type=all"
+           class="{% if filter_type == 'all' %}active{% endif %}">
+            All
+        </a>
+
+        <a href="{% url 'diamond' %}?type=Women"
+           class="{% if filter_type == 'Women' %}active{% endif %}">
+            Women
+        </a>
+
+        <a href="{% url 'diamond' %}?type=Men"
+           class="{% if filter_type == 'Men' %}active{% endif %}">
+            Men
+        </a>
+
+        <a href="{% url 'diamond' %}?type=Kids"
+           class="{% if filter_type == 'Kids' %}active{% endif %}">
+            Kids
+        </a>
+
+    </div>
+
+</div>
 
     <!-- SUB CATEGORIES -->
 
@@ -225,6 +235,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <h3>Filter Jewellery</h3>
 
 <div class="sidebar-line"></div>
+
+<div class="filter-section audience-filter">
+
+    <h4>Shop By</h4>
+
+    <label class="filter-link">
+        <a href="{% url 'diamond' %}?type=all"
+           class="{% if filter_type == 'all' %}active{% endif %}">
+            All
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'diamond' %}?type=Women"
+           class="{% if filter_type == 'Women' %}active{% endif %}">
+            Women
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'diamond' %}?type=Men"
+           class="{% if filter_type == 'Men' %}active{% endif %}">
+            Men
+        </a>
+    </label>
+
+    <label class="filter-link">
+        <a href="{% url 'diamond' %}?type=Kids"
+           class="{% if filter_type == 'Kids' %}active{% endif %}">
+            Kids
+        </a>
+    </label>
+
+</div>
 
 
 <div class="filter-section">
