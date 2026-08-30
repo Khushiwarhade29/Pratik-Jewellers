@@ -8358,7 +8358,7 @@ transform:translateY(-8px);
     .rate-item {
         white-space: nowrap !important;
 
-        font-size: 10.5px !important;
+        font-size: 12px !important;
 
         font-weight: 600 !important;
 
@@ -34334,4 +34334,731 @@ body:has(.gold-card) .gold-info > .gold-btn {
 
 .hero-slide {
     cursor: pointer;
+}
+
+.custom-consultation-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 32px;
+
+    background: #c6a15b;
+    color: #fff;
+
+    border: 1px solid #c6a15b;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.custom-consultation-btn:hover {
+    background: #b18b48;
+    border-color: #b18b48;
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+.custom-consultation-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 32px;
+
+    background: #c6a15b !important;
+    color: #fff !important;
+
+    border: 1px solid #c6a15b !important;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-consultation-btn:hover,
+.custom-consultation-btn:focus,
+.custom-consultation-btn:active {
+    background: #b18b48 !important;
+    color: #fff !important;
+    border-color: #b18b48 !important;
+
+    transform: translateY(-2px);
+}
+
+.custom-consultation-btn {
+    margin-top: 12px;
+}
+
+.custom-consultation-btn {
+    background: #dfb526 !important;
+    color: #fff !important;
+    border: 1px solid #dfb526 !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-consultation-btn i {
+    color: #fff !important;
+}
+
+.custom-consultation-btn:hover {
+    background: #fff !important;
+    color: #dfb526 !important;
+    border-color: #dfb526 !important;
+}
+
+.custom-consultation-btn:hover i {
+    color: #dfb526 !important;
+}
+
+
+.custom-consultation-btn {
+    background: #dfb526 !important;
+    color: #fff !important;
+    border: 1px solid #dfb526 !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-consultation-btn i {
+    color: #fff !important;
+}
+
+.custom-consultation-btn:hover {
+    background: #fff !important;
+    color: #dfb526 !important;
+    border-color: #dfb526 !important;
+}
+
+.custom-consultation-btn:hover i {
+    color: #dfb526 !important;
+}
+
+/* =====================================================
+   EVERYDAY PRODUCTS — MOBILE FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .everyday-products {
+        padding: 20px 16px 70px !important;
+    }
+
+    .everyday-product-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+    }
+
+    .everyday-product-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .everyday-product-image {
+        width: 100% !important;
+        height: 220px !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .everyday-product-info {
+        padding: 18px 14px 20px !important;
+    }
+
+    .everyday-product-category {
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .everyday-product-info h3 {
+        font-size: 20px !important;
+        line-height: 1.25 !important;
+        margin: 8px 0 !important;
+        word-break: normal !important;
+    }
+
+    .everyday-product-info p {
+        font-size: 13px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .everyday-product-link {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .main-navbar .mobile-header,
+    .main-navbar .mobile-menu-btn,
+    .main-navbar .mobile-search-btn,
+    .main-navbar .mobile-wishlist-btn {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+}
+
+
+/* RATE BAR - GOLD RATE HIGHLIGHT */
+.rate-item.gold-rate {
+    color: #5f4308 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.rate-item.silver-rate {
+    color: #444444 !important;
+    font-weight: 700 !important;
+}
+
+.footer-community {
+    margin-top: 22px;
+}
+
+.footer-community-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+.footer-community-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-community-link i {
+    font-size: 17px;
+}
+
+.footer-community-link b {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.footer-community-link:hover b {
+    transform: translateX(5px);
+}
+
+.footer-community-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+    color: #000000 !important;
+}
+
+.footer-community-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+}
+
+/* =====================================================
+   WHATSAPP COMMUNITY
+===================================================== */
+
+/* =====================================================
+   WHATSAPP COMMUNITY — PREMIUM EDITORIAL
+===================================================== */
+
+.whatsapp-community {
+    width: 100%;
+    padding: 90px 20px;
+    background: #f7f4ee;
+}
+
+.whatsapp-community-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.whatsapp-community-content {
+    padding: 20px 0;
+}
+
+.whatsapp-community-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #9b7229 !important;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.whatsapp-community-content h2 {
+    margin: 0 0 22px;
+
+    color: #111111 !important;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.whatsapp-community-content p {
+    max-width: 590px;
+
+    margin: 0 0 32px;
+
+    color: #555555 !important;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   COMMUNITY BUTTON
+===================================================== */
+
+.whatsapp-community-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    background: #111111;
+
+    color: #ffffff !important;
+
+    border: 1px solid #111111;
+    border-radius: 2px;
+
+    text-decoration: none !important;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-community-btn i {
+    font-size: 17px;
+}
+
+.whatsapp-community-btn span {
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-community-btn:hover {
+    background: #ffffff;
+
+    color: #111111 !important;
+
+    border-color: #111111;
+}
+
+.whatsapp-community-btn:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   RIGHT — RATE CARD
+===================================================== */
+
+.whatsapp-rate-card {
+    position: relative;
+
+    padding: 32px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #ded8cc;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Gold top line */
+
+.whatsapp-rate-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #9b7229;
+}
+
+
+/* =====================================================
+   RATE HEADER
+===================================================== */
+
+.whatsapp-rate-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.whatsapp-rate-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ded8cc;
+
+    border-radius: 50%;
+
+    background: #faf9f6;
+}
+
+.whatsapp-rate-icon i {
+    color: #25D366;
+
+    font-size: 25px;
+}
+
+.whatsapp-rate-header span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+.whatsapp-rate-header small {
+    display: block;
+
+    color: #9b7229;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.whatsapp-rate-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 0 0 5px;
+
+    background: #e9e4db;
+}
+
+
+/* =====================================================
+   RATE ROW
+===================================================== */
+
+.whatsapp-rate-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #eeeae3;
+}
+
+.whatsapp-rate-row > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.whatsapp-rate-row span {
+    color: #222222;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.whatsapp-rate-row small {
+    color: #888888;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.whatsapp-rate-row strong {
+    color: #9b7229;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   RATE FOOTER
+===================================================== */
+
+.whatsapp-rate-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding-top: 20px;
+}
+
+.whatsapp-rate-footer i {
+    color: #9b7229;
+
+    font-size: 13px;
+}
+
+.whatsapp-rate-footer span {
+    color: #666666;
+
+    font-size: 11px;
+
+    letter-spacing: .5px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .whatsapp-community {
+        padding: 60px 16px;
+    }
+
+    .whatsapp-community-inner {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .whatsapp-community-content {
+        text-align: center;
+    }
+
+    .whatsapp-community-content h2 {
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+    .whatsapp-community-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .whatsapp-community-btn {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+    .whatsapp-rate-card {
+        width: 100%;
+
+        padding: 28px 22px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .whatsapp-community-content h2 {
+        font-size: 30px;
+    }
+
+    .whatsapp-rate-card {
+        padding: 25px 18px;
+    }
+
+    .whatsapp-rate-row {
+        padding: 15px 0;
+    }
+
+    .whatsapp-rate-row strong {
+        font-size: 14px;
+    }
+
+}
+
+
+.help-box {
+    color: #111111 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.help-box h5,
+.help-box p {
+    color: #111111 !important;
+    transition: color 0.3s ease;
+}
+
+.help-box i {
+    color: #111111 !important;
+    transition: color 0.3s ease;
+}
+
+/* Hover */
+.help-box:hover h5,
+.help-box:hover p,
+.help-box:hover i {
+    color: #b08a3c !important;
+}
+
+
+
+
+.testimonials {
+    padding-bottom: 35px !important;
+}
+
+.whatsapp-community {
+    padding-top: 35px !important;
+}
+
+/* Desktop Hero Drag / Swipe */
+@media (min-width: 769px) {
+
+    .hero-slider {
+        cursor: grab;
+        user-select: none;
+        touch-action: pan-y;
+    }
+
+    .hero-slider:active {
+        cursor: grabbing;
+    }
+
+    .hero-slide {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .hero-slide img {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+}
+
+
+
+/* =========================================================
+   SAVING SCHEME HERO — FULL BACKGROUND CLICK
+   ========================================================= */
+
+.hero-overlay {
+    pointer-events: none !important;
+}
+
+.hero-content {
+    pointer-events: none !important;
+}
+
+.hero-content a,
+.hero-content button,
+.hero-content .hero-btn {
+    pointer-events: auto !important;
+}
+
+
+
+
+/* MOBILE — ONLY 3RD SILVER HERO SLIDE */
+@media (max-width: 768px) {
+
+    .hero-slide:nth-child(3) {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
 }

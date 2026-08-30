@@ -1280,6 +1280,156 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
+<!-- =====================================================
+     WHATSAPP COMMUNITY
+====================================================== -->
+
+<!-- =====================================================
+     WHATSAPP COMMUNITY — PREMIUM RATE UPDATE
+====================================================== -->
+
+<section class="whatsapp-community">
+
+    <div class="whatsapp-community-inner">
+
+        <!-- LEFT CONTENT -->
+
+        <div class="whatsapp-community-content">
+
+            <span class="whatsapp-community-label">
+                STAY CONNECTED
+            </span>
+
+            <h2>
+                Daily Gold & Silver<br>
+                Rates, Delivered to You.
+            </h2>
+
+            <p>
+                Stay updated with daily gold and silver rates,
+                new jewellery arrivals, exclusive offers and
+                important updates from Pratik Jewellers.
+            </p>
+
+            <a href="https://chat.whatsapp.com/CPRkvveY5RSJw95rlljYpF"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="whatsapp-community-btn">
+
+                <i class="fab fa-whatsapp"></i>
+
+                JOIN OUR WHATSAPP COMMUNITY
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT : RATE CARD -->
+
+        <div class="whatsapp-rate-card">
+
+            <div class="whatsapp-rate-header">
+
+                <div class="whatsapp-rate-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        PRATIK JEWELLERS
+                    </span>
+
+                    <small>
+                        DAILY RATE UPDATE
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="whatsapp-rate-divider"></div>
+
+
+            <div class="whatsapp-rate-row">
+
+                <div>
+                    <span>22K GOLD</span>
+                    <small>PER 10 GRAM</small>
+                </div>
+
+                <strong>
+                    ₹ —
+                </strong>
+
+            </div>
+
+
+            <div class="whatsapp-rate-row">
+
+                <div>
+                    <span>24K GOLD</span>
+                    <small>PER 10 GRAM</small>
+                </div>
+
+                <strong>
+                    ₹ —
+                </strong>
+
+            </div>
+
+
+            <div class="whatsapp-rate-row">
+
+                <div>
+                    <span>18K GOLD</span>
+                    <small>PER 10 GRAM</small>
+                </div>
+
+                <strong>
+                    ₹ —
+                </strong>
+
+            </div>
+
+
+            <div class="whatsapp-rate-row">
+
+                <div>
+                    <span>SILVER</span>
+                    <small>PER 1 KG</small>
+                </div>
+
+                <strong>
+                    ₹ —
+                </strong>
+
+            </div>
+
+
+            <div class="whatsapp-rate-divider"></div>
+
+
+            <div class="whatsapp-rate-footer">
+
+                <i class="fas fa-bell"></i>
+
+                <span>
+                    Updated daily on WhatsApp
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 {% include "home/footer.html" %}
 
 <a href="https://wa.me/919766688337?text=Hello%20Pratik%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
@@ -1291,6 +1441,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </a>
 
 <script src="{% static 'home/js/script.js' %}"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hero = document.querySelector(".hero");
+
+    if (!hero) return;
+
+    hero.addEventListener("click", function (e) {
+
+        /* Buttons aur dots ko normal kaam karne do */
+        if (
+            e.target.closest(".hero-btn") ||
+            e.target.closest(".hero-dots") ||
+            e.target.closest(".hero-dot")
+        ) {
+            return;
+        }
+
+        /* Sirf 4th Saving Scheme slide */
+        const savingSlide = hero.querySelector(".hero-slide.saving-slide");
+
+        if (
+            savingSlide &&
+            savingSlide.classList.contains("active")
+        ) {
+            window.location.href = "{% url 'saving_scheme' %}";
+        }
+
+    });
+
+});
+</script>
 
 
 </body>
