@@ -372,6 +372,7 @@ class CustomGallery(models.Model):
         ("pendant", "Pendant"),
         ("earrings", "Earrings"),
         ("couple-ring", "Couple Ring"),
+         ("redesign", "Redesign"),
 
     ]
 
