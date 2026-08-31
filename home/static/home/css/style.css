@@ -35096,3 +35096,25 @@ body:has(.gold-card) .gold-info > .gold-btn {
 .whatsapp-rate-join-btn:hover span {
     transform: translateX(4px);
 }
+
+
+
+/* RATE BAR TEXT - DARKER & LARGER */
+.rate-track span {
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    color: #111 !important;
+}
+
+.rate-update {
+    font-size: 18px !important;
+    color: #111 !important;
+    font-weight: 500 !important;
+}
+
+.gold-rate,
+.silver-rate {
+    color: #111 !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+}
